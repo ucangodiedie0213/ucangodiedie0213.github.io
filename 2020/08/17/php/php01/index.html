@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="php," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="開發環境  eclipse IntelliJ IDEA Community NetBeans  基礎語法 輸出 前者為輸出並換行 後者只有輸出 12System.out.println(&quot;Hello Java&quot;);System.out.print(&quot;Hello Java&quot;); 輸入 Java輸入需要 import java.util.Scanner(有些IDE會自動import) 常用的輸入有 n">
+<meta name="description" content="基礎語法 php開頭 php以 &lt;?php開頭 以 ?&gt;  結尾 php可以直接崁入html執行 輸出 php的輸出使用 echo含式 在php中所有用戶定義的函式、類別…大小些都合法 但是變數不在此範圍 1234&lt;?phpecho &quot;Hello World&quot;;ECHO &quot;Hello World&quot;;?&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java教學(01)-">
-<meta property="og:url" content="https://cyshchaonote.ga/2020/08/14/Java/java01/index.html">
+<meta property="og:title" content="php01">
+<meta property="og:url" content="https://cyshchaonote.ga/2020/08/17/php/php01/index.html">
 <meta property="og:site_name" content="Chao&#39;s Note">
-<meta property="og:description" content="開發環境  eclipse IntelliJ IDEA Community NetBeans  基礎語法 輸出 前者為輸出並換行 後者只有輸出 12System.out.println(&quot;Hello Java&quot;);System.out.print(&quot;Hello Java&quot;); 輸入 Java輸入需要 import java.util.Scanner(有些IDE會自動import) 常用的輸入有 n">
+<meta property="og:description" content="基礎語法 php開頭 php以 &lt;?php開頭 以 ?&gt;  結尾 php可以直接崁入html執行 輸出 php的輸出使用 echo含式 在php中所有用戶定義的函式、類別…大小些都合法 但是變數不在此範圍 1234&lt;?phpecho &quot;Hello World&quot;;ECHO &quot;Hello World&quot;;?&gt;">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-08-14T10:48:44.000Z">
-<meta property="article:modified_time" content="2020-08-19T12:19:01.867Z">
+<meta property="article:published_time" content="2020-08-17T15:00:30.000Z">
+<meta property="article:modified_time" content="2020-08-19T12:16:24.638Z">
 <meta property="article:author" content="ChaoYi Lin">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://cyshchaonote.ga/2020/08/14/Java/java01/"/>
+  <link rel="canonical" href="https://cyshchaonote.ga/2020/08/17/php/php01/"/>
 
 
 
 
 
-  <title>Java教學(01)- | Chao's Note</title>
+  <title>php01 | Chao's Note</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/08/14/Java/java01/">
+    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/08/17/php/php01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChaoYi Lin">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java教學(01)-</h1>
+          <h1 class="post-title" itemprop="name headline">php01</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-08-14T18:48:44+08:00">
-                2020-08-14
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-08-17T23:00:30+08:00">
+                2020-08-17
               </time>
             
 
@@ -336,8 +336,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
                   </a>
                 </span>
 
@@ -373,104 +373,17 @@
       
 
       
-        <h1>開發環境</h1>
-<blockquote>
-<p>eclipse<br>
-IntelliJ IDEA Community<br>
-NetBeans</p>
-</blockquote>
-<h1>基礎語法</h1>
-<h2 id="輸出">輸出</h2>
-<p>前者為輸出並換行<br>
-後者只有輸出</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"Hello Java"</span>);</span><br><span class="line">System.out.print(<span class="string">"Hello Java"</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="輸入">輸入</h2>
-<p>Java輸入需要 <em><strong>import</strong></em> <strong>java.util.Scanner</strong>(有些IDE會自動import)<br>
-常用的輸入有 <strong>nextLine()</strong> <strong>nextInt()</strong> <strong>nextDouble()</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span></span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> a,b;</span><br><span class="line">        a = scanner.nextInt();</span><br><span class="line">        b = scanner.nextInt();</span><br><span class="line">        System.out.println(a+b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="變數與常數">變數與常數</h2>
-<h3 id="整數">整數</h3>
-<p>大部分使用int就可以偶爾會用到byte</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">型態</th>
-<th style="text-align:center">空間(位元組)</th>
-<th style="text-align:center">範圍</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">byte</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">-128~127</td>
-</tr>
-<tr>
-<td style="text-align:center">sort</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">-32768~32767</td>
-</tr>
-<tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2147483648~2147483647</td>
-</tr>
-<tr>
-<td style="text-align:center">long</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">-9,223,372,036,854,775,808~9,223,372,036,854,775,807</td>
-</tr>
-</tbody>
-</table>
-<h3 id="浮點數">浮點數</h3>
-<p>浮點數可以儲存與小數兩個視範圍與用途選擇<br>
-在程競的世界，在需要用浮點數做運算的時候會盡量使用double來避免浮點數誤差<br>
-所以，只要有需要運算盡量使用double</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">型態</th>
-<th style="text-align:center">空間(位元組)</th>
-<th style="text-align:center">範圍</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">3.4<em>10^-38~3.4</em>10^38</td>
-</tr>
-<tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">1.7<em>10^-308~1.8</em>10^308</td>
-</tr>
-</tbody>
-</table>
-<h3 id="布林值">布林值</h3>
-<p>布林值可以存取<strong>true</strong>或者<strong>false</strong>(數字分別代表1和0)<br>
-型態:boolean<br>
-空間(位元組):4<br>
-範圍:0~1</p>
-<h3 id="字元">字元</h3>
-<p>字元能用來儲存一個字預設值null<br>
-型態:char<br>
-空間(位元組):2<br>
-範圍:ASCII碼</p>
-<h3 id="字串">字串</h3>
-<p>字串能用來儲存多個字<br>
-型態:String</p>
-<h3 id="常數">常數</h3>
-<p>在Java的世界可以用<strong>final 型態</strong>來宣告一個不可以改變的常數</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> pi = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="判斷式">判斷式</h2>
-<h2 id="迴圈">迴圈</h2>
-<h3 id="for">for</h3>
-<h3 id="while">while</h3>
-<h3 id="do-while">do while</h3>
-<h3 id="switch">switch</h3>
-<h1>物件導向</h1>
-<h2 id="類別與物件">類別與物件</h2>
+        <h3 id="基礎語法">基礎語法</h3>
+<h4 id="php開頭">php開頭</h4>
+<p>php以 <strong>&lt;?php</strong>開頭<br>
+以 <strong>?&gt;</strong>  結尾</p>
+<div class="note info no-icon"><p>php可以直接崁入html執行</p></div>
+<h4 id="輸出">輸出</h4>
+<p>php的輸出使用 <strong>echo</strong>含式</p>
+<div class="note info no-icon"><p>在php中所有用戶定義的函式、類別…大小些都合法<br>
+但是變數不在此範圍</p></div>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"Hello World"</span>;</span><br><span class="line"><span class="keyword">ECHO</span> <span class="string">"Hello World"</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id=""></h4>
 
       
     </div>
@@ -488,7 +401,7 @@ NetBeans</p>
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/php/" rel="tag"># php</a>
           
         </div>
       
@@ -501,8 +414,8 @@ NetBeans</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/24/Discord/discord-0/" rel="next" title="DiscordBot(0)-環境設置">
-                <i class="fa fa-chevron-left"></i> DiscordBot(0)-環境設置
+              <a href="/2020/08/15/alogrithm/TopologicalSort/" rel="next" title="TopologicalSort 拓樸排序">
+                <i class="fa fa-chevron-left"></i> TopologicalSort 拓樸排序
               </a>
             
           </div>
@@ -510,10 +423,6 @@ NetBeans</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/15/alogrithm/TopologicalSort/" rel="prev" title="TopologicalSort 拓樸排序">
-                TopologicalSort 拓樸排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -645,7 +554,7 @@ NetBeans</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">開發環境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">基礎語法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#輸出"><span class="nav-number">2.1.</span> <span class="nav-text">輸出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#輸入"><span class="nav-number">2.2.</span> <span class="nav-text">輸入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#變數與常數"><span class="nav-number">2.3.</span> <span class="nav-text">變數與常數</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整數"><span class="nav-number">2.3.1.</span> <span class="nav-text">整數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮點數"><span class="nav-number">2.3.2.</span> <span class="nav-text">浮點數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布林值"><span class="nav-number">2.3.3.</span> <span class="nav-text">布林值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字元"><span class="nav-number">2.3.4.</span> <span class="nav-text">字元</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字串"><span class="nav-number">2.3.5.</span> <span class="nav-text">字串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常數"><span class="nav-number">2.3.6.</span> <span class="nav-text">常數</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判斷式"><span class="nav-number">2.4.</span> <span class="nav-text">判斷式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迴圈"><span class="nav-number">2.5.</span> <span class="nav-text">迴圈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for"><span class="nav-number">2.5.1.</span> <span class="nav-text">for</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#while"><span class="nav-number">2.5.2.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#do-while"><span class="nav-number">2.5.3.</span> <span class="nav-text">do while</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#switch"><span class="nav-number">2.5.4.</span> <span class="nav-text">switch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">3.</span> <span class="nav-text">物件導向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#類別與物件"><span class="nav-number">3.1.</span> <span class="nav-text">類別與物件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基礎語法"><span class="nav-number">1.</span> <span class="nav-text">基礎語法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#php開頭"><span class="nav-number">1.1.</span> <span class="nav-text">php開頭</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#輸出"><span class="nav-number">1.2.</span> <span class="nav-text">輸出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.3.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
             
 
           </div>
