@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Qiskit,QuantumComputing,Quantum," />
+  <meta name="keywords" content="graph,floyd washall,alogrithm," />
 
 
 
@@ -79,17 +79,19 @@
 
 
 
+<meta name="description" content="Flody-Washall演算法 是一個求最短路徑的一種演算法 它能處理正權、負權的圖，但不能處理負權迴圈的圖。 作法 Flody-Washall 就是找到任意兩個點間的最短路徑， 首先會先將圖使用相鄰矩陣方式存起來 再去求每個點各個路徑長度  影片取自洪Âng春男Chhun-Lâm 實現關鍵片段程式碼 12345678for(int k&#x3D;0;k&lt;n;k++)&amp;#123;    for(in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="開啟量子電腦的第一章-Qiskit安裝與設置環境">
-<meta property="og:url" content="https://cyshchaonote.ga/2020/08/26/qikit/index.html">
+<meta property="og:title" content="Floyd-Washall 佛洛伊德演算法 最短路徑">
+<meta property="og:url" content="https://cyshchaonote.ga/2020/04/25/alogrithm/Graph/floydwashll/index.html">
 <meta property="og:site_name" content="Chao&#39;s Note">
+<meta property="og:description" content="Flody-Washall演算法 是一個求最短路徑的一種演算法 它能處理正權、負權的圖，但不能處理負權迴圈的圖。 作法 Flody-Washall 就是找到任意兩個點間的最短路徑， 首先會先將圖使用相鄰矩陣方式存起來 再去求每個點各個路徑長度  影片取自洪Âng春男Chhun-Lâm 實現關鍵片段程式碼 12345678for(int k&#x3D;0;k&lt;n;k++)&amp;#123;    for(in">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-08-26T10:14:36.000Z">
-<meta property="article:modified_time" content="2020-08-26T10:22:11.684Z">
+<meta property="article:published_time" content="2020-04-25T01:24:59.000Z">
+<meta property="article:modified_time" content="2020-09-12T03:40:03.035Z">
 <meta property="article:author" content="ChaoYi Lin">
-<meta property="article:tag" content="Qiskit">
-<meta property="article:tag" content="QuantumComputing">
-<meta property="article:tag" content="Quantum">
+<meta property="article:tag" content="graph">
+<meta property="article:tag" content="floyd washall">
+<meta property="article:tag" content="alogrithm">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://cyshchaonote.ga/2020/08/26/qikit/"/>
+  <link rel="canonical" href="https://cyshchaonote.ga/2020/04/25/alogrithm/Graph/floydwashll/"/>
 
 
 
 
 
-  <title>開啟量子電腦的第一章-Qiskit安裝與設置環境 | Chao's Note</title>
+  <title>Floyd-Washall 佛洛伊德演算法 最短路徑 | Chao's Note</title>
   
 
 
@@ -248,7 +250,7 @@
   
 </nav>
 
-
+<script data-ad-client="ca-pub-7963170615160013" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
  </div>
     </header>
@@ -273,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/08/26/qikit/">
+    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/25/alogrithm/Graph/floydwashll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChaoYi Lin">
@@ -290,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">開啟量子電腦的第一章-Qiskit安裝與設置環境</h1>
+          <h1 class="post-title" itemprop="name headline">Floyd-Washall 佛洛伊德演算法 最短路徑</h1>
         
 
         <div class="post-meta">
@@ -302,8 +304,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-08-26T18:14:36+08:00">
-                2020-08-26
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-25T09:24:59+08:00">
+                2020-04-25
               </time>
             
 
@@ -312,6 +314,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Alogrithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Alogrithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -340,7 +364,30 @@
       
 
       
-        
+        <p><strong>Flody-Washall</strong>演算法 是一個求最短路徑的一種演算法<br>
+它能處理正權、負權的圖，但不能處理負權迴圈的圖。</p>
+<h4 id="作法">作法</h4>
+<p><strong>Flody-Washall</strong> 就是找到任意兩個點間的最短路徑，<br>
+首先會先將圖使用相鄰矩陣方式存起來<br>
+再去求每個點各個路徑長度</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6wPIMMuPxUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+影片取自洪Âng春男Chhun-Lâm
+<h3 id="實現關鍵片段程式碼">實現關鍵片段程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(d[i][j] &gt; d[i][k]+d[k][j])</span><br><span class="line">                d[i][j] = d[i][k]+d[k][j];</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="注意">注意</h3>
+<p>並不是每個題目都是透過上述的判斷式決定<br>
+上面為求最短路徑</p>
+<h3 id="相關題目">相關題目</h3>
+<p><strong>[d282: 11015 - 05-2 Rendezvous](<a href="https://zerojudge.tw/ShowProblem?problemid=d282" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=d282</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+<strong><a href="https://zerojudge.tw/ShowProblem?problemid=c128" target="_blank" rel="noopener">c128: 00544 - Heavy Cargo</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+<strong><a href="https://zerojudge.tw/ShowProblem?problemid=a874" target="_blank" rel="noopener">a874: 14. Trace Route</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+<strong><a href="https://zerojudge.tw/ShowProblem?problemid=a674" target="_blank" rel="noopener">a674: 10048 - Audiophobia</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+題目擷取自<a href="https://hackmd.io/@cube/H1TjWAbOE" target="_blank" rel="noopener">APCS(大學程式設計先修檢測)程式實作</a></p>
+
       
     </div>
     
@@ -357,11 +404,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Qiskit/" rel="tag"># Qiskit</a>
+            <a href="/tags/graph/" rel="tag"># graph</a>
           
-            <a href="/tags/QuantumComputing/" rel="tag"># QuantumComputing</a>
+            <a href="/tags/floyd-washall/" rel="tag"># floyd washall</a>
           
-            <a href="/tags/Quantum/" rel="tag"># Quantum</a>
+            <a href="/tags/alogrithm/" rel="tag"># alogrithm</a>
           
         </div>
       
@@ -374,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/08/20/alogrithm/dpLCS/" rel="next" title="最長共同子序列-LongestCommonSubsequence">
-                <i class="fa fa-chevron-left"></i> 最長共同子序列-LongestCommonSubsequence
+              <a href="/2020/04/19/foldingathome/" rel="next" title="參與Folding@Home為研究武漢肺炎貢獻算力吧!">
+                <i class="fa fa-chevron-left"></i> 參與Folding@Home為研究武漢肺炎貢獻算力吧!
               </a>
             
           </div>
@@ -383,6 +430,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/05/ZJ/a129zerojudge/" rel="prev" title="a129.最小生成樹">
+                a129.最小生成樹 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -434,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -496,6 +556,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#作法"><span class="nav-number">1.</span> <span class="nav-text">作法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#實現關鍵片段程式碼"><span class="nav-number"></span> <span class="nav-text">實現關鍵片段程式碼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number"></span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相關題目"><span class="nav-number"></span> <span class="nav-text">相關題目</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
       
@@ -505,7 +581,7 @@
             <h3 class="widget-title">Tag Cloud</h3>
             <div id="myCanvasContainer" class="widget tagcloud">
                 <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DiscordBot/" rel="tag">DiscordBot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiskit/" rel="tag">Qiskit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quantum/" rel="tag">Quantum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QuantumComputing/" rel="tag">QuantumComputing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a><span class="tag-list-count">1</span></li></ul>
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DiscordBot/" rel="tag">DiscordBot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a><span class="tag-list-count">1</span></li></ul>
                 </canvas>
             </div>
         </div>

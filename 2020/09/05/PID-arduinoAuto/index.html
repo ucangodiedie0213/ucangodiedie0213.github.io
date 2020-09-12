@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="DP,LCS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,16 @@
 
 
 
-<meta name="description" content="LCS  s1 &#x3D; 2 5 7 9 3 1 2 s2 &#x3D; 3 5 3 2 8 LCS(s1,s2) &#x3D; 5 3 2  LCS可能有很多個  s1: a b c d b c e e a s2: c a b d e f g a s3: d c e a LCS(s1, s2, s3) &#x3D;  {c e a, d e a}  想法 DP的精隨就是要找到子問題 所以我們要把題目變簡單 把序列拆成最後一項跟剩下">
+<meta name="description" content="https:&#x2F;&#x2F;www.facebook.com&#x2F;notes&#x2F;蘇奕昕&#x2F;演算法-pid自動控制-arduino實作&#x2F;1157343571048056&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最長共同子序列-LongestCommonSubsequence">
-<meta property="og:url" content="https://cyshchaonote.ga/2020/08/20/alogrithm/dpLCS/index.html">
+<meta property="og:title" content="PID-arduinoAuto">
+<meta property="og:url" content="https://cyshchaonote.ga/2020/09/05/PID-arduinoAuto/index.html">
 <meta property="og:site_name" content="Chao&#39;s Note">
-<meta property="og:description" content="LCS  s1 &#x3D; 2 5 7 9 3 1 2 s2 &#x3D; 3 5 3 2 8 LCS(s1,s2) &#x3D; 5 3 2  LCS可能有很多個  s1: a b c d b c e e a s2: c a b d e f g a s3: d c e a LCS(s1, s2, s3) &#x3D;  {c e a, d e a}  想法 DP的精隨就是要找到子問題 所以我們要把題目變簡單 把序列拆成最後一項跟剩下">
+<meta property="og:description" content="https:&#x2F;&#x2F;www.facebook.com&#x2F;notes&#x2F;蘇奕昕&#x2F;演算法-pid自動控制-arduino實作&#x2F;1157343571048056&#x2F;">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-08-20T08:31:42.000Z">
-<meta property="article:modified_time" content="2020-08-29T10:02:51.654Z">
+<meta property="article:published_time" content="2020-09-05T02:06:47.000Z">
+<meta property="article:modified_time" content="2020-09-12T08:30:39.262Z">
 <meta property="article:author" content="ChaoYi Lin">
-<meta property="article:tag" content="DP">
-<meta property="article:tag" content="LCS">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://cyshchaonote.ga/2020/08/20/alogrithm/dpLCS/"/>
+  <link rel="canonical" href="https://cyshchaonote.ga/2020/09/05/PID-arduinoAuto/"/>
 
 
 
 
 
-  <title>最長共同子序列-LongestCommonSubsequence | Chao's Note</title>
+  <title>PID-arduinoAuto | Chao's Note</title>
   
 
 
@@ -249,7 +247,7 @@
   
 </nav>
 
-
+<script data-ad-client="ca-pub-7963170615160013" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
  </div>
     </header>
@@ -274,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/08/20/alogrithm/dpLCS/">
+    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/09/05/PID-arduinoAuto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChaoYi Lin">
@@ -291,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">最長共同子序列-LongestCommonSubsequence</h1>
+          <h1 class="post-title" itemprop="name headline">PID-arduinoAuto</h1>
         
 
         <div class="post-meta">
@@ -303,8 +301,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-08-20T16:31:42+08:00">
-                2020-08-20
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-09-05T10:06:47+08:00">
+                2020-09-05
               </time>
             
 
@@ -341,45 +339,7 @@
       
 
       
-        <h1>LCS</h1>
-<blockquote>
-<p>s1 = 2 5 7 9 3 1 2<br>
-s2 = 3 5 3 2 8<br>
-LCS(s1,s2) = 5 3 2</p>
-</blockquote>
-<p><strong>LCS可能有很多個</strong></p>
-<blockquote>
-<p>s1: a b c d b c e e a<br>
-s2: c a b d e f g a<br>
-s3: d c e a<br>
-LCS(s1, s2, s3) =  {c e a, d e a}</p>
-</blockquote>
-<h1>想法</h1>
-<p>DP的精隨就是要找到子問題<br>
-所以我們要把題目變簡單<br>
-把序列拆成最後一項跟剩下的</p>
-<blockquote>
-<p>s1 = sub1+e1<br>
-s2 = sub2+e2</p>
-</blockquote>
-<p><strong>這時候的LCS就有四種情況</strong></p>
-<ul>
-<li>包含e1 不含 e2</li>
-<li>不含e1 包含e2</li>
-<li>不含e1 不含e2</li>
-<li>包含e1 包含e2</li>
-</ul>
-<h4 id="再來我們來討論LCS會在哪裡">再來我們來討論LCS會在哪裡</h4>
-<p>1.e2沒用 所以LCS會在sub2裡面 故 LCS(s1,s2)=LCS(s1,sub2)<br>
-2.同上 LCS(s1,s2)=LCS(sub1,s2)<br>
-3.兩者皆沒用 所以LCS在sub1,sub2裡面 LCS(s1,s2)=LCS(sub1,sub2)<br>
-4.同時包含故LCS最後一個元素必定是e1(e1==e2) 故 LCS(s1,s2)=LCS(sub1,sub2)+e1</p>
-<h4 id="整理公式並簡化">整理公式並簡化</h4>
-<blockquote>
-<p>LCS(s1,s2)=<br>
-{ if(e1!=e2)  max( LCS(sub1,s2),LCS(s1,sub2) )}<br>
-{ if(e1==e2) LCS(sub1,sub2)+e1}</p>
-</blockquote>
+        <p><a href="https://www.facebook.com/notes/%E8%98%87%E5%A5%95%E6%98%95/%E6%BC%94%E7%AE%97%E6%B3%95-pid%E8%87%AA%E5%8B%95%E6%8E%A7%E5%88%B6-arduino%E5%AF%A6%E4%BD%9C/1157343571048056/" target="_blank" rel="noopener">https://www.facebook.com/notes/蘇奕昕/演算法-pid自動控制-arduino實作/1157343571048056/</a></p>
 
       
     </div>
@@ -395,14 +355,6 @@ s2 = sub2+e2</p>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/DP/" rel="tag"># DP</a>
-          
-            <a href="/tags/LCS/" rel="tag"># LCS</a>
-          
-        </div>
-      
 
       
       
@@ -412,8 +364,8 @@ s2 = sub2+e2</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/08/17/php/php01/" rel="next" title="php01">
-                <i class="fa fa-chevron-left"></i> php01
+              <a href="/2020/08/20/alogrithm/DP/LCS/" rel="next" title="最長共同子序列-LongestCommonSubsequence">
+                <i class="fa fa-chevron-left"></i> 最長共同子序列-LongestCommonSubsequence
               </a>
             
           </div>
@@ -421,10 +373,6 @@ s2 = sub2+e2</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/26/qikit/" rel="prev" title="開啟量子電腦的第一章-Qiskit安裝與設置環境">
-                開啟量子電腦的第一章-Qiskit安裝與設置環境 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,17 +424,8 @@ s2 = sub2+e2</p>
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -523,7 +462,7 @@ s2 = sub2+e2</p>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -547,22 +486,6 @@ s2 = sub2+e2</p>
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">LCS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">想法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#再來我們來討論LCS會在哪裡"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">再來我們來討論LCS會在哪裡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整理公式並簡化"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">整理公式並簡化</span></a></li></ol></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
       
@@ -572,7 +495,7 @@ s2 = sub2+e2</p>
             <h3 class="widget-title">Tag Cloud</h3>
             <div id="myCanvasContainer" class="widget tagcloud">
                 <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DiscordBot/" rel="tag">DiscordBot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiskit/" rel="tag">Qiskit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quantum/" rel="tag">Quantum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QuantumComputing/" rel="tag">QuantumComputing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a><span class="tag-list-count">1</span></li></ul>
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DiscordBot/" rel="tag">DiscordBot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a><span class="tag-list-count">1</span></li></ul>
                 </canvas>
             </div>
         </div>
