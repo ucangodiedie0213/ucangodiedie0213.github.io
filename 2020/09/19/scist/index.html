@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="graph,cpp,dfs,apcs," />
+  <meta name="keywords" content="SCIST,Linux,CTF," />
 
 
 
@@ -79,20 +79,19 @@
 
 
 
-<meta name="description" content="題目內容 Q同學正在習程式， P老師出了以下的題目讓他練習。 一群人在一起時經常會形成一個一個的小群體。假設有 N個人，編號由 0到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說0到 N-1每個數字 都恰好出現一次。 這種好友的關係會形成一些小群體。例如 N&#x3D;10，好友編號如下，    自己的編號">
+<meta name="description" content="Commands ls 執行ls指令會列出當下目錄的所有檔案  ls 也可以ls指定目錄 只要在ls後加上路徑 ls [DIR] 可選參數若填入-al 可列出所有檔案的詳細資訊 ls -al 星號為萬字元 { 使用者列表位於&#x2F;etc&#x2F;passwd 密碼存於&#x2F;etc&#x2F;shadow }  chmod chmod 可以更改檔案權限 權限分為擁有者、群組、所有人 這三個都各有rwx三個參數 可用二進制表示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c291.APCS 2017-0304-2小群體">
-<meta property="og:url" content="https://cyshchaonote.ga/2020/04/18/ZJ/c291-zerojudge/index.html">
+<meta property="og:title" content="學習Linux開啟CTF的第一章吧!-SCIST資安D1">
+<meta property="og:url" content="https://cyshchaonote.ga/2020/09/19/scist/index.html">
 <meta property="og:site_name" content="Chao&#39;s Note">
-<meta property="og:description" content="題目內容 Q同學正在習程式， P老師出了以下的題目讓他練習。 一群人在一起時經常會形成一個一個的小群體。假設有 N個人，編號由 0到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說0到 N-1每個數字 都恰好出現一次。 這種好友的關係會形成一些小群體。例如 N&#x3D;10，好友編號如下，    自己的編號">
+<meta property="og:description" content="Commands ls 執行ls指令會列出當下目錄的所有檔案  ls 也可以ls指定目錄 只要在ls後加上路徑 ls [DIR] 可選參數若填入-al 可列出所有檔案的詳細資訊 ls -al 星號為萬字元 { 使用者列表位於&#x2F;etc&#x2F;passwd 密碼存於&#x2F;etc&#x2F;shadow }  chmod chmod 可以更改檔案權限 權限分為擁有者、群組、所有人 這三個都各有rwx三個參數 可用二進制表示">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-04-18T12:05:42.000Z">
-<meta property="article:modified_time" content="2020-09-12T03:40:25.041Z">
+<meta property="article:published_time" content="2020-09-19T11:58:26.000Z">
+<meta property="article:modified_time" content="2020-09-19T12:59:17.234Z">
 <meta property="article:author" content="ChaoYi Lin">
-<meta property="article:tag" content="graph">
-<meta property="article:tag" content="cpp">
-<meta property="article:tag" content="dfs">
-<meta property="article:tag" content="apcs">
+<meta property="article:tag" content="SCIST">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
 
 
@@ -123,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://cyshchaonote.ga/2020/04/18/ZJ/c291-zerojudge/"/>
+  <link rel="canonical" href="https://cyshchaonote.ga/2020/09/19/scist/"/>
 
 
 
 
 
-  <title>c291.APCS 2017-0304-2小群體 | Chao's Note</title>
+  <title>學習Linux開啟CTF的第一章吧!-SCIST資安D1 | Chao's Note</title>
   
 
 
@@ -276,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/18/ZJ/c291-zerojudge/">
+    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/09/19/scist/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChaoYi Lin">
@@ -293,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">c291.APCS 2017-0304-2小群體</h1>
+          <h1 class="post-title" itemprop="name headline">學習Linux開啟CTF的第一章吧!-SCIST資安D1</h1>
         
 
         <div class="post-meta">
@@ -305,8 +304,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-18T20:05:42+08:00">
-                2020-04-18
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-09-19T19:58:26+08:00">
+                2020-09-19
               </time>
             
 
@@ -315,39 +314,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">題解</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -376,58 +342,161 @@
       
 
       
-        <h3 id="題目內容">題目內容</h3>
-<p>Q同學正在習程式， P老師出了以下的題目讓他練習。</p>
-<p>一群人在一起時經常會形成一個一個的小群體。假設有 N個人，編號由 0到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說0到 N-1每個數字 都恰好出現一次。</p>
-<p>這種好友的關係會形成一些小群體。例如 N=10，好友編號如下，</p>
-<table>
-<thead>
-<tr>
-<th>自己的編號</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>朋友的編號</td>
-<td>4</td>
-<td>7</td>
-<td>2</td>
-<td>9</td>
-<td>6</td>
-<td>0</td>
-<td>8</td>
-<td>1</td>
-<td>5</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p>0的好友是 4，4的好友是 6，6的好友是 8，8的好友是 5，5的好友是 0，所以 0、4、 6、8、和 5就形成了一個小群體。另外， 1的好友是7而且7的好友是1，所以1和7形成另一個小群體，同理3和9是一個小群體，而2的好友是自己，因此他的好友是自己，因此他自己是一個小群體。總而言之在這個例子裡有4個小群體：{0,4,6,8,5}、{1,7} 、{3,9} 、 {2} 。本題的問題是：輸入每個人好友編號，計算出總共有幾小群體。</p>
-<p>Q同學想了卻不知如何下手，和藹可親的P老師於是給了他以下的提示：如果你從任何一人x開始，追蹤他的好友，好友的好友，….，這樣一直下去，定會形成個圈回到 x，這就是一個小群體。如果我們追蹤的過程中把追蹤過的加以標記，很容易知道哪些人已經追蹤過，因此當一個小群體找到之後，我們再從任何還未蹤過的開始繼續找下一個小群體，直到所有人都追蹤完畢。</p>
-<p>Q同學聽完之後很順利的成了作業。</p>
-<p>在本題中，你的任務與Q同學一樣：給定群人的好友，請計算出小群體個數。</p>
-<h2 id="輸入說明">輸入說明</h2>
-<p>第一行是一個正整數N，說明團體中人數。</p>
-<p>第二行依序是 0的好友編號 、1的好友編號 、…… 、N-1的好友編號。共有N個數字，包含 0到 N-1的每個數字恰好出現一次，數字間會有一個空白隔開。</p>
-<h3 id="輸出說明">輸出說明</h3>
-<p>請輸出小群體的個數。不要有任何多餘的字或空白，並以換行字元結尾。</p>
-<h3 id="想法思路">想法思路</h3>
-<p>先從0開始跑<br>
-追蹤朋友的朋友並記錄<br>
-再依序追蹤朋友的朋友直到某人的朋友已經被追蹤過<br>
-則記為一個群體</p>
-<h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">50000</span>],c[<span class="number">50000</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[a]==<span class="literal">false</span>)&#123;</span><br><span class="line">        c[a]=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">int</span> after=f[a];</span><br><span class="line">        <span class="keyword">if</span>(c[after]==<span class="literal">false</span>)</span><br><span class="line">            dfs(after);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;f[i];</span><br><span class="line">            c[i]=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c[i]==<span class="literal">false</span>)&#123;</span><br><span class="line">                  ans++;</span><br><span class="line">                  c[i]=<span class="literal">true</span>;</span><br><span class="line">                  dfs(f[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1>Commands</h1>
+<h3 id="ls">ls</h3>
+<p>執行ls指令會列出當下目錄的所有檔案</p>
+<blockquote>
+<p>ls<br>
+也可以ls指定目錄 只要在ls後加上路徑<br>
+ls [DIR]<br>
+可選參數若填入-al 可列出所有檔案的詳細資訊<br>
+ls -al<br>
+星號為萬字元<br>
+{<br>
+使用者列表位於/etc/passwd<br>
+密碼存於/etc/shadow<br>
+}</p>
+</blockquote>
+<h3 id="chmod">chmod</h3>
+<p>chmod 可以更改檔案權限<br>
+權限分為擁有者、群組、所有人<br>
+這三個都各有rwx三個參數<br>
+可用二進制表示<br>
+rwx為7(111) r-x為5(101) rw-為6(110)</p>
+<blockquote>
+<p>chmod 777 file</p>
+</blockquote>
+<div class="note info no-icon"><p>更改資料夾 -R</p></div>
+<h3 id="sudo">sudo</h3>
+<p>以root權限執行<br>
+當你執行大部分的系統命令時出現沒有權限，可在指令前加入sudo解決</p>
+<div class="note info no-icon"><p>sudo su 可直接將自己變成root</p></div>
+<h3 id="wget">wget</h3>
+<blockquote>
+<p>wget [網址] [參數]<br>
+參數常用為-O [檔案名稱] 可將下載下來的檔案直接命名</p>
+</blockquote>
+<h3 id="file">file</h3>
+<blockquote>
+<p>file [FILE]<br>
+取的檔案型態<br>
+ELF為可執行檔<br>
+ASCII txt為文字檔可直接cat<br>
+gzip壓縮 可用tar解壓</p>
+</blockquote>
+<h3 id="cat">cat</h3>
+<p>將檔案內的內容吐出來</p>
+<blockquote>
+<p>cat [FILE]</p>
+</blockquote>
+<h4 id="輸出型態">輸出型態</h4>
+<p>輸出分為 STDIN(0) STDOUT (1) STDERR(2)<br>
+有時候會有用STDERR偽裝STDOUT<br>
+需要過濾</p>
+<h3 id="apt">apt</h3>
+<p>安裝程式</p>
+<h3 id="tree">tree</h3>
+<p>美化版ls</p>
+<div class="note info no-icon"><p>-L 可指定最深幾層</p></div>
+<blockquote>
+<p>tree -L 2</p>
+</blockquote>
+<h3 id="cd">cd</h3>
+<p>移動目錄</p>
+<div class="note info no-icon"><p>/為根目錄<br>
+~預設為home<br>
+.為當前目錄<br>
+…為上一層</p></div>
+<h3 id="tar">tar</h3>
+<p>壓縮打包與解壓<br>
+參數<br>
+z為用gzip操作;x為解壓縮;c為壓縮;v詳細資料;f指定檔名<br>
+解壓範例</p>
+<blockquote>
+<p>tar zxvf [FILE]</p>
+</blockquote>
+<h3 id="grep">grep</h3>
+<blockquote>
+<p>grep KEYWORD [FILE]<br>
+搜尋關鍵字</p>
+</blockquote>
+<h4 id="管道符號與重導向符號">管道符號與重導向符號</h4>
+<blockquote>
+<p>command1 | command2<br>
+把command1的<strong>STDOUT</strong>當成command2的<strong>STDIN</strong>執行<br>
+command1 &gt; file<br>
+將command1的STDOUT<strong>寫入</strong>file<br>
+command1 &gt;&gt;file<br>
+將command1的STDOUT寫入到file的<strong>後方</strong></p>
+</blockquote>
+<h3 id="touch">touch</h3>
+<blockquote>
+<p>touch [檔名]<br>
+建立新檔案</p>
+</blockquote>
+<h3 id="mkdir">mkdir</h3>
+<blockquote>
+<p>mkdir [資料夾名稱]<br>
+建立新資料夾</p>
+</blockquote>
+<h3 id="mv">mv</h3>
+<p>移動檔案</p>
+<blockquote>
+<p>mv [FILE] [DIR]</p>
+</blockquote>
+<h3 id="cp">cp</h3>
+<p>複製檔案到路徑</p>
+<blockquote>
+<p>cp [FILE] [DIR]</p>
+</blockquote>
+<h3 id="rm">rm</h3>
+<p>刪除</p>
+<blockquote>
+<p>rm [FILE]</p>
+</blockquote>
+<h3 id="strings">strings</h3>
+<p>吐出檔案內所有可視字元</p>
+<blockquote>
+<p>strings [FILE]</p>
+</blockquote>
+<h3 id="md5sum">md5sum</h3>
+<p>計算md5值</p>
+<blockquote>
+<p>md5sum [FILE]</p>
+</blockquote>
+<h3 id="base64">base64</h3>
+<p>使用base64做編碼解碼<br>
+預設為編碼 解碼只要加上-d的參數</p>
+<blockquote>
+<p>base64 -d [FILE]</p>
+</blockquote>
+<h3 id="ssh">ssh</h3>
+<p>遠端連線電腦</p>
+<blockquote>
+<p>ssh user@ip</p>
+</blockquote>
+<div class="note info no-icon"><p>若要指定port<br>
+加上-p [PORT] 參數</p></div>
+<h3 id="find">find</h3>
+<p>在指定目錄尋找檔案名稱</p>
+<blockquote>
+<p>find [PATH] -name [FILENAME]</p>
+</blockquote>
+<h3 id="service">service</h3>
+<p>對特定服務進行操作</p>
+<blockquote>
+<p>service [NAME] [start|stop|status|restart]</p>
+</blockquote>
+<h3 id="ps-aux">ps -aux</h3>
+<p>查看所有服務</p>
+<h3 id="curl">curl</h3>
+<p>模擬人為操作瀏覽網站</p>
+<blockquote>
+<p>curl [host/ip]</p>
+</blockquote>
+<h1>Vim</h1>
+<p>分成normal insert模式</p>
+
       
     </div>
     
@@ -444,13 +513,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/graph/" rel="tag"># graph</a>
+            <a href="/tags/SCIST/" rel="tag"># SCIST</a>
           
-            <a href="/tags/cpp/" rel="tag"># cpp</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
-            <a href="/tags/dfs/" rel="tag"># dfs</a>
-          
-            <a href="/tags/apcs/" rel="tag"># apcs</a>
+            <a href="/tags/CTF/" rel="tag"># CTF</a>
           
         </div>
       
@@ -463,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/12/ZJ/d038zerojudge/" rel="next" title="d038. 00900 - Brick Wall Patterns">
-                <i class="fa fa-chevron-left"></i> d038. 00900 - Brick Wall Patterns
+              <a href="/2020/09/05/PID-arduinoAuto/" rel="next" title="PID-arduinoAuto">
+                <i class="fa fa-chevron-left"></i> PID-arduinoAuto
               </a>
             
           </div>
@@ -472,10 +539,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/19/foldingathome/" rel="prev" title="參與Folding@Home為研究武漢肺炎貢獻算力吧!">
-                參與Folding@Home為研究武漢肺炎貢獻算力吧! <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -607,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目內容"><span class="nav-number">1.</span> <span class="nav-text">題目內容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#輸入說明"><span class="nav-number"></span> <span class="nav-text">輸入說明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#輸出說明"><span class="nav-number">1.</span> <span class="nav-text">輸出說明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#想法思路"><span class="nav-number">2.</span> <span class="nav-text">想法思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程式碼"><span class="nav-number">3.</span> <span class="nav-text">程式碼</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">1.0.1.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">1.0.2.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sudo"><span class="nav-number">1.0.3.</span> <span class="nav-text">sudo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wget"><span class="nav-number">1.0.4.</span> <span class="nav-text">wget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#file"><span class="nav-number">1.0.5.</span> <span class="nav-text">file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat"><span class="nav-number">1.0.6.</span> <span class="nav-text">cat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#輸出型態"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">輸出型態</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apt"><span class="nav-number">1.0.7.</span> <span class="nav-text">apt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tree"><span class="nav-number">1.0.8.</span> <span class="nav-text">tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">1.0.9.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tar"><span class="nav-number">1.0.10.</span> <span class="nav-text">tar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">1.0.11.</span> <span class="nav-text">grep</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管道符號與重導向符號"><span class="nav-number">1.0.11.1.</span> <span class="nav-text">管道符號與重導向符號</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch"><span class="nav-number">1.0.12.</span> <span class="nav-text">touch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">1.0.13.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">1.0.14.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp"><span class="nav-number">1.0.15.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">1.0.16.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#strings"><span class="nav-number">1.0.17.</span> <span class="nav-text">strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#md5sum"><span class="nav-number">1.0.18.</span> <span class="nav-text">md5sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base64"><span class="nav-number">1.0.19.</span> <span class="nav-text">base64</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh"><span class="nav-number">1.0.20.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">1.0.21.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">1.0.22.</span> <span class="nav-text">service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps-aux"><span class="nav-number">1.0.23.</span> <span class="nav-text">ps -aux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#curl"><span class="nav-number">1.0.24.</span> <span class="nav-text">curl</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">Vim</span></a></li></ol></div>
             
 
           </div>
