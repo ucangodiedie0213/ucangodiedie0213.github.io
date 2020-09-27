@@ -1,2100 +1,1288 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-tw">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="utf-8" name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Chao&#39;s Note</title>
+  
+  <!-- JQuery -->
+  
+<script src="/lib/jquery.min.js"></script>
 
+  <!-- Font Awesome -->
+  
+<script src="/lib/fontawesome/all.min.js"></script>
 
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Title & Icon -->
+  
+  <link rel="icon" href="/img/favicon.ico">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chao&#39;s Note">
-<meta property="og:url" content="https://cyshchaonote.ga/index.html">
-<meta property="og:site_name" content="Chao&#39;s Note">
-<meta property="og:locale" content="zh_TW">
-<meta property="article:author" content="ChaoYi Lin">
-<meta name="twitter:card" content="summary">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://cyshchaonote.ga/"/>
-
-
-
-
-
-  <title>Chao's Note</title>
+  <!-- MyStyle -->
   
+<link rel="stylesheet" href="/css/style.css">
 
+  <!-- LayoutBehavior -->
+  
+<script src="/js/layoutBehavior.js"></script>
 
-
-
-
-
-
+  <!-- PostBehavior -->
+  
+<script src="/js/postBehavior.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
-
+<body id="layout" style="background-image: url(/img/thumb-1920-819294.png);">
   
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Chao's Note</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <nav id="navbar" class="banner-style">
+  <div class="navbar-list wrapper">
+    <div class="nav-item-avatar">
+      <img src="/img/gitcat.png" alt="avatar" onmousedown="return false;">
     </div>
+    <div class="nav-item-links-left">
       
-        <p class="site-subtitle"></p>
+<ul class="links">
+  
+  <li class="item">
+    
+    <a class="item-link" href="/">
+      首頁
+    </a>
+    
+  </li>
+  
+  <li class="item">
+    
+    <a class="item-link" href="/archives">
+      歸檔
+    </a>
+    
+  </li>
+  
+</ul>
+    </div>
+    <div class="nav-item-links-right">
       
+<ul class="links">
+  
+  <li class="item">
+    
+    <a href="https://zerojudge.tw/UserStatistic?id=47443" target="_blank" rel="noopener" title="ZeroJudge">
+      <i class="item-link fas fa-code"></i>
+    </a>
+    
+  </li>
+  
+  <li class="item">
+    
+    <a href="https://github.com/ucangodiedie0213" target="_blank" rel="noopener" title="Github">
+      <i class="item-link fab fa-github"></i>
+    </a>
+    
+  </li>
+  
+</ul>
+    </div>
   </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            關於
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            標籤
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分類
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
-            
-            友情連結
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/09/19/scist01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/19/scist01/" itemprop="url">學習Linux開啟CTF的第一章吧!-SCIST資安D1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-09-19T19:58:26+08:00">
-                2020-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Commands
-ls
-執行ls指令會列出當下目錄的所有檔案
-
-ls
-也可以ls指定目錄 只要在ls後加上路徑
-ls [DIR]
-可選參數若填入-al 可列出所有檔案的詳細資訊
-ls -al
-星號為萬字元
-{
-使用者列表位於/etc/passwd
-密碼存於/etc/shadow
-}
-
-chmod
-c
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/09/19/scist01/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+  <div id="messageField">
+    <p>Test Message</p>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/09/05/PID-arduinoAuto/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/05/PID-arduinoAuto/" itemprop="url">PID-arduinoAuto</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-09-05T10:06:47+08:00">
-                2020-09-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          https://www.facebook.com/notes/蘇奕昕/演算法-pid自動控制-arduino實作/1157343571048056/
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/09/05/PID-arduinoAuto/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/08/20/alogrithm/DP/LCS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/20/alogrithm/DP/LCS/" itemprop="url">最長共同子序列-LongestCommonSubsequence</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-08-20T16:31:42+08:00">
-                2020-08-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          LCS
-
-s1 = 2 5 7 9 3 1 2
-s2 = 3 5 3 2 8
-LCS(s1,s2) = 5 3 2
-
-LCS可能有很多個
-
-s1: a b c d b c e e a
-s2: c a b d e f g a
-s3: d c e a
-LCS(s1, s2, s3) =  {c e a,
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/08/20/alogrithm/DP/LCS/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/08/15/alogrithm/Graph/TopologicalSort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/15/alogrithm/Graph/TopologicalSort/" itemprop="url">TopologicalSort 拓樸排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-08-15T06:16:37+08:00">
-                2020-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Alogrithm/" itemprop="url" rel="index">
-                    <span itemprop="name">Alogrithm</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          拓樸排序
-定義(待補)
-用法
-在操作有前後順序的圖
-可以使用拓樸排序
-作法
-用deg存每個點的出度
-每次都將出度為0的點輸出
-再把他的子節點出度都-1
-以下範例代碼為Zerojudge a552
-1234567891011121314151617181920212223242526272829303
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/08/15/alogrithm/Graph/TopologicalSort/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/06/13/Python/python-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/13/Python/python-1/" itemprop="url">Python教學-基礎語法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-13T23:21:15+08:00">
-                2020-06-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index">
-                    <span itemprop="name">語言學習</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          常見錯誤及需要注意的
-
-一定要給我排版!絕對
-如果可以盡量宣告時直接指定型態
-該空格要空格 該縮排就縮排
-盡量避免掉語法錯誤
-
-基礎中的基礎
-輸出
-print(‘我是被輸出的’)
-1print('HelloWorld')
-變數
-常見的變數型態有 int(整數),float(浮點數),str(字串),
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/13/Python/python-1/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/05/21/Golang-0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/21/Golang-0/" itemprop="url">C語言的後裔 -Go語言 Golang</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-05-21T19:29:00+08:00">
-                2020-05-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index">
-                    <span itemprop="name">語言學習</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/" itemprop="url" rel="index">
-                    <span itemprop="name">Golang</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Introduction
-Go語言 稱為Go language，又稱Golang。
-Golang 由 Google開發的一個靜態編譯程式語言，並且由Google負責維護。
-編譯器
-目前Golang有兩個分之，分別為gc和gccgo，一開始使用C寫成，候用Golang重寫實現自舉。
-What Gola
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/21/Golang-0/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/05/05/ZJ/a129zerojudge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/05/ZJ/a129zerojudge/" itemprop="url">a129.最小生成樹</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-05-05T19:50:58+08:00">
-                2020-05-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">題解</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          內容
-給你一個加權的無向圖(weighted undirected graph)，請問這個圖的最小生成樹(minimum spanning tree)的權重和為多少？
-輸入說明
-輸入可能包含多筆測試資料，以EOF作為結束。
-每筆測試資料的第一列有兩個整數n,m(1&lt;=n&lt;=100,000
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/05/ZJ/a129zerojudge/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/25/alogrithm/Graph/floydwashll/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/25/alogrithm/Graph/floydwashll/" itemprop="url">Floyd-Washall 佛洛伊德演算法 最短路徑</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-25T09:24:59+08:00">
-                2020-04-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Alogrithm/" itemprop="url" rel="index">
-                    <span itemprop="name">Alogrithm</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Flody-Washall演算法 是一個求最短路徑的一種演算法
-它能處理正權、負權的圖，但不能處理負權迴圈的圖。
-作法
-Flody-Washall 就是找到任意兩個點間的最短路徑，
-首先會先將圖使用相鄰矩陣方式存起來
-再去求每個點各個路徑長度
-
-影片取自洪Âng春男Chhun-Lâm
-實現關鍵片段程
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/25/alogrithm/Graph/floydwashll/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/19/foldingathome/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/19/foldingathome/" itemprop="url">參與Folding@Home為研究武漢肺炎貢獻算力吧!</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-19T19:01:21+08:00">
-                2020-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/" itemprop="url" rel="index">
-                    <span itemprop="name">資訊新知</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          介紹
-Folding@home (簡稱FAH or F@H) 是一個由史丹佛大學化學系的潘德實驗室主辦。
-從2000年啟動，至此Folding@home已經成為世界上最大的分散式計算計畫，2007年被金氏世界紀錄承認。
-Folding@home主要在做蛋白質分子動力模擬、蛋白質摺疊的過程，更多的是生
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/19/foldingathome/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/18/ZJ/c291-zerojudge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/18/ZJ/c291-zerojudge/" itemprop="url">c291.APCS 2017-0304-2小群體</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-18T20:05:42+08:00">
-                2020-04-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">題解</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          題目內容
-Q同學正在習程式， P老師出了以下的題目讓他練習。
-一群人在一起時經常會形成一個一個的小群體。假設有 N個人，編號由 0到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說0到 N-1每個數字 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/18/ZJ/c291-zerojudge/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一頁</a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  <header id="header">
+  <img class="banner-img" src="/img/banner.jpg" onmousedown="return false" alt="headerImage">
+  <div class="banner-inner">
+    <div class="banner-title">
+    Chao&#39;s Note
     </div>
   </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
+</header>
+  <div class="wrapper main-body">
+    <main id="main">
       
-
+<article id="學習Linux開啟CTF的第一章吧!-SCIST資安D1" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
       
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">ChaoYi Lin</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            學習Linux開啟CTF的第一章吧!-SCIST資安D1
           </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives%7C%7Carchive">
-              
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">文章</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">分類</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
-                  <span class="site-state-item-name">標籤</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
       
-
+      <a class="title-link" href="/2020/09/19/scist01/">
+        <h1 class="title-text" title="學習Linux開啟CTF的第一章吧!-SCIST資安D1">學習Linux開啟CTF的第一章吧!-SCIST資安D1</h1>
+      </a>
       
-      
-        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-        <div class="widget-wrap">
-            <h3 class="widget-title">Tag Cloud</h3>
-            <div id="myCanvasContainer" class="widget tagcloud">
-                <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCIST/" rel="tag">SCIST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Share/" rel="tag">Share</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a><span class="tag-list-count">1</span></li></ul>
-                </canvas>
-            </div>
-        </div>
-      
-
-
-    </div>
-  </aside>
-
-
+      <div class="separator"></div>
+      <div class="info">
         
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCIST/" rel="tag">SCIST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Share/" rel="tag">Share</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-09-19
+        </time>
       </div>
+    </header>
+    
+    <div class="content  toc-article">
+      <h1>Commands</h1>
+<h3 id="ls">ls</h3>
+<p>執行ls指令會列出當下目錄的所有檔案</p>
+<blockquote>
+<p>ls<br>
+也可以ls指定目錄 只要在ls後加上路徑<br>
+ls [DIR]<br>
+可選參數若填入-al 可列出所有檔案的詳細資訊<br>
+ls -al<br>
+星號為萬字元<br>
+{<br>
+使用者列表位於/etc/passwd<br>
+密碼存於/etc/shadow<br>
+}</p>
+</blockquote>
+      <div class="hidden-content">
+        <h3 id="chmod">chmod</h3>
+<p>chmod 可以更改檔案權限<br>
+權限分為擁有者、群組、所有人<br>
+這三個都各有rwx三個參數<br>
+可用二進制表示<br>
+rwx為7(111) r-x為5(101) rw-為6(110)</p>
+<blockquote>
+<p>chmod 777 file</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>更改資料夾 -R</p>
+</blockquote>
+</blockquote>
+<h3 id="sudo">sudo</h3>
+<p>以root權限執行<br>
+當你執行大部分的系統命令時出現沒有權限，可在指令前加入sudo解決</p>
+<blockquote>
+<blockquote>
+<p>sudo su 可直接將自己變成root</p>
+</blockquote>
+</blockquote>
+<h3 id="wget">wget</h3>
+<blockquote>
+<p>wget [網址] [參數]<br>
+參數常用為-O [檔案名稱] 可將下載下來的檔案直接命名</p>
+</blockquote>
+<h3 id="file">file</h3>
+<blockquote>
+<p>file [FILE]<br>
+取的檔案型態<br>
+ELF為可執行檔<br>
+ASCII txt為文字檔可直接cat<br>
+gzip壓縮 可用tar解壓</p>
+</blockquote>
+<h3 id="cat">cat</h3>
+<p>將檔案內的內容吐出來</p>
+<blockquote>
+<p>cat [FILE]</p>
+</blockquote>
+<h4 id="輸出型態">輸出型態</h4>
+<p>輸出分為 STDIN(0) STDOUT (1) STDERR(2)<br>
+有時候會有用STDERR偽裝STDOUT<br>
+需要過濾</p>
+<h3 id="apt">apt</h3>
+<p>安裝程式</p>
+<h3 id="tree">tree</h3>
+<p>美化版ls</p>
+<pre><code>-L 可指定最深幾層
+</code></pre>
+<blockquote>
+<p>tree -L 2</p>
+</blockquote>
+<h3 id="cd">cd</h3>
+<p>移動目錄</p>
+<pre><code>/為根目錄
+~預設為home
+.為當前目錄
+..為上一層
+</code></pre>
+<h3 id="tar">tar</h3>
+<p>壓縮打包與解壓<br>
+參數<br>
+z為用gzip操作;x為解壓縮;c為壓縮;v詳細資料;f指定檔名<br>
+解壓範例</p>
+<blockquote>
+<p>tar zxvf [FILE]</p>
+</blockquote>
+<h3 id="grep">grep</h3>
+<blockquote>
+<p>grep KEYWORD [FILE]<br>
+搜尋關鍵字</p>
+</blockquote>
+<h4 id="管道符號與重導向符號">管道符號與重導向符號</h4>
+<blockquote>
+<p>command1 | command2<br>
+把command1的<strong>STDOUT</strong>當成command2的<strong>STDIN</strong>執行<br>
+command1 &gt; file<br>
+將command1的STDOUT<strong>寫入</strong>file<br>
+command1 &gt;&gt;file<br>
+將command1的STDOUT寫入到file的<strong>後方</strong></p>
+</blockquote>
+<h3 id="touch">touch</h3>
+<blockquote>
+<p>touch [檔名]<br>
+建立新檔案</p>
+</blockquote>
+<h3 id="mkdir">mkdir</h3>
+<blockquote>
+<p>mkdir [資料夾名稱]<br>
+建立新資料夾</p>
+</blockquote>
+<h3 id="mv">mv</h3>
+<p>移動檔案</p>
+<blockquote>
+<p>mv [FILE] [DIR]</p>
+</blockquote>
+<h3 id="cp">cp</h3>
+<p>複製檔案到路徑</p>
+<blockquote>
+<p>cp [FILE] [DIR]</p>
+</blockquote>
+<h3 id="rm">rm</h3>
+<p>刪除</p>
+<blockquote>
+<p>rm [FILE]</p>
+</blockquote>
+<h3 id="strings">strings</h3>
+<p>吐出檔案內所有可視字元</p>
+<blockquote>
+<p>strings [FILE]</p>
+</blockquote>
+<h3 id="md5sum">md5sum</h3>
+<p>計算md5值</p>
+<blockquote>
+<p>md5sum [FILE]</p>
+</blockquote>
+<h3 id="base64">base64</h3>
+<p>使用base64做編碼解碼<br>
+預設為編碼 解碼只要加上-d的參數</p>
+<blockquote>
+<p>base64 -d [FILE]</p>
+</blockquote>
+<h3 id="ssh">ssh</h3>
+<p>遠端連線電腦</p>
+<blockquote>
+<p>ssh user@ip</p>
+</blockquote>
+<pre><code>若要指定port
+加上-p [PORT] 參數
+</code></pre>
+<h3 id="find">find</h3>
+<p>在指定目錄尋找檔案名稱</p>
+<blockquote>
+<p>find [PATH] -name [FILENAME]</p>
+</blockquote>
+<h3 id="service">service</h3>
+<p>對特定服務進行操作</p>
+<blockquote>
+<p>service [NAME] [start|stop|status|restart]</p>
+</blockquote>
+<h3 id="ps-aux">ps -aux</h3>
+<p>查看所有服務</p>
+<h3 id="curl">curl</h3>
+<p>模擬人為操作瀏覽網站</p>
+<blockquote>
+<p>curl [host/ip]</p>
+</blockquote>
+<h1>Vim</h1>
+<p>分成normal insert模式</p>
+      </div>
+    </div>
+    <div class="more">
+      <a class="more-button" onclick="readMore()">閱讀更多</a>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="PID-arduinoAuto" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            PID-arduinoAuto
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/09/05/PID-arduinoAuto/">
+        <h1 class="title-text" title="PID-arduinoAuto">PID-arduinoAuto</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-09-05
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <p><a href="https://www.facebook.com/notes/%E8%98%87%E5%A5%95%E6%98%95/%E6%BC%94%E7%AE%97%E6%B3%95-pid%E8%87%AA%E5%8B%95%E6%8E%A7%E5%88%B6-arduino%E5%AF%A6%E4%BD%9C/1157343571048056/" target="_blank" rel="noopener">https://www.facebook.com/notes/蘇奕昕/演算法-pid自動控制-arduino實作/1157343571048056/</a></p>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="最長共同子序列-LongestCommonSubsequence" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            最長共同子序列-LongestCommonSubsequence
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/08/20/alogrithm/DP/LCS/">
+        <h1 class="title-text" title="最長共同子序列-LongestCommonSubsequence">最長共同子序列-LongestCommonSubsequence</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-08-20
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h1>LCS</h1>
+<blockquote>
+<p>s1 = 2 5 7 9 3 1 2<br>
+s2 = 3 5 3 2 8<br>
+LCS(s1,s2) = 5 3 2</p>
+</blockquote>
+<p><strong>LCS可能有很多個</strong></p>
+<blockquote>
+<p>s1: a b c d b c e e a<br>
+s2: c a b d e f g a<br>
+s3: d c e a<br>
+LCS(s1, s2, s3) =  {c e a, d e a}</p>
+</blockquote>
+<h1>想法</h1>
+<p>DP的精隨就是要找到子問題<br>
+所以我們要把題目變簡單<br>
+把序列拆成最後一項跟剩下的</p>
+<blockquote>
+<p>s1 = sub1+e1<br>
+s2 = sub2+e2</p>
+</blockquote>
+<p><strong>這時候的LCS就有四種情況</strong></p>
+<ul>
+<li>包含e1 不含 e2</li>
+<li>不含e1 包含e2</li>
+<li>不含e1 不含e2</li>
+<li>包含e1 包含e2</li>
+</ul>
+<h4 id="再來我們來討論LCS會在哪裡">再來我們來討論LCS會在哪裡</h4>
+<p>1.e2沒用 所以LCS會在sub2裡面 故 LCS(s1,s2)=LCS(s1,sub2)<br>
+2.同上 LCS(s1,s2)=LCS(sub1,s2)<br>
+3.兩者皆沒用 所以LCS在sub1,sub2裡面 LCS(s1,s2)=LCS(sub1,sub2)<br>
+4.同時包含故LCS最後一個元素必定是e1(e1==e2) 故 LCS(s1,s2)=LCS(sub1,sub2)+e1</p>
+<h4 id="整理公式並簡化">整理公式並簡化</h4>
+<blockquote>
+<p>LCS(s1,s2)=<br>
+{ if(e1!=e2)  max( LCS(sub1,s2),LCS(s1,sub2) )}<br>
+{ if(e1==e2) LCS(sub1,sub2)+e1}</p>
+</blockquote>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="TopologicalSort 拓樸排序" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/Alogrithm/" title="Alogrithm (2)">
+          <div class="meta-list-link-text">
+            Alogrithm
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            TopologicalSort 拓樸排序
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/08/15/alogrithm/Graph/TopologicalSort/">
+        <h1 class="title-text" title="TopologicalSort 拓樸排序">TopologicalSort 拓樸排序</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-08-15
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="拓樸排序">拓樸排序</h3>
+<h2 id="定義-待補">定義(待補)</h2>
+<h2 id="用法">用法</h2>
+<p>在操作有前後順序的圖<br>
+可以使用拓樸排序</p>
+<h2 id="作法">作法</h2>
+<p>用deg存每個點的出度<br>
+每次都將出度為0的點輸出<br>
+再把他的子節點出度都-1</p>
+<p><strong>以下範例代碼為Zerojudge a552</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v[<span class="number">101</span>];</span><br><span class="line">        <span class="keyword">int</span> deg[<span class="number">101</span>];</span><br><span class="line">        priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">        <span class="built_in">memset</span>(deg,<span class="number">0</span>,<span class="keyword">sizeof</span>(deg));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            deg[b]++;</span><br><span class="line">            v[a].push_back(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!deg[i])s.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">while</span>(s.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="keyword">int</span> now=s.top();</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;now&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">            s.pop();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;v[now].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">                deg[v[now][i]]--;</span><br><span class="line">                <span class="keyword">if</span>(!deg[v[now][i]])s.push(v[now][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="Python教學-基礎語法" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/" title="語言學習 (2)">
+          <div class="meta-list-link-text">
+            語言學習
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/" title="Python (1)">
+          <div class="meta-list-link-text">
+            Python
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            Python教學-基礎語法
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/06/13/Python/python-1/">
+        <h1 class="title-text" title="Python教學-基礎語法">Python教學-基礎語法</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-06-13
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h1>常見錯誤及需要注意的</h1>
+<ul>
+<li>一定要給我排版!絕對</li>
+<li>如果可以盡量宣告時直接指定型態</li>
+<li>該空格要空格 該縮排就縮排</li>
+<li>盡量避免掉語法錯誤</li>
+</ul>
+<h1>基礎中的基礎</h1>
+<h3 id="輸出">輸出</h3>
+<p>print(‘我是被輸出的’)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'HelloWorld'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="變數">變數</h2>
+<p>常見的變數型態有 <strong>int(整數),float(浮點數),str(字串),bool(布林值)</strong></p>
+<ul>
+<li>變數宣告時不須指定型態</li>
+<li>使用指定運算子( = ) 來為變數指定初始值</li>
+<li>使用 <strong>type</strong>可以得知此變數的變數型態</li>
+<li>不須設定初始值請用 <strong>None</strong></li>
+<li>單行註解使用 <strong>#被註解的文字</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">16</span> </span><br><span class="line">name = <span class="string">'Chen'</span></span><br><span class="line">score = <span class="number">99.7</span></span><br><span class="line">pa = <span class="literal">False</span></span><br><span class="line">ans = <span class="literal">None</span></span><br><span class="line">print(<span class="string">'學生名稱'</span>,name)</span><br><span class="line">print(<span class="string">'年齡'</span>,age)</span><br><span class="line">print(<span class="string">'分數'</span>,score)</span><br><span class="line">print(<span class="string">'會被當嗎'</span>,pa)</span><br></pre></td></tr></table></figure>
+<h3 id="輸入">輸入</h3>
+<p>變數 = input(‘提示字元’)</p>
+<h2 id="算術運算子">算術運算子</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">運算子</th>
+<th style="text-align:center">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">x+y</td>
+<td style="text-align:center">相加</td>
+</tr>
+<tr>
+<td style="text-align:center">x-y</td>
+<td style="text-align:center">相減</td>
+</tr>
+<tr>
+<td style="text-align:center">x*y</td>
+<td style="text-align:center">相乘</td>
+</tr>
+<tr>
+<td style="text-align:center">x/y</td>
+<td style="text-align:center">x除y</td>
+</tr>
+<tr>
+<td style="text-align:center">x//y</td>
+<td style="text-align:center">x除y 求整數</td>
+</tr>
+<tr>
+<td style="text-align:center">x%y</td>
+<td style="text-align:center">取x除y的餘數</td>
+</tr>
+<tr>
+<td style="text-align:center">x**y</td>
+<td style="text-align:center">x的y次</td>
+</tr>
+</tbody>
+</table>
+<h2 id="其他語法">其他語法</h2>
+<p><strong>\n</strong>換行<br>
+一次輸出多個變數 <strong>%</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Code</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">%%</td>
+<td style="text-align:center">輸出%</td>
+</tr>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">10進位整數</td>
+</tr>
+<tr>
+<td style="text-align:center">%f</td>
+<td style="text-align:center">十進位浮點術</td>
+</tr>
+<tr>
+<td style="text-align:center">%c</td>
+<td style="text-align:center">字元輸出</td>
+</tr>
+</tbody>
+</table>
+<p>(其實還有更多)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">chinese =int( input(<span class="string">'國文分數:'</span>))</span><br><span class="line">english = int(input(<span class="string">'英文分數:'</span>))</span><br><span class="line">math = int(input(<span class="string">'數學分數:'</span>))</span><br><span class="line">science = int(input(<span class="string">'自然分數:'</span>))</span><br><span class="line">society = int(input(<span class="string">'社會分數:'</span>))</span><br><span class="line">avg = float((chinese + english + math + science + society )/<span class="number">5</span>)</span><br><span class="line">print(<span class="string">'你的分數分別是'</span>)</span><br><span class="line">print(<span class="string">'國文:%d\n英文:%d\n數學:%d\n自然:%d\n社會:%d\n'</span> %(chinese,english,math,science,society))</span><br><span class="line">print(<span class="string">'平均:%f'</span> %(avg))</span><br></pre></td></tr></table></figure>
+<h1>條件判斷</h1>
+<p><strong>使用if elif else</strong></p>
+<ul>
+<li>條件不必使用括號</li>
+<li>條件完必須要加<strong>分號</strong></li>
+<li>一樣!絕對要排版!不要忘記TAB和空格</li>
+<li>變數型態轉換 後來(原本)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">name = input(<span class="string">'請輸入您的名字'</span>)</span><br><span class="line">score = int(input(<span class="string">'請輸入您的分數'</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    print(name,<span class="string">'是學霸!好電Orz'</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;=<span class="number">60</span>:</span><br><span class="line">    print(<span class="string">'還可以接受啦'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(name,<span class="string">'!你給我去讀書!'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="邏輯運算子">邏輯運算子</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">運算子</th>
+<th style="text-align:center">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">x == y</td>
+<td style="text-align:center">是否等於Y</td>
+</tr>
+<tr>
+<td style="text-align:center">x != y</td>
+<td style="text-align:center">是否不等於Y</td>
+</tr>
+</tbody>
+</table>
+<h3 id="布林運算子">布林運算子</h3>
+<p>A 為條件A<br>
+B 為條件B</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">運算子</th>
+<th style="text-align:center">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A and B</td>
+<td style="text-align:center">是否A B皆成立</td>
+</tr>
+<tr>
+<td style="text-align:center">A or B</td>
+<td style="text-align:center">A或B其中一個成立</td>
+</tr>
+<tr>
+<td style="text-align:center">not A</td>
+<td style="text-align:center">回傳A的相反</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">score = int(input(<span class="string">'請輸入您的分數'</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt;= <span class="number">90</span> :</span><br><span class="line">    print(<span class="string">'你只有'</span>,score,<span class="string">'是個普通人'</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> score &gt;= <span class="number">60</span> :</span><br><span class="line">    print(<span class="string">'一樣給我去念書!!'</span>)</span><br></pre></td></tr></table></figure>
+<h1>陣列</h1>
+<ul>
+<li>Range,Tuple 不可修改</li>
+<li>可存不同資料</li>
+<li>使用[index]讀取資料</li>
+</ul>
+<h3 id="Range">Range</h3>
+<p><strong>不可修改</strong><br>
+Range(stop)<br>
+Range(start, stop)<br>
+Range(start, stop, step)</p>
+<ul>
+<li>若沒有給起始值，將預設為0</li>
+<li>若沒有給間隔，將預設為1</li>
+<li>遇到停止點後就會終止，因此Range中的數字將<strong>不會包含停止點</strong></li>
+</ul>
+<h3 id="Tuple">Tuple</h3>
+<p><strong>不可修改</strong></p>
+<h3 id="List">List</h3>
+<p>即為array</p>
+<ul>
+<li>需使用[]</li>
+<li>陣列內的元素也可以是陣列(類似數學上的集合)</li>
+<li>使用 **[start:stop:step]**來取出資料，-1表示最後一個</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">number = range (<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>) <span class="comment">#range</span></span><br><span class="line">name = <span class="string">'John'</span>,<span class="string">'Chris'</span>,<span class="string">'Amber'</span>,<span class="string">'Bob'</span>,<span class="string">'Emma'</span> <span class="comment">#tuple</span></span><br><span class="line">score = [ <span class="number">50</span>,<span class="number">70</span>,<span class="number">98</span>,<span class="number">78</span>,<span class="number">4</span>] <span class="comment">#list</span></span><br><span class="line">score[<span class="number">0</span>] = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">print(<span class="string">'座號:'</span>,number[<span class="number">0</span>],number[<span class="number">1</span>],number[<span class="number">2</span>],number[<span class="number">3</span>])</span><br><span class="line">print(<span class="string">'姓名:'</span>,name[<span class="number">0</span>],name[<span class="number">1</span>],name[<span class="number">2</span>],name[<span class="number">3</span>])</span><br><span class="line">print(<span class="string">'分數:'</span>,score[<span class="number">0</span>],score[<span class="number">1</span>],score[<span class="number">2</span>],score[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'hello world'</span></span><br><span class="line">arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">arr2 = arr1[<span class="number">0</span>:<span class="number">5</span>]</span><br><span class="line">arr3 = arr1[<span class="number">0</span>:<span class="number">-1</span>:<span class="number">2</span>]</span><br><span class="line">arr4 = arr1[:]</span><br><span class="line">print(arr2)</span><br><span class="line">print(arr3)</span><br><span class="line">print(arr4)</span><br><span class="line">print(str1[<span class="number">5</span>:])</span><br><span class="line">print(arr1[:<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<h1>重複結構</h1>
+<h3 id="for">for</h3>
+<p>常跟range搭配使用<br>
+或者跟List搭配<br>
+有次數限定的</p>
+<blockquote>
+<p>for i in range()<br>
+for i in str<br>
+for i in arr</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">score = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">program = [<span class="string">'國文'</span>,<span class="string">'英文'</span>,<span class="string">'數學'</span>,<span class="string">'自然'</span>,<span class="string">'社會'</span>]</span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    x = int(input(program[i]))</span><br><span class="line">    score[i] = x</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">'%s成績為%d分'</span>%(program[i],score[i]))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    sum += score[i]</span><br><span class="line">print(<span class="string">'總分'</span>,sum)</span><br><span class="line">avg = sum/<span class="number">5</span></span><br><span class="line">print(<span class="string">'平均'</span>,avg)</span><br></pre></td></tr></table></figure>
+<p><em><strong>example</strong></em><br>
+<strong>印出10為底的三角形,如下</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">***********</span><br><span class="line"></span><br><span class="line"> *********</span><br><span class="line"></span><br><span class="line">  *******</span><br><span class="line"></span><br><span class="line">   *****</span><br><span class="line"></span><br><span class="line">    ***</span><br><span class="line"></span><br><span class="line">     *</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i):</span><br><span class="line">        print(<span class="string">' '</span>,end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">11</span>- <span class="number">2</span>*i):</span><br><span class="line">        print(<span class="string">'*'</span>,end=<span class="string">""</span>)</span><br><span class="line">    print(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="while">while</h3>
+<p><strong>有條件限定的</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 條件:</span><br><span class="line">    <span class="keyword">if</span> 條件:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">if</span> 條件:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num = int(input(<span class="string">'請輸入一個數'</span>))</span><br><span class="line"><span class="keyword">while</span> num != <span class="number">0</span>:</span><br><span class="line">    print(num % <span class="number">10</span>)</span><br><span class="line">    num //= <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<h1>字元、字串</h1>
+<p>字串其實也是序列的一種 也可以把它看成一種容器</p>
+<ul>
+<li>使用加號(A+B=AB)</li>
+<li>判斷是否相同記憶體使用is</li>
+<li>split 和 join</li>
+</ul>
+<blockquote>
+<p>split(‘分割符’,數量)<br>
+join可將一個陣列組合成一個字串</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">country = <span class="string">'Taiwan,USA,UK,Japan'</span></span><br><span class="line">list1 = country.split(<span class="string">','</span>,<span class="number">4</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(list1)):</span><br><span class="line">    print(list1[i])</span><br><span class="line">ans = <span class="string">'xx'</span>.join(list1)</span><br><span class="line"><span class="keyword">print</span> (ans)</span><br></pre></td></tr></table></figure>
+<h1>函式</h1>
+<p>在不同地方但需要使用同一段程式碼時<br>
+argument可以預設 若無輸入就會使用預設</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FunctionName</span><span class="params">(Argument)</span>:</span></span><br><span class="line">    程式碼</span><br><span class="line">    <span class="keyword">return</span> 回傳值</span><br></pre></td></tr></table></figure>
+<p><em><strong>最小公因數(GCD)</strong></em></p>
+<p><strong>輾轉相除法</strong><br>
+兩個整數的GCD是能夠同時整除它們的最大的正整數。</p>
+<blockquote>
+<p>原理：<br>
+兩個整數的GCD等於較小的數和,兩數的差的最大公因數</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> gcd(b,a%b)</span><br><span class="line">x = int(input(<span class="string">'請輸入x:'</span>))</span><br><span class="line">y = int(input(<span class="string">'請輸入y:'</span>))</span><br><span class="line">print(<span class="string">'x和y的GCD為'</span>,gcd(x,y))</span><br></pre></td></tr></table></figure>
+<h3 id="遞迴">遞迴</h3>
+<p>這只是基礎的遞迴<br>
+<em><strong>費氏數列</strong></em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> n &lt;=<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> f(n<span class="number">-1</span>)+f(n<span class="number">-2</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">11</span>):</span><br><span class="line">    print(f(i))</span><br></pre></td></tr></table></figure>
+<h1>其他常見操作</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">len(s)</td>
+<td style="text-align:center">s的長度</td>
+</tr>
+<tr>
+<td style="text-align:center">min(s)</td>
+<td style="text-align:center">s內的最小值</td>
+</tr>
+<tr>
+<td style="text-align:center">s.count(x)</td>
+<td style="text-align:center">x在s裡出現幾次</td>
+</tr>
+<tr>
+<td style="text-align:center">s.remove(x)</td>
+<td style="text-align:center">刪除在s裡第一個x</td>
+</tr>
+<tr>
+<td style="text-align:center">s.reverse()</td>
+<td style="text-align:center">反轉</td>
+</tr>
+<tr>
+<td style="text-align:center">s.insert(i,x)</td>
+<td style="text-align:center">在i的地方插入x</td>
+</tr>
+</tbody>
+</table>
+<h3 id="導入模組">導入模組</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"><span class="keyword">from</span> apthlib <span class="keyword">import</span> Path</span><br></pre></td></tr></table></figure>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="C語言的後裔 -Go語言 Golang" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/" title="語言學習 (2)">
+          <div class="meta-list-link-text">
+            語言學習
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/" title="Golang (1)">
+          <div class="meta-list-link-text">
+            Golang
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            C語言的後裔 -Go語言 Golang
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/05/21/Golang-0/">
+        <h1 class="title-text" title="C語言的後裔 -Go語言 Golang">C語言的後裔 -Go語言 Golang</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-05-21
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="Introduction">Introduction</h3>
+<p>Go語言 稱為Go language，又稱Golang。<br>
+Golang 由 Google開發的一個靜態編譯程式語言，並且由Google負責維護。<br>
+<em><strong>編譯器</strong></em><br>
+目前Golang有兩個分之，分別為gc和gccgo，一開始使用C寫成，候用Golang重寫實現自舉。</p>
+<h3 id="What-Golang-can-do">What Golang can do?</h3>
+<p>Golang的多方性能讓使用者有很大的空間發揮<br>
+1.Web相關開發<br>
+2.伺服器<br>
+3.雲計算<br>
+4.開發軟體<br>
+實例<br>
+1.Docker</p>
+<h3 id="Advantage">Advantage</h3>
+<p>Golang非常容易上手<br>
+Golang 有著C的效率，速度僅次於C家族與Java;<br>
+也有著Python的簡潔，拋開那醜醜的大括號與分號。</p>
+<h3 id="Style">Style</h3>
+<p>每行程式結束後不需要撰寫分號（;）。<br>
+大括號（{）不能夠換行放置。<br>
+if判斷式和for迴圈不需要以小括號包覆起來。<br>
+使用 tab 做排版<br>
+並且，Golang是由Google維護與開發的，他是可靠的。</p>
+<h3 id="Futrue">Futrue</h3>
+<p>未來在Google開發的更完整，我也期待它變成一個Python的勁敵。</p>
+<h3 id="List">List</h3>
+<p><strong>以下我會慢慢發布做Golang的教學</strong></p>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="a129.最小生成樹" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
+          <div class="meta-list-link-text">
+            題解
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
+          <div class="meta-list-link-text">
+            zerojudge
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            a129.最小生成樹
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/05/05/ZJ/a129zerojudge/">
+        <h1 class="title-text" title="a129.最小生成樹">a129.最小生成樹</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-05-05
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="內容">內容</h3>
+<p>給你一個加權的無向圖(weighted undirected graph)，請問這個圖的最小生成樹(minimum spanning tree)的權重和為多少？</p>
+<h3 id="輸入說明">輸入說明</h3>
+<p>輸入可能包含多筆測試資料，以EOF作為結束。</p>
+<p>每筆測試資料的第一列有兩個整數n,m(1&lt;=n&lt;=100,000；0&lt;=m&lt;=200,000)，代表該圖的點數和邊數。<br>
+頂點的編號從0到n-1。<br>
+接下來有m列，每列用三個整數i,j,c(0&lt;=i,j&lt;n c為int可儲存的非負整數)描述一條邊，i,j為兩個端點的編號，c為其權重。</p>
+<h3 id="輸出說明">輸出說明</h3>
+<p>對於每筆測試資料，請輸出最小生成樹的權重和。如果圖不連通，請輸出-1。</p>
+<h3 id="解題思路">解題思路</h3>
+<p>本題的想法是使用最小生成樹和並查集完成的<br>
+father是用來記錄父節點的;num是在記錄樹的大小以便合併<br>
+將存有各邊數據的vcetor排序依照權重由小到大<br>
+for跑 找根 如果根不同 就將權重加入 並合併<br>
+還要順便確認邊的數量是否相同</p>
+<h3 id="程式碼">程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> father[<span class="number">100000</span>],num[<span class="number">100000</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line"><span class="keyword">int</span> start,<span class="built_in">stop</span>,length;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_father</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(father[s]!=s)&#123;</span><br><span class="line">        s=father[s];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">myCompare</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a.length&lt;b.length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;node&gt; <span class="title">v</span><span class="params">(m)</span></span>;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            father[i]=i;</span><br><span class="line">            num[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;v[i].start&gt;&gt;v[i].<span class="built_in">stop</span>&gt;&gt;v[i].length;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),myCompare);</span><br><span class="line">        <span class="keyword">int</span> edgesum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            a=find_father(v[i].start);</span><br><span class="line">            b=find_father(v[i].<span class="built_in">stop</span>);</span><br><span class="line">            <span class="keyword">if</span>(a!=b)&#123;</span><br><span class="line">                <span class="keyword">if</span>(num[a]&gt;num[b])&#123;</span><br><span class="line">                    father[b]=a;</span><br><span class="line">                    num[a]+=num[b];</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    father[a]=b;</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    num[b]+=num[a];</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(edgesum==n<span class="number">-1</span>)<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="Floyd-Washall 佛洛伊德演算法 最短路徑" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/Alogrithm/" title="Alogrithm (2)">
+          <div class="meta-list-link-text">
+            Alogrithm
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            Floyd-Washall 佛洛伊德演算法 最短路徑
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/04/25/alogrithm/Graph/floydwashll/">
+        <h1 class="title-text" title="Floyd-Washall 佛洛伊德演算法 最短路徑">Floyd-Washall 佛洛伊德演算法 最短路徑</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-25
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <p><strong>Flody-Washall</strong>演算法 是一個求最短路徑的一種演算法<br>
+它能處理正權、負權的圖，但不能處理負權迴圈的圖。</p>
+<h4 id="作法">作法</h4>
+<p><strong>Flody-Washall</strong> 就是找到任意兩個點間的最短路徑，<br>
+首先會先將圖使用相鄰矩陣方式存起來<br>
+再去求每個點各個路徑長度</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6wPIMMuPxUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+影片取自洪Âng春男Chhun-Lâm
+<h3 id="實現關鍵片段程式碼">實現關鍵片段程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(d[i][j] &gt; d[i][k]+d[k][j])</span><br><span class="line">                d[i][j] = d[i][k]+d[k][j];</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="注意">注意</h3>
+<p>並不是每個題目都是透過上述的判斷式決定<br>
+上面為求最短路徑</p>
+<h3 id="相關題目">相關題目</h3>
+<p><strong>[d282: 11015 - 05-2 Rendezvous](<a href="https://zerojudge.tw/ShowProblem?problemid=d282" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=d282</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+<strong><a href="https://zerojudge.tw/ShowProblem?problemid=c128" target="_blank" rel="noopener">c128: 00544 - Heavy Cargo</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+<strong><a href="https://zerojudge.tw/ShowProblem?problemid=a874" target="_blank" rel="noopener">a874: 14. Trace Route</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+<strong><a href="https://zerojudge.tw/ShowProblem?problemid=a674" target="_blank" rel="noopener">a674: 10048 - Audiophobia</a></strong><br>
+●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
+題目擷取自<a href="https://hackmd.io/@cube/H1TjWAbOE" target="_blank" rel="noopener">APCS(大學程式設計先修檢測)程式實作</a></p>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="參與Folding@Home為研究武漢肺炎貢獻算力吧!" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/" title="資訊新知 (1)">
+          <div class="meta-list-link-text">
+            資訊新知
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            參與Folding@Home為研究武漢肺炎貢獻算力吧!
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/04/19/foldingathome/">
+        <h1 class="title-text" title="參與Folding@Home為研究武漢肺炎貢獻算力吧!">參與Folding@Home為研究武漢肺炎貢獻算力吧!</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-19
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="介紹">介紹</h3>
+<p><strong>Folding@home</strong> (簡稱FAH or F@H) 是一個由史丹佛大學化學系的潘德實驗室主辦。<br>
+從2000年啟動，至此Folding@home已經成為世界上最大的分散式計算計畫，2007年被金氏世界紀錄承認。<br>
+Folding@home主要在做蛋白質分子動力模擬、蛋白質摺疊的過程，更多的是生物醫療的研究，這項計畫研究過腦退化症、亨丁頓舞蹈症、癌症、成骨不全症、病毒、甚至最新的COVID-19 這項計畫都有參與研究的，</p>
+<h3 id="如何運作">如何運作</h3>
+<p>這項企畫他不需要超級電腦來運算，而是召集成千上萬人的電腦算力來運算。<br>
+下載客戶端，客戶端會利用電腦不忙碌時連上史丹佛大學的伺服器取得工作單元資料包，並進行計算，完成後再傳回伺服器。<br>
+因為這樣這項企劃也因此產出了223科學論文<br>
+更有許多研究蛋白質結構的論文參照了這個企劃的成果。</p>
+<h4 id="GPU">GPU</h4>
+<p>Folding@home發行測試軟體，改為徵招GPU算力，每個核顯算力為傳統CPU的70多倍。<br>
+更新後更支援DX介面並支援GPU多核。NVIDA的版本則利用NV顯卡的CUDA技術。</p>
+<h4 id="PS3">PS3</h4>
+<p>Sony加入此計畫更新了PlayStation3的韌體，當PS3閒置時就啟動運算程式為這個計畫提供算力。</p>
+<h3 id="COVID-19">COVID-19</h3>
+<p>2020年全球風行著一種冠狀病毒–<strong>武漢肺炎(COVID-19)</strong>，造成了全球大麻煩。<br>
+<img src=https://lh3.googleusercontent.com/Wc2az055cf5_yty9QgPi1vurDBnwchYpichzbGmPkTmneOK8t5maEZnKPxrzwE5okVoH0XLb8kFcN_l8YkFVEtta6Jfi0drVXzBiVXKiZoTD6o8KdlAMncpo0xvlzFMLX3JbRV8M style="zoom:30%" /><br>
+因為需要研究出蛋白質擺動、折疊、展開，各種形種，用來正好的了解病毒結構，以便研發抗體。<br>
+正當全球防疫之際，Folding@home 發布了新的軟體用來研究這個病毒並開始徵招算力。<br>
+NVIDA、Intel、MSI，也呼籲玩家使用顯卡為這項企畫提供算力，以此達成幫助世界的目標。<br>
+因為這樣許多玩家共襄盛舉紛紛為這項企華提供算力，Bowman粗估這股算力已經超過 1.5 exaflops，因為有超過35萬的GPU提供算力。<br>
+另外在世界前500算力的超級電腦有136台超級電腦採用NV的GPU並參與這項企畫。<br>
+在TOP500中的超級電腦已經貢獻了近四成的運算能力約626 petaflops。</p>
+<h5 id="資料來源">資料來源</h5>
+<p><a href="https://zh.wikipedia.org/wiki/Folding@home" target="_blank" rel="noopener">Folding@home 維基百科中文版</a><br>
+<a href="https://en.wikipedia.org/wiki/Folding@home" target="_blank" rel="noopener">Folding@home 維基百科英文版</a><br>
+<a href="https://foldingathome.org/2009/06/17/how-does-fah-code-development-and-sysadmin-get-done/" target="_blank" rel="noopener">HOW DOES FAH CODE DEVELOPMENT AND SYSADMIN GET DONE?</a><br>
+<a href="https://foldingathome.org/2007/09/30/how-fah-works-t/" target="_blank" rel="noopener">HOW FAH WORKS: THERMODYNAMIC ALCHEMY</a><br>
+<a href="https://foldingathome.org/2007/09/24/how-fah-works-f/" target="_blank" rel="noopener">HOW FAH WORKS: FOLDING ON STREAMING PROCESSORS (GPU’S AND PS3)</a><br>
+<a href="https://hackaday.com/2020/03/22/coronavirus-and-foldinghome-more-on-how-your-computer-helps-medical-research/" target="_blank" rel="noopener">CORONAVIRUS AND FOLDING@HOME; MORE ON HOW YOUR COMPUTER HELPS MEDICAL RESEARCH</a><br>
+<a href="https://www.ithome.com.tw/news/136400" target="_blank" rel="noopener">想替武漢肺炎解藥研發盡一己之力嗎？貢獻你的閒置運算能力給Folding@Home專案吧</a><br>
+<a href="https://www.reddit.com/r/pcmasterrace/comments/fhb5e4/coronavirus_specific_gpu_projects_are_now/" target="_blank" rel="noopener">Coronavirus specific GPU projects are now available at folding@home. CPU projects coming ASAP. Join us in fighting against Covid-19!</a><br>
+<a href="https://blogs.nvidia.com.tw/2020/04/foldingathome-exaflop-coronavirus/" target="_blank" rel="noopener">病毒大戰全面爆發：Folding@Home 獲得 1.5 Exaflops 的運算能力來對抗新型冠狀病毒</a><br>
+<a href="https://blogs.nvidia.com.tw/2019/11/record-gpu-accelerated-supercomputers-top500/" target="_blank" rel="noopener">在 TOP 500 排行榜上有 136 台超級電腦採用 NVIDIA GPU 加速技術，寫下全新紀錄</a><br>
+<a href="https://www.blocktempo.com/nvidia-calls-on-gpu-miners-to-combat-coronavirus/" target="_blank" rel="noopener">史丹佛「新冠病毒研究專案」徵閒置 GPU 算力！Nvidia Intel MSI 與礦工們紛紛響應</a><br>
+<a href="https://www.eettaiwan.com/20200331nt61-use-your-pc-to-study-the-coronavirus/" target="_blank" rel="noopener">研究新冠病毒 你也可以貢獻力量!</a><br>
+<a href="https://blogs.nvidia.com.tw/2020/03/new-breakthrough-in-coronavirus-research-uses-gpu-accelerated-software-to-support-treatment-design/" target="_blank" rel="noopener">GPU 加速軟體助力治療發展，幫助新冠病毒研究取得新突破</a></p>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="c291.APCS 2017-0304-2小群體" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
+          <div class="meta-list-link-text">
+            題解
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
+          <div class="meta-list-link-text">
+            zerojudge
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            c291.APCS 2017-0304-2小群體
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/04/18/ZJ/c291-zerojudge/">
+        <h1 class="title-text" title="c291.APCS 2017-0304-2小群體">c291.APCS 2017-0304-2小群體</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-18
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="題目內容">題目內容</h3>
+<p>Q同學正在習程式， P老師出了以下的題目讓他練習。</p>
+<p>一群人在一起時經常會形成一個一個的小群體。假設有 N個人，編號由 0到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說0到 N-1每個數字 都恰好出現一次。</p>
+<p>這種好友的關係會形成一些小群體。例如 N=10，好友編號如下，</p>
+<table>
+<thead>
+<tr>
+<th>自己的編號</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>朋友的編號</td>
+<td>4</td>
+<td>7</td>
+<td>2</td>
+<td>9</td>
+<td>6</td>
+<td>0</td>
+<td>8</td>
+<td>1</td>
+<td>5</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>0的好友是 4，4的好友是 6，6的好友是 8，8的好友是 5，5的好友是 0，所以 0、4、 6、8、和 5就形成了一個小群體。另外， 1的好友是7而且7的好友是1，所以1和7形成另一個小群體，同理3和9是一個小群體，而2的好友是自己，因此他的好友是自己，因此他自己是一個小群體。總而言之在這個例子裡有4個小群體：{0,4,6,8,5}、{1,7} 、{3,9} 、 {2} 。本題的問題是：輸入每個人好友編號，計算出總共有幾小群體。</p>
+<p>Q同學想了卻不知如何下手，和藹可親的P老師於是給了他以下的提示：如果你從任何一人x開始，追蹤他的好友，好友的好友，….，這樣一直下去，定會形成個圈回到 x，這就是一個小群體。如果我們追蹤的過程中把追蹤過的加以標記，很容易知道哪些人已經追蹤過，因此當一個小群體找到之後，我們再從任何還未蹤過的開始繼續找下一個小群體，直到所有人都追蹤完畢。</p>
+<p>Q同學聽完之後很順利的成了作業。</p>
+<p>在本題中，你的任務與Q同學一樣：給定群人的好友，請計算出小群體個數。</p>
+<h2 id="輸入說明">輸入說明</h2>
+<p>第一行是一個正整數N，說明團體中人數。</p>
+<p>第二行依序是 0的好友編號 、1的好友編號 、…… 、N-1的好友編號。共有N個數字，包含 0到 N-1的每個數字恰好出現一次，數字間會有一個空白隔開。</p>
+<h3 id="輸出說明">輸出說明</h3>
+<p>請輸出小群體的個數。不要有任何多餘的字或空白，並以換行字元結尾。</p>
+<h3 id="想法思路">想法思路</h3>
+<p>先從0開始跑<br>
+追蹤朋友的朋友並記錄<br>
+再依序追蹤朋友的朋友直到某人的朋友已經被追蹤過<br>
+則記為一個群體</p>
+<h3 id="程式碼">程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">50000</span>],c[<span class="number">50000</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[a]==<span class="literal">false</span>)&#123;</span><br><span class="line">        c[a]=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">int</span> after=f[a];</span><br><span class="line">        <span class="keyword">if</span>(c[after]==<span class="literal">false</span>)</span><br><span class="line">            dfs(after);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;f[i];</span><br><span class="line">            c[i]=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c[i]==<span class="literal">false</span>)&#123;</span><br><span class="line">                  ans++;</span><br><span class="line">                  c[i]=<span class="literal">true</span>;</span><br><span class="line">                  dfs(f[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+
+<div class="index-pagination">
+  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一頁</a>
+</div>
+
     </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">ChaoYi Lin</span>
-
-  
+    <aside id="sidebar" class="sidebar">
+      
+<div class="widget">
+  <div class="tag-cloud">
+    <a class="title">
+      標籤雲
+    </a>
+    
+    <div class="content">
+    
+      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/Disjoint-Set/" style="font-size: 10px;">Disjoint Set</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Kruskal/" style="font-size: 10px;">Kruskal</a> <a href="/tags/LCS/" style="font-size: 10px;">LCS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MST/" style="font-size: 10px;">MST</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/alogrithm/" style="font-size: 15px;">alogrithm</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/floyd-washall/" style="font-size: 10px;">floyd washall</a> <a href="/tags/graph/" style="font-size: 20px;">graph</a> <a href="/tags/topologicalsort/" style="font-size: 10px;">topologicalsort</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
+    </div>
+  </div>
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+<div class="widget">
+  <div class="categories">
+    <a class="title">
+      分類目錄
+    </a>
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
+    <div class="content">
     
-
-    
-
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/">語言學習</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/">Golang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/">資訊新知</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/">題解</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/">zerojudge</a><span class="category-list-count">5</span></li></ul></li></ul>
+    </div>
   </div>
+</div>
 
+
+    </aside>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="copyright">
+      &copy; 2020 Theme by <a href="https://github.com/naukri7707/hexo-theme-naukri" target="_blank" rel="noopener">Naukri</a> -
+      Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.
+    </div>
+  </div>
+</footer>
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
 </body>
+
 </html>

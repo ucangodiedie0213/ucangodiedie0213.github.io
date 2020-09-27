@@ -1,1184 +1,425 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-tw">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="utf-8" name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Chao&#39;s Note</title>
+  
+  <!-- JQuery -->
+  
+<script src="/lib/jquery.min.js"></script>
 
+  <!-- Font Awesome -->
+  
+<script src="/lib/fontawesome/all.min.js"></script>
 
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Title & Icon -->
+  
+  <link rel="icon" href="/img/favicon.ico">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chao&#39;s Note">
-<meta property="og:url" content="https://cyshchaonote.ga/page/2/index.html">
-<meta property="og:site_name" content="Chao&#39;s Note">
-<meta property="og:locale" content="zh_TW">
-<meta property="article:author" content="ChaoYi Lin">
-<meta name="twitter:card" content="summary">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://cyshchaonote.ga/page/2/"/>
-
-
-
-
-
-  <title>Chao's Note</title>
+  <!-- MyStyle -->
   
+<link rel="stylesheet" href="/css/style.css">
 
+  <!-- LayoutBehavior -->
+  
+<script src="/js/layoutBehavior.js"></script>
 
-
-
-
-
-
+  <!-- PostBehavior -->
+  
+<script src="/js/postBehavior.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
-
+<body id="layout" style="background-image: url(/img/thumb-1920-819294.png);">
   
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Chao's Note</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <nav id="navbar" class="banner-style">
+  <div class="navbar-list wrapper">
+    <div class="nav-item-avatar">
+      <img src="/img/gitcat.png" alt="avatar" onmousedown="return false;">
     </div>
+    <div class="nav-item-links-left">
       
-        <p class="site-subtitle"></p>
+<ul class="links">
+  
+  <li class="item">
+    
+    <a class="item-link" href="/">
+      首頁
+    </a>
+    
+  </li>
+  
+  <li class="item">
+    
+    <a class="item-link" href="/archives">
+      歸檔
+    </a>
+    
+  </li>
+  
+</ul>
+    </div>
+    <div class="nav-item-links-right">
       
+<ul class="links">
+  
+  <li class="item">
+    
+    <a href="https://zerojudge.tw/UserStatistic?id=47443" target="_blank" rel="noopener" title="ZeroJudge">
+      <i class="item-link fas fa-code"></i>
+    </a>
+    
+  </li>
+  
+  <li class="item">
+    
+    <a href="https://github.com/ucangodiedie0213" target="_blank" rel="noopener" title="Github">
+      <i class="item-link fab fa-github"></i>
+    </a>
+    
+  </li>
+  
+</ul>
+    </div>
   </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            關於
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            標籤
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分類
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
-            
-            友情連結
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/12/ZJ/d038zerojudge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/12/ZJ/d038zerojudge/" itemprop="url">d038. 00900 - Brick Wall Patterns</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-12T22:46:24+08:00">
-                2020-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">題解</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          題目內容
-如果我們要用常見的長度為高度兩倍的磚塊建一道磚牆，並且牆的高度為兩個單位，根據牆的長度，我們可以建出不同數量的花樣。從圖一我們可以看出：
-
-寛度為 1 單位的牆只有一種花樣—就是讓磚塊直立。
-長度為 2 的牆有 2 種花樣—兩個平躺的磚磈疊在一起以及兩個直立的磚塊併在一起。
-長度為 3 的
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/12/ZJ/d038zerojudge/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+  <div id="messageField">
+    <p>Test Message</p>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/12/ZJ/a111zerojudge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/12/ZJ/a111zerojudge/" itemprop="url">a111. 12149 - Feynman</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-12T22:19:55+08:00">
-                2020-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">題解</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          題目內容
-費曼 (Richard Phillips Feynman) 是一個有名的美國物理學家及諾貝爾物理獎得主。他主攻理論物理並倡導量子電腦。他曾訪問南美十個月，在那兒演講並享受熱帶生活。他的成名作「別鬧了，費曼先生」及「你管別人怎麼想」中也包含了他在赤道以南的經歷。
-他一生的嗜好是解及建立謎題、
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/12/ZJ/a111zerojudge/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/01/ZJ/c129zerojudge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/01/ZJ/c129zerojudge/" itemprop="url">c129. 00572 - Oil Deposits --Uva 572</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-01T21:27:26+08:00">
-                2020-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">題解</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          題目內容
-有一家石油公司負責探勘某塊地底下的石油含量，這塊地是矩行的，並且為了探勘的方便被切割為許多小塊。然後使用儀器對每個小塊去探勘。含有石油的小塊稱為 一個pocket。假如兩個pocket相連，則這兩個pocket屬於同一個oil deposit。（所謂相連的定義與踩地雷遊戲中的定義相同，請參
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/01/ZJ/c129zerojudge/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cyshchaonote.ga/2020/04/01/HelloWorld/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoYi Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chao's Note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/01/HelloWorld/" itemprop="url">HelloWorld</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-01T20:41:26+08:00">
-                2020-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Hello World!!
-My first hexo website was born in 2020.04.01
-Funny Day!
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/01/HelloWorld/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">上一頁</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  <header id="header">
+  <img class="banner-img" src="/img/banner.jpg" onmousedown="return false" alt="headerImage">
+  <div class="banner-inner">
+    <div class="banner-title">
+    Chao&#39;s Note
     </div>
   </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
+</header>
+  <div class="wrapper main-body">
+    <main id="main">
       
-
+<article id="d038. 00900 - Brick Wall Patterns" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
       
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">ChaoYi Lin</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
+          <div class="meta-list-link-text">
+            題解
           </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives%7C%7Carchive">
-              
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">文章</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">分類</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
-                  <span class="site-state-item-name">標籤</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
+        </a>
+      </li>
       
-
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
+          <div class="meta-list-link-text">
+            zerojudge
+          </div>
+        </a>
+      </li>
       
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            d038. 00900 - Brick Wall Patterns
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
       
-        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-        <div class="widget-wrap">
-            <h3 class="widget-title">Tag Cloud</h3>
-            <div id="myCanvasContainer" class="widget tagcloud">
-                <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCIST/" rel="tag">SCIST</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Share/" rel="tag">Share</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a><span class="tag-list-count">1</span></li></ul>
-                </canvas>
-            </div>
-        </div>
+      <a class="title-link" href="/2020/04/12/ZJ/d038zerojudge/">
+        <h1 class="title-text" title="d038. 00900 - Brick Wall Patterns">d038. 00900 - Brick Wall Patterns</h1>
+      </a>
       
-
-
-    </div>
-  </aside>
-
-
+      <div class="separator"></div>
+      <div class="info">
         
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-12
+        </time>
       </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="題目內容">題目內容</h3>
+<p>如果我們要用常見的長度為高度兩倍的磚塊建一道磚牆，並且牆的高度為兩個單位，根據牆的長度，我們可以建出不同數量的花樣。從圖一我們可以看出：<br>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAACyCAMAAADxuDqnAAAAD1BMVEX/////MwAzzAAAAADMmWZw+AL9AAAAAXRSTlMAQObYZgAAAXFJREFUeNrt3cFygjAUhtHcmvd/5i66Mm2AjNaBn3M2rsr4DRCB3tHWAHjVYxBWV0/UqVOnTp26iLpKrquy79SpU6dO3Q3qXImpU6dOnTp16k7uK89t6gAA4AO3QM96X5o9esyd8Qav96X7veGvT3enqE6dOnXqpmqcWEmqqzb++zWorlpyXYuvq+Q1s6LXzPd+IvS5M8Ql1f28Zdcq6tSpU6dOnTp16v7JdK6l94BpHLNGAAAAXMX2eN/KuN/OpOD+VuazgotTh7OnIsMjlaVHLNtPZw5sZf6AZvFJjzp16tSpU5ddN46r5O27Sj4yK/m8q8peVT50ZC4Ox/UtK2tmqbvkJ0L2mlnpq4o6derUqVOnLqPuyHjfC+N+75wUPLKtA3Vm/AAAAACAk6nouIrecxV9WNb2nv3Zt+PrZc652jsn6/frdRaU3Lo/vi1tuqbWJdfY6Lidt3vxuNZuXHeP6zT7DgCAddm/iOr3XgHu6xvIoCzyW/4MEAAAABh0RVh0U29mdHdhcmUAZ2lmMmFwbmcuc2YubmV0lv8TyAAAAABJRU5ErkJggg==" alt="avatar"><br>
+寛度為 1 單位的牆只有一種花樣—就是讓磚塊直立。<br>
+長度為 2 的牆有 2 種花樣—兩個平躺的磚磈疊在一起以及兩個直立的磚塊併在一起。<br>
+長度為 3 的牆有三種花樣。<br>
+長度為 4 的牆你可以找出幾種花樣？那長度為 5 的牆呢？</p>
+<h5 id="問題">問題</h5>
+<p>你的工作是要寫一個程式，給它牆的長度，它就算出這道牆可以有幾種花樣。</p>
+<h3 id="輸入說明">輸入說明</h3>
+<p>你將程式會收到一連串的整數，一行一個，每個整數代表牆的長度。牆的最大長度為 50。</p>
+<h3 id="輸出說明">輸出說明</h3>
+<p>對於每個輸入的牆長度，你要輸出這道牆的花樣數量，每個數字單獨一行。</p>
+<h3 id="想法思路">想法思路</h3>
+<p>觀察排列方式<br>
+應為費氏數列<br>
+公式 <strong>f[n]=f[n-1]+f[n-2]</strong></p>
+<h3 id="程式碼">程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> fib[<span class="number">75</span>];</span><br><span class="line">    fib[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    fib[<span class="number">2</span>]=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=<span class="number">51</span>;i++)fib[i]=fib[i<span class="number">-1</span>]+fib[i<span class="number">-2</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;fib[n]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="a111. 12149 - Feynman" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
+          <div class="meta-list-link-text">
+            題解
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
+          <div class="meta-list-link-text">
+            zerojudge
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            a111. 12149 - Feynman
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/04/12/ZJ/a111zerojudge/">
+        <h1 class="title-text" title="a111. 12149 - Feynman">a111. 12149 - Feynman</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/" rel="tag">dp</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-12
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="題目內容">題目內容</h3>
+<p>費曼 (Richard Phillips Feynman) 是一個有名的美國物理學家及諾貝爾物理獎得主。他主攻理論物理並倡導量子電腦。他曾訪問南美十個月，在那兒演講並享受熱帶生活。他的成名作「別鬧了，費曼先生」及「你管別人怎麼想」中也包含了他在赤道以南的經歷。</p>
+<p>他一生的嗜好是解及建立謎題、鎖、及密碼。最近，曾在1949年接待費曼的一位南美老農夫找到一些據信屬於這位年輕物理學家的筆記。在這些有關介子及電磁學的筆記中，夾有一張餐巾紙，上寫有個簡單的謎題：「在一個 N ×N 的方格中含有幾個不同的正方形？」</p>
+<p>下面重現了該餐巾紙上的圖，顯示 N=2 時答案為 5。<br>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbEAAABJCAMAAACEuOhDAAAAG1BMVEX///////+/v79/f39fX1+AgIA/Pz8vLy/AwMAWZSJiAAAAAXRSTlMAQObYZgAAAPlJREFUeNrt2zEOgCAMAEAVEP//YncdaAgkaK47peVIt25lUFzbIy6Z52SuuRn1TM04y7PGEjkVub0v87ya+zJHOo29Rj6akdPejPSuMXIqcntf5nk192WOdBp7DWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRozYCmK2ar+2VfvX7lf7ZePE/jphVpvk46YiMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRmwFMVu1H9uqvQFKhLiJu8DSTgAAABh0RVh0U29mdHdhcmUAZ2lmMmFwbmcuc2YubmV0lv8TyAAAAABJRU5ErkJggg==" alt="avatar"></p>
+<h3 id="輸入說明">輸入說明</h3>
+<p>輸入有若干筆測資，每筆一行，含有一個整數 N，代表方格的邊長 (1 ≤ N ≤ 100)。</p>
+<p>輸入的結束以含有一個零的一行表示。</p>
+<h3 id="輸出說明">輸出說明</h3>
+<p>對於每筆測資，你的程式須輸出該筆測資一共包含幾個不同的正方形於一行。</p>
+<h3 id="想法思路">想法思路</h3>
+<pre><code>邊長1 -&gt; 1個1x1 = 1
+邊長2 -&gt; 1個2x2+4個1x1 = 1+4 =2^2+邊長1
+邊長3 -&gt; 1個3x3+4個2x2+9個1x1 = 1+4+9 = 3^2+邊長2
+邊長4 -&gt; 1個4x4+4個3x3+9個2x2+16個1x1 = 1+4+9+16 = 4^2+邊長3
+</code></pre>
+<p>公式應為 <strong>f[n]=f[n-1]+n*n</strong></p>
+<h3 id="程式碼">程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> f[<span class="number">101</span>];</span><br><span class="line">    f[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">100</span>;i++)f[i]=i*i+f[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;f[n]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="c129. 00572 - Oil Deposits --Uva 572" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
+          <div class="meta-list-link-text">
+            題解
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
+          <div class="meta-list-link-text">
+            zerojudge
+          </div>
+        </a>
+      </li>
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            c129. 00572 - Oil Deposits --Uva 572
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/04/01/ZJ/c129zerojudge/">
+        <h1 class="title-text" title="c129. 00572 - Oil Deposits --Uva 572">c129. 00572 - Oil Deposits --Uva 572</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <i class="fas fa-tags"></i>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-01
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <h3 id="題目內容">題目內容</h3>
+<p>有一家石油公司負責探勘某塊地底下的石油含量，這塊地是矩行的，並且為了探勘的方便被切割為許多小塊。然後使用儀器對每個小塊去探勘。含有石油的小塊稱為 一個pocket。假如兩個pocket相連，則這兩個pocket屬於同一個oil deposit。（所謂相連的定義與踩地雷遊戲中的定義相同，請參考sample input, sample output）<br>
+你的任務就是要找出這塊地包含幾個不同的oil deposit。</p>
+<h3 id="輸入說明">輸入說明</h3>
+<p>輸入包含好幾組資料，每組資料的第一行有2個整數m,n。m代表這塊地的列數，n代表這塊地的行數。（1&lt;=m,n&lt;=100），接下來的m行就是這塊地探勘的內容。<br>
+'@‘代表此小塊含石油，’*'代表此小塊不含石油。m=0 n=0代表輸入結束。</p>
+<h3 id="輸出說明">輸出說明</h3>
+<p>對每組測試資料輸出oil deposit的數目。</p>
+<h3 id="想法思路">想法思路</h3>
+<p>先用0將輸入包起來</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0000000</span><br><span class="line">0*@*@*0</span><br><span class="line">0**@**0</span><br><span class="line">0*@*@*0</span><br><span class="line">0000000</span><br></pre></td></tr></table></figure>
+<p>用一個bool陣列去紀錄已經走過的石油地<br>
+for迴圈搜尋所有點若沒走過但又是石油地就執行dfs函式且ans++<br>
+dfs函式只要沒走過又是石油地就把它紀錄<br>
+然後因為輸入範例一可知只要鄰近就算同一塊 故八個方向皆執行dfs函式</p>
+<h3 id="程式碼">程式碼</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> oil[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"><span class="keyword">bool</span> <span class="built_in">run</span>[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">run</span>[a][b]==<span class="literal">false</span> &amp;&amp; oil[a][b]==<span class="string">'@'</span>)&#123;</span><br><span class="line">        <span class="built_in">run</span>[a][b]=<span class="literal">true</span>;</span><br><span class="line">        dfs(a+<span class="number">1</span>,b+<span class="number">1</span>);</span><br><span class="line">        dfs(a+<span class="number">1</span>,b);</span><br><span class="line">        dfs(a+<span class="number">1</span>,b<span class="number">-1</span>);</span><br><span class="line">        dfs(a,b+<span class="number">1</span>);</span><br><span class="line">        dfs(a,b<span class="number">-1</span>);</span><br><span class="line">        dfs(a<span class="number">-1</span>,b+<span class="number">1</span>);</span><br><span class="line">        dfs(a<span class="number">-1</span>,b);</span><br><span class="line">        dfs(a<span class="number">-1</span>,b<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(m==<span class="number">0</span>&amp;&amp;n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m+<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n+<span class="number">2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(i==m+<span class="number">1</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">0</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(j==n+<span class="number">1</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="built_in">cin</span>&gt;&gt;oil[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">run</span>[i][j]=<span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m+<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n+<span class="number">2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">run</span>[i][j]==<span class="literal">false</span> &amp;&amp; oil[i][j]==<span class="string">'@'</span>)&#123;</span><br><span class="line">                    ans++;</span><br><span class="line">                    dfs(i,j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="類似題">類似題</h3>
+<p><a href="https://zerojudge.tw/ShowProblem?problemid=c129" target="_blank" rel="noopener">c129: 00572 - Oil Deposits</a><br>
+<a href="https://zerojudge.tw/ShowProblem?problemid=d165" target="_blank" rel="noopener">d165: 八、草场普查</a></p>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+<article id="HelloWorld" class="post">
+<div class="postinside">
+  <div class="post-meta">
+    <ul class="meta-list">
+      
+      <li class="meta-list-item">
+        <a class="meta-list-link current-link">
+          <div class="meta-list-link-text">
+            HelloWorld
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="post-inner">
+    <header class="title">
+      
+      <a class="title-link" href="/2020/04/01/HelloWorld/">
+        <h1 class="title-text" title="HelloWorld">HelloWorld</h1>
+      </a>
+      
+      <div class="separator"></div>
+      <div class="info">
+        
+        <time class="time">
+          <i class="far fa-calendar-alt"></i>
+          2020-04-01
+        </time>
+      </div>
+    </header>
+    
+    <div class="content">
+      <p>Hello World!!<br>
+My first hexo website was born in 2020.04.01<br>
+Funny Day!</p>
+
+    </div>
+    
+  </div>
+</div>
+</article>
+
+
+<div class="index-pagination">
+  <a class="extend prev" rel="prev" href="/">上一頁</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+</div>
+
     </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">ChaoYi Lin</span>
-
-  
+    <aside id="sidebar" class="sidebar">
+      
+<div class="widget">
+  <div class="tag-cloud">
+    <a class="title">
+      標籤雲
+    </a>
+    
+    <div class="content">
+    
+      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/Disjoint-Set/" style="font-size: 10px;">Disjoint Set</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Kruskal/" style="font-size: 10px;">Kruskal</a> <a href="/tags/LCS/" style="font-size: 10px;">LCS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MST/" style="font-size: 10px;">MST</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/alogrithm/" style="font-size: 15px;">alogrithm</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/floyd-washall/" style="font-size: 10px;">floyd washall</a> <a href="/tags/graph/" style="font-size: 20px;">graph</a> <a href="/tags/topologicalsort/" style="font-size: 10px;">topologicalsort</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
+    </div>
+  </div>
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+<div class="widget">
+  <div class="categories">
+    <a class="title">
+      分類目錄
+    </a>
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
+    <div class="content">
     
-
-    
-
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/">語言學習</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/">Golang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/">資訊新知</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/">題解</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/">zerojudge</a><span class="category-list-count">5</span></li></ul></li></ul>
+    </div>
   </div>
+</div>
 
+
+    </aside>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="copyright">
+      &copy; 2020 Theme by <a href="https://github.com/naukri7707/hexo-theme-naukri" target="_blank" rel="noopener">Naukri</a> -
+      Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.
+    </div>
+  </div>
+</footer>
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
 </body>
+
 </html>
