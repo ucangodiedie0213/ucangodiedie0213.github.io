@@ -61,6 +61,22 @@
     
   </li>
   
+  <li class="item">
+    
+    <a class="item-link" href="/friends">
+      navbar.links
+    </a>
+    
+  </li>
+  
+  <li class="item">
+    
+    <a class="item-link" href="/archives2">
+      navbar.archives2
+    </a>
+    
+  </li>
+  
 </ul>
     </div>
     <div class="nav-item-links-right">
@@ -133,28 +149,33 @@
     </header>
     
     <div class="content">
-      <h1>Commands</h1>
-<h3 id="ls">ls</h3>
-<p>執行ls指令會列出當下目錄的所有檔案</p>
-<blockquote>
-<p>ls<br>
+      <h2 id="Linux">Linux</h2>
+<p>Linux 是一個類unix 免費且開源的操作系統<br>
+在你CTF的路上他可是你不可或缺的好夥伴呦<br>
+趕快跟Linux交個朋友吧!</p>
+<a id="more"></a>
+<h2 id="Commands">Commands</h2>
+<ul>
+<li>ls<br>
+執行ls指令會列出當下目錄的所有檔案<br>
 也可以ls指定目錄 只要在ls後加上路徑<br>
 ls [DIR]<br>
-可選參數若填入-al 可列出所有檔案的詳細資訊<br>
-ls -al<br>
+可選參數若填入-al 可列出所有檔案的詳細資訊</li>
+</ul>
+<blockquote>
+<p>ls -al<br>
 星號為萬字元<br>
-{<br>
 使用者列表位於/etc/passwd<br>
-密碼存於/etc/shadow<br>
-}</p>
+密碼存於/etc/shadow</p>
 </blockquote>
-<a id="more"></a>
-<h3 id="chmod">chmod</h3>
-<p>chmod 可以更改檔案權限<br>
+<ul>
+<li>chmod<br>
+chmod 可以更改檔案權限<br>
 權限分為擁有者、群組、所有人<br>
 這三個都各有rwx三個參數<br>
 可用二進制表示<br>
-rwx為7(111) r-x為5(101) rw-為6(110)</p>
+rwx為7(111) r-x為5(101) rw-為6(110)</li>
+</ul>
 <blockquote>
 <p>chmod 777 file</p>
 </blockquote>
@@ -163,20 +184,26 @@ rwx為7(111) r-x為5(101) rw-為6(110)</p>
 <p>更改資料夾 -R</p>
 </blockquote>
 </blockquote>
-<h3 id="sudo">sudo</h3>
-<p>以root權限執行<br>
-當你執行大部分的系統命令時出現沒有權限，可在指令前加入sudo解決</p>
+<ul>
+<li>sudo<br>
+以root權限執行<br>
+當你執行大部分的系統命令時出現沒有權限，可在指令前加入sudo解決</li>
+</ul>
 <blockquote>
 <blockquote>
 <p>sudo su 可直接將自己變成root</p>
 </blockquote>
 </blockquote>
-<h3 id="wget">wget</h3>
+<ul>
+<li>wget</li>
+</ul>
 <blockquote>
 <p>wget [網址] [參數]<br>
 參數常用為-O [檔案名稱] 可將下載下來的檔案直接命名</p>
 </blockquote>
-<h3 id="file">file</h3>
+<ul>
+<li>file</li>
+</ul>
 <blockquote>
 <p>file [FILE]<br>
 取的檔案型態<br>
@@ -184,45 +211,59 @@ ELF為可執行檔<br>
 ASCII txt為文字檔可直接cat<br>
 gzip壓縮 可用tar解壓</p>
 </blockquote>
-<h3 id="cat">cat</h3>
-<p>將檔案內的內容吐出來</p>
+<ul>
+<li>cat<br>
+將檔案內的內容吐出來</li>
+</ul>
 <blockquote>
 <p>cat [FILE]</p>
 </blockquote>
-<h4 id="輸出型態">輸出型態</h4>
+<h2 id="輸出型態">輸出型態</h2>
 <p>輸出分為 STDIN(0) STDOUT (1) STDERR(2)<br>
 有時候會有用STDERR偽裝STDOUT<br>
 需要過濾</p>
-<h3 id="apt">apt</h3>
-<p>安裝程式</p>
-<h3 id="tree">tree</h3>
-<p>美化版ls</p>
-<pre><code>-L 可指定最深幾層
-</code></pre>
+<ul>
+<li>
+<p>apt<br>
+安裝程式</p>
+</li>
+<li>
+<p>tree<br>
+美化版ls</p>
+<p>-L 可指定最深幾層</p>
+</li>
+</ul>
 <blockquote>
 <p>tree -L 2</p>
 </blockquote>
-<h3 id="cd">cd</h3>
-<p>移動目錄</p>
-<pre><code>/為根目錄
-~預設為home
-.為當前目錄
-..為上一層
-</code></pre>
-<h3 id="tar">tar</h3>
-<p>壓縮打包與解壓<br>
+<ul>
+<li>
+<p>cd<br>
+移動目錄</p>
+<p>/為根目錄<br>
+~預設為home<br>
+.為當前目錄<br>
+…為上一層</p>
+</li>
+<li>
+<p>tar<br>
+壓縮打包與解壓<br>
 參數<br>
 z為用gzip操作;x為解壓縮;c為壓縮;v詳細資料;f指定檔名<br>
 解壓範例</p>
+</li>
+</ul>
 <blockquote>
 <p>tar zxvf [FILE]</p>
 </blockquote>
-<h3 id="grep">grep</h3>
+<ul>
+<li>grep</li>
+</ul>
 <blockquote>
 <p>grep KEYWORD [FILE]<br>
 搜尋關鍵字</p>
 </blockquote>
-<h4 id="管道符號與重導向符號">管道符號與重導向符號</h4>
+<h2 id="管道符號與重導向符號">管道符號與重導向符號</h2>
 <blockquote>
 <p>command1 | command2<br>
 把command1的<strong>STDOUT</strong>當成command2的<strong>STDIN</strong>執行<br>
@@ -231,74 +272,100 @@ command1 &gt; file<br>
 command1 &gt;&gt;file<br>
 將command1的STDOUT寫入到file的<strong>後方</strong></p>
 </blockquote>
-<h3 id="touch">touch</h3>
+<ul>
+<li>touch</li>
+</ul>
 <blockquote>
 <p>touch [檔名]<br>
 建立新檔案</p>
 </blockquote>
-<h3 id="mkdir">mkdir</h3>
+<ul>
+<li>mkdir</li>
+</ul>
 <blockquote>
 <p>mkdir [資料夾名稱]<br>
 建立新資料夾</p>
 </blockquote>
-<h3 id="mv">mv</h3>
-<p>移動檔案</p>
+<ul>
+<li>mv<br>
+移動檔案</li>
+</ul>
 <blockquote>
 <p>mv [FILE] [DIR]</p>
 </blockquote>
-<h3 id="cp">cp</h3>
-<p>複製檔案到路徑</p>
+<ul>
+<li>cp<br>
+複製檔案到路徑</li>
+</ul>
 <blockquote>
 <p>cp [FILE] [DIR]</p>
 </blockquote>
-<h3 id="rm">rm</h3>
-<p>刪除</p>
+<ul>
+<li>rm<br>
+刪除</li>
+</ul>
 <blockquote>
 <p>rm [FILE]</p>
 </blockquote>
-<h3 id="strings">strings</h3>
-<p>吐出檔案內所有可視字元</p>
+<ul>
+<li>strings<br>
+吐出檔案內所有可視字元</li>
+</ul>
 <blockquote>
 <p>strings [FILE]</p>
 </blockquote>
-<h3 id="md5sum">md5sum</h3>
-<p>計算md5值</p>
+<ul>
+<li>md5sum<br>
+計算md5值</li>
+</ul>
 <blockquote>
 <p>md5sum [FILE]</p>
 </blockquote>
-<h3 id="base64">base64</h3>
-<p>使用base64做編碼解碼<br>
-預設為編碼 解碼只要加上-d的參數</p>
+<ul>
+<li>base64<br>
+使用base64做編碼解碼<br>
+預設為編碼 解碼只要加上-d的參數</li>
+</ul>
 <blockquote>
 <p>base64 -d [FILE]</p>
 </blockquote>
-<h3 id="ssh">ssh</h3>
-<p>遠端連線電腦</p>
+<ul>
+<li>ssh<br>
+遠端連線電腦</li>
+</ul>
 <blockquote>
 <p>ssh user@ip</p>
 </blockquote>
 <pre><code>若要指定port
 加上-p [PORT] 參數
 </code></pre>
-<h3 id="find">find</h3>
-<p>在指定目錄尋找檔案名稱</p>
+<ul>
+<li>find<br>
+在指定目錄尋找檔案名稱</li>
+</ul>
 <blockquote>
 <p>find [PATH] -name [FILENAME]</p>
 </blockquote>
-<h3 id="service">service</h3>
-<p>對特定服務進行操作</p>
+<ul>
+<li>service<br>
+對特定服務進行操作</li>
+</ul>
 <blockquote>
 <p>service [NAME] [start|stop|status|restart]</p>
 </blockquote>
-<h3 id="ps-aux">ps -aux</h3>
-<p>查看所有服務</p>
-<h3 id="curl">curl</h3>
-<p>模擬人為操作瀏覽網站</p>
+<ul>
+<li>ps -aux<br>
+查看所有服務</li>
+<li>curl<br>
+模擬人為操作瀏覽網站</li>
+</ul>
 <blockquote>
 <p>curl [host/ip]</p>
 </blockquote>
 <h1>Vim</h1>
 <p>分成normal insert模式</p>
+<h1>參考資料</h1>
+<p><a href="https://www.youtube.com/watch?v=Mq7eqAZreqY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Mq7eqAZreqY</a></p>
 
     </div>
     
@@ -344,7 +411,7 @@ command1 &gt;&gt;file<br>
     
       <div class="content">
         
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">Commands</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-text">ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chmod"><span class="toc-text">chmod</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sudo"><span class="toc-text">sudo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wget"><span class="toc-text">wget</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#file"><span class="toc-text">file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-text">cat</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#輸出型態"><span class="toc-text">輸出型態</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#apt"><span class="toc-text">apt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tree"><span class="toc-text">tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-text">tar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-text">grep</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#管道符號與重導向符號"><span class="toc-text">管道符號與重導向符號</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch"><span class="toc-text">touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv"><span class="toc-text">mv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-text">cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-text">rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strings"><span class="toc-text">strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#md5sum"><span class="toc-text">md5sum</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#base64"><span class="toc-text">base64</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ssh"><span class="toc-text">ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-text">find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#service"><span class="toc-text">service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ps-aux"><span class="toc-text">ps -aux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#curl"><span class="toc-text">curl</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">Vim</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commands"><span class="toc-text">Commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#輸出型態"><span class="toc-text">輸出型態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管道符號與重導向符號"><span class="toc-text">管道符號與重導向符號</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">Vim</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">參考資料</span></a>
       </div>
     </div>
     <div class="post-progress">
