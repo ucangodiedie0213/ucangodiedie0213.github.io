@@ -23,12 +23,12 @@
 <meta property="article:modified_time" content="2020-09-12T03:40:37.173Z">
 <meta property="article:author" content="ChaoYi Lin">
 <meta property="article:tag" content="cpp">
-<meta property="article:tag" content="graph">
 <meta property="article:tag" content="dfs">
+<meta property="article:tag" content="graph">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645558">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864250">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -203,7 +203,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月01日</a>
-    <a><i class="nexmoefont icon-areachart"></i>626 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>601 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
@@ -230,13 +230,80 @@
 <p>對每組測試資料輸出oil deposit的數目。</p>
 <h3 id="想法思路">想法思路</h3>
 <p>先用0將輸入包起來</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0000000</span><br><span class="line">0*@*@*0</span><br><span class="line">0**@**0</span><br><span class="line">0*@*@*0</span><br><span class="line">0000000</span><br></pre></td></tr></table></figure>
+<pre><code>0000000
+0*@*@*0
+0**@**0
+0*@*@*0
+0000000
+</code></pre>
 <p>用一個bool陣列去紀錄已經走過的石油地<br>
 for迴圈搜尋所有點若沒走過但又是石油地就執行dfs函式且ans++<br>
 dfs函式只要沒走過又是石油地就把它紀錄<br>
 然後因為輸入範例一可知只要鄰近就算同一塊 故八個方向皆執行dfs函式</p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> oil[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"><span class="keyword">bool</span> <span class="built_in">run</span>[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">run</span>[a][b]==<span class="literal">false</span> &amp;&amp; oil[a][b]==<span class="string">'@'</span>)&#123;</span><br><span class="line">        <span class="built_in">run</span>[a][b]=<span class="literal">true</span>;</span><br><span class="line">        dfs(a+<span class="number">1</span>,b+<span class="number">1</span>);</span><br><span class="line">        dfs(a+<span class="number">1</span>,b);</span><br><span class="line">        dfs(a+<span class="number">1</span>,b<span class="number">-1</span>);</span><br><span class="line">        dfs(a,b+<span class="number">1</span>);</span><br><span class="line">        dfs(a,b<span class="number">-1</span>);</span><br><span class="line">        dfs(a<span class="number">-1</span>,b+<span class="number">1</span>);</span><br><span class="line">        dfs(a<span class="number">-1</span>,b);</span><br><span class="line">        dfs(a<span class="number">-1</span>,b<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(m==<span class="number">0</span>&amp;&amp;n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m+<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n+<span class="number">2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(i==m+<span class="number">1</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">0</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(j==n+<span class="number">1</span>)&#123;</span><br><span class="line">                    oil[i][j]=<span class="string">'0'</span>;</span><br><span class="line">                    <span class="built_in">run</span>[i][j]=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="built_in">cin</span>&gt;&gt;oil[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">run</span>[i][j]=<span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m+<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n+<span class="number">2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">run</span>[i][j]==<span class="literal">false</span> &amp;&amp; oil[i][j]==<span class="string">'@'</span>)&#123;</span><br><span class="line">                    ans++;</span><br><span class="line">                    dfs(i,j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char oil[101][101];
+bool run[101][101];
+int m,n;
+void dfs(int a,int b){
+    if(run[a][b]==false &amp;&amp; oil[a][b]=='@'){
+        run[a][b]=true;
+        dfs(a+1,b+1);
+        dfs(a+1,b);
+        dfs(a+1,b-1);
+        dfs(a,b+1);
+        dfs(a,b-1);
+        dfs(a-1,b+1);
+        dfs(a-1,b);
+        dfs(a-1,b-1);
+    }
+
+}
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    while(cin&gt;&gt;m&gt;&gt;n){
+        if(m==0&amp;&amp;n==0)break;
+        int ans=0;
+        for(int i=0;i&lt;m+2;i++){
+            for(int j=0;j&lt;n+2;j++){
+                if(i==0){
+                    oil[i][j]='0';
+                    run[i][j]=true;
+                }
+                else if(i==m+1){
+                    oil[i][j]='0';
+                    run[i][j]=true;
+                }
+                else if(j==0){
+                    oil[i][j]='0';
+                    run[i][j]=true;
+                }
+                else if(j==n+1){
+                    oil[i][j]='0';
+                    run[i][j]=true;
+                }
+                else {
+                    cin&gt;&gt;oil[i][j];
+                }
+                run[i][j]=false;
+            }
+        }
+        for(int i=0;i&lt;m+2;i++){
+            for(int j=0;j&lt;n+2;j++){
+                if(run[i][j]==false &amp;&amp; oil[i][j]=='@'){
+                    ans++;
+                    dfs(i,j);
+                }
+            }
+        }
+        cout&lt;&lt;ans&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
 <h3 id="類似題">類似題</h3>
 <p><a href="https://zerojudge.tw/ShowProblem?problemid=c129" target="_blank" rel="noopener">c129: 00572 - Oil Deposits</a><br>
 <a href="https://zerojudge.tw/ShowProblem?problemid=d165" target="_blank" rel="noopener">d165: 八、草场普查</a></p>
@@ -293,7 +360,7 @@ dfs函式只要沒走過又是石油地就把它紀錄<br>
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645560"></script>
+<script src="/js/app.js?v=1601513864252"></script>
   
     <!-- Google Analytics -->
 <script>

@@ -29,7 +29,7 @@
 <meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAACyCAMAAADxuDqnAAAAD1BMVEX/////MwAzzAAAAADMmWZw+AL9AAAAAXRSTlMAQObYZgAAAXFJREFUeNrt3cFygjAUhtHcmvd/5i66Mm2AjNaBn3M2rsr4DRCB3tHWAHjVYxBWV0/UqVOnTp26iLpKrquy79SpU6dO3Q3qXImpU6dOnTp16k7uK89t6gAA4AO3QM96X5o9esyd8Qav96X7veGvT3enqE6dOnXqpmqcWEmqqzb++zWorlpyXYuvq+Q1s6LXzPd+IvS5M8Ql1f28Zdcq6tSpU6dOnTp16v7JdK6l94BpHLNGAAAAXMX2eN/KuN/OpOD+VuazgotTh7OnIsMjlaVHLNtPZw5sZf6AZvFJjzp16tSpU5ddN46r5O27Sj4yK/m8q8peVT50ZC4Ox/UtK2tmqbvkJ0L2mlnpq4o6derUqVOnLqPuyHjfC+N+75wUPLKtA3Vm/AAAAACAk6nouIrecxV9WNb2nv3Zt+PrZc652jsn6/frdRaU3Lo/vi1tuqbWJdfY6Lidt3vxuNZuXHeP6zT7DgCAddm/iOr3XgHu6xvIoCzyW/4MEAAAABh0RVh0U29mdHdhcmUAZ2lmMmFwbmcuc2YubmV0lv8TyAAAAABJRU5ErkJggg==">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645551">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864244">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -204,7 +204,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月12日</a>
-    <a><i class="nexmoefont icon-areachart"></i>356 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>351 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -239,7 +239,23 @@
 應為費氏數列<br>
 公式 <strong>f[n]=f[n-1]+f[n-2]</strong></p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> fib[<span class="number">75</span>];</span><br><span class="line">    fib[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    fib[<span class="number">2</span>]=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=<span class="number">51</span>;i++)fib[i]=fib[i<span class="number">-1</span>]+fib[i<span class="number">-2</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;fib[n]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    int n;
+    long long int fib[75];
+    fib[1]=1;
+    fib[2]=2;
+    for(int i=3;i&lt;=51;i++)fib[i]=fib[i-1]+fib[i-2];
+    while(cin&gt;&gt;n){
+        if(n==0)break;
+        cout&lt;&lt;fib[n]&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+
   </article>
 
   
@@ -292,7 +308,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645553"></script>
+<script src="/js/app.js?v=1601513864245"></script>
   
     <!-- Google Analytics -->
 <script>

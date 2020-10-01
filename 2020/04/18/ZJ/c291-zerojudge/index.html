@@ -23,13 +23,13 @@
 <meta property="article:modified_time" content="2020-09-12T03:40:25.041Z">
 <meta property="article:author" content="ChaoYi Lin">
 <meta property="article:tag" content="cpp">
-<meta property="article:tag" content="graph">
 <meta property="article:tag" content="dfs">
+<meta property="article:tag" content="graph">
 <meta property="article:tag" content="apcs">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645544">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864241">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -204,7 +204,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月18日</a>
-    <a><i class="nexmoefont icon-areachart"></i>819 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>804 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
@@ -272,7 +272,40 @@
 再依序追蹤朋友的朋友直到某人的朋友已經被追蹤過<br>
 則記為一個群體</p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">50000</span>],c[<span class="number">50000</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[a]==<span class="literal">false</span>)&#123;</span><br><span class="line">        c[a]=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">int</span> after=f[a];</span><br><span class="line">        <span class="keyword">if</span>(c[after]==<span class="literal">false</span>)</span><br><span class="line">            dfs(after);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;f[i];</span><br><span class="line">            c[i]=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c[i]==<span class="literal">false</span>)&#123;</span><br><span class="line">                  ans++;</span><br><span class="line">                  c[i]=<span class="literal">true</span>;</span><br><span class="line">                  dfs(f[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int f[50000],c[50000];
+void dfs(int a){
+    if(c[a]==false){
+        c[a]=true;
+        int after=f[a];
+        if(c[after]==false)
+            dfs(after);
+    }
+}
+int main()
+{
+    int n;
+    while(cin&gt;&gt;n){
+        int ans=0;
+        for(int i=0;i&lt;n;i++){
+            cin&gt;&gt;f[i];
+            c[i]=false;
+        }
+        for(int i=0;i&lt;n;i++){
+            if(c[i]==false){
+                  ans++;
+                  c[i]=true;
+                  dfs(f[i]);
+            }
+        }
+        cout&lt;&lt;ans&lt;&lt;endl;
+    }
+    return 0;
+}
+
+</code></pre>
+
   </article>
 
   
@@ -325,7 +358,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645545"></script>
+<script src="/js/app.js?v=1601513864242"></script>
   
     <!-- Google Analytics -->
 <script>

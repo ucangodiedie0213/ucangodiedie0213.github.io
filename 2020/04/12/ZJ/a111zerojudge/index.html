@@ -29,7 +29,7 @@
 <meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbEAAABJCAMAAACEuOhDAAAAG1BMVEX///////+/v79/f39fX1+AgIA/Pz8vLy/AwMAWZSJiAAAAAXRSTlMAQObYZgAAAPlJREFUeNrt2zEOgCAMAEAVEP//YncdaAgkaK47peVIt25lUFzbIy6Z52SuuRn1TM04y7PGEjkVub0v87ya+zJHOo29Rj6akdPejPSuMXIqcntf5nk192WOdBp7DWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRozYCmK2ar+2VfvX7lf7ZePE/jphVpvk46YiMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRowYMWLEiBEjRmwFMVu1H9uqvQFKhLiJu8DSTgAAABh0RVh0U29mdHdhcmUAZ2lmMmFwbmcuc2YubmV0lv8TyAAAAABJRU5ErkJggg==">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645554">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864246">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -204,7 +204,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月12日</a>
-    <a><i class="nexmoefont icon-areachart"></i>446 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>441 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
@@ -239,7 +239,23 @@
 </code></pre>
 <p>公式應為 <strong>f[n]=f[n-1]+n*n</strong></p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> f[<span class="number">101</span>];</span><br><span class="line">    f[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">100</span>;i++)f[i]=i*i+f[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;f[n]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+    int n;
+    int f[101];
+    f[1]=1;
+    for(int i=2;i&lt;=100;i++)f[i]=i*i+f[i-1];
+    while(cin&gt;&gt;n){
+        if(n==0)break;
+        cout&lt;&lt;f[n]&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+
   </article>
 
   
@@ -292,7 +308,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645556"></script>
+<script src="/js/app.js?v=1601513864247"></script>
   
     <!-- Google Analytics -->
 <script>

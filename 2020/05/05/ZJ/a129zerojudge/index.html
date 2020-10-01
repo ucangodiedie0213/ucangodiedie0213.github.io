@@ -30,7 +30,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645536">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864235">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -205,7 +205,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月05日</a>
-    <a><i class="nexmoefont icon-areachart"></i>510 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>485 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
@@ -238,7 +238,64 @@ father是用來記錄父節點的;num是在記錄樹的大小以便合併<br>
 for跑 找根 如果根不同 就將權重加入 並合併<br>
 還要順便確認邊的數量是否相同</p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> father[<span class="number">100000</span>],num[<span class="number">100000</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line"><span class="keyword">int</span> start,<span class="built_in">stop</span>,length;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_father</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(father[s]!=s)&#123;</span><br><span class="line">        s=father[s];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">myCompare</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a.length&lt;b.length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;node&gt; <span class="title">v</span><span class="params">(m)</span></span>;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            father[i]=i;</span><br><span class="line">            num[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;v[i].start&gt;&gt;v[i].<span class="built_in">stop</span>&gt;&gt;v[i].length;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),myCompare);</span><br><span class="line">        <span class="keyword">int</span> edgesum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            a=find_father(v[i].start);</span><br><span class="line">            b=find_father(v[i].<span class="built_in">stop</span>);</span><br><span class="line">            <span class="keyword">if</span>(a!=b)&#123;</span><br><span class="line">                <span class="keyword">if</span>(num[a]&gt;num[b])&#123;</span><br><span class="line">                    father[b]=a;</span><br><span class="line">                    num[a]+=num[b];</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    father[a]=b;</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    num[b]+=num[a];</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(edgesum==n<span class="number">-1</span>)<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int father[100000],num[100000];
+struct node {
+int start,stop,length;
+};
+int find_father(int s){
+    while(father[s]!=s){
+        s=father[s];
+    }
+    return s;
+}
+bool myCompare(node a,node b){
+return a.length&lt;b.length;
+}
+int main()
+{
+    int n,m;
+    while(cin&gt;&gt;n&gt;&gt;m){
+        vector&lt;node&gt; v(m);
+        long long int ans=0;
+        for(int i=0;i&lt;n;i++){
+            father[i]=i;
+            num[i]=1;
+        }
+        for(int i=0;i&lt;m;i++){
+            cin&gt;&gt;v[i].start&gt;&gt;v[i].stop&gt;&gt;v[i].length;
+        }
+        sort(v.begin(),v.end(),myCompare);
+        int edgesum=0;
+        for(int i=0;i&lt;m;i++){
+            int a,b;
+            a=find_father(v[i].start);
+            b=find_father(v[i].stop);
+            if(a!=b){
+                if(num[a]&gt;num[b]){
+                    father[b]=a;
+                    num[a]+=num[b];
+                    ans+=v[i].length;
+                    edgesum++;
+                }
+                else{
+                    father[a]=b;
+                    ans+=v[i].length;
+                    num[b]+=num[a];
+                    edgesum++;
+                }
+            }
+        }
+        if(edgesum==n-1)cout&lt;&lt;ans&lt;&lt;endl;
+        else cout&lt;&lt;-1&lt;&lt;endl;
+
+    }
+    return 0;
+}
+
+</code></pre>
+
   </article>
 
   
@@ -291,7 +348,7 @@ for跑 找根 如果根不同 就將權重加入 並合併<br>
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645538"></script>
+<script src="/js/app.js?v=1601513864236"></script>
   
     <!-- Google Analytics -->
 <script>

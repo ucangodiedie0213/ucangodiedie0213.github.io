@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645596">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864290">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -312,7 +312,7 @@ s2 = sub2+e2</p>
 
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月15日</a>
-            <a><i class="nexmoefont icon-areachart"></i>232 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>221 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
 
@@ -328,7 +328,43 @@ s2 = sub2+e2</p>
 每次都將出度為0的點輸出<br>
 再把他的子節點出度都-1</p>
 <p><strong>以下範例代碼為Zerojudge a552</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v[<span class="number">101</span>];</span><br><span class="line">        <span class="keyword">int</span> deg[<span class="number">101</span>];</span><br><span class="line">        priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">        <span class="built_in">memset</span>(deg,<span class="number">0</span>,<span class="keyword">sizeof</span>(deg));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            deg[b]++;</span><br><span class="line">            v[a].push_back(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!deg[i])s.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">while</span>(s.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="keyword">int</span> now=s.top();</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;now&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">            s.pop();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;v[now].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">                deg[v[now][i]]--;</span><br><span class="line">                <span class="keyword">if</span>(!deg[v[now][i]])s.push(v[now][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include &lt;bits/stdc++.h&gt;
+#define IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+using namespace std;
+int main()
+{
+    IOS
+    int n,m;
+    while(cin&gt;&gt;n&gt;&gt;m){
+        vector&lt;int&gt; v[101];
+        int deg[101];
+        priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt; s;
+        memset(deg,0,sizeof(deg));
+        for(int i=0;i&lt;m;i++){
+            int a,b;
+            cin&gt;&gt;a&gt;&gt;b;
+            deg[b]++;
+            v[a].push_back(b);
+        }
+        for(int i=0;i&lt;n;i++){
+            if(!deg[i])s.push(i);
+        }
+        cout&lt;&lt;endl;
+        while(s.size()){
+            int now=s.top();
+            cout&lt;&lt;now&lt;&lt;&quot; &quot;;
+            s.pop();
+            for(int i=0;i&lt;v[now].size();i++){
+                deg[v[now][i]]--;
+                if(!deg[v[now][i]])s.push(v[now][i]);
+            }
+        }  
+        cout&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+
             
         </article>
     </div>
@@ -361,7 +397,8 @@ s2 = sub2+e2</p>
 <h1>基礎中的基礎</h1>
 <h3 id="輸出">輸出</h3>
 <p>print(‘我是被輸出的’)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'HelloWorld'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">print('HelloWorld')
+</code></pre>
 <h2 id="變數">變數</h2>
 <p>常見的變數型態有 <strong>int(整數),float(浮點數),str(字串),bool(布林值)</strong></p>
 <ul>
@@ -371,7 +408,16 @@ s2 = sub2+e2</p>
 <li>不須設定初始值請用 <strong>None</strong></li>
 <li>單行註解使用 <strong>#被註解的文字</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">16</span> </span><br><span class="line">name = <span class="string">'Chen'</span></span><br><span class="line">score = <span class="number">99.7</span></span><br><span class="line">pa = <span class="literal">False</span></span><br><span class="line">ans = <span class="literal">None</span></span><br><span class="line">print(<span class="string">'學生名稱'</span>,name)</span><br><span class="line">print(<span class="string">'年齡'</span>,age)</span><br><span class="line">print(<span class="string">'分數'</span>,score)</span><br><span class="line">print(<span class="string">'會被當嗎'</span>,pa)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">    age = 16 
+    name = 'Chen'
+    score = 99.7
+    pa = False
+    ans = None
+    print('學生名稱',name)
+    print('年齡',age)
+    print('分數',score)
+    print('會被當嗎',pa)
+</code></pre>
 <h3 id="輸入">輸入</h3>
 <p>變數 = input(‘提示字元’)</p>
 <h2 id="算術運算子">算術運算子</h2>
@@ -443,7 +489,16 @@ s2 = sub2+e2</p>
 </tbody>
 </table>
 <p>(其實還有更多)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">chinese =int( input(<span class="string">'國文分數:'</span>))</span><br><span class="line">english = int(input(<span class="string">'英文分數:'</span>))</span><br><span class="line">math = int(input(<span class="string">'數學分數:'</span>))</span><br><span class="line">science = int(input(<span class="string">'自然分數:'</span>))</span><br><span class="line">society = int(input(<span class="string">'社會分數:'</span>))</span><br><span class="line">avg = float((chinese + english + math + science + society )/<span class="number">5</span>)</span><br><span class="line">print(<span class="string">'你的分數分別是'</span>)</span><br><span class="line">print(<span class="string">'國文:%d\n英文:%d\n數學:%d\n自然:%d\n社會:%d\n'</span> %(chinese,english,math,science,society))</span><br><span class="line">print(<span class="string">'平均:%f'</span> %(avg))</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">chinese =int( input('國文分數:'))
+english = int(input('英文分數:'))
+math = int(input('數學分數:'))
+science = int(input('自然分數:'))
+society = int(input('社會分數:'))
+avg = float((chinese + english + math + science + society )/5)
+print('你的分數分別是')
+print('國文:%d\n英文:%d\n數學:%d\n自然:%d\n社會:%d\n' %(chinese,english,math,science,society))
+print('平均:%f' %(avg))
+</code></pre>
 <h1>條件判斷</h1>
 <p><strong>使用if elif else</strong></p>
 <ul>
@@ -452,7 +507,16 @@ s2 = sub2+e2</p>
 <li>一樣!絕對要排版!不要忘記TAB和空格</li>
 <li>變數型態轉換 後來(原本)</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">name = input(<span class="string">'請輸入您的名字'</span>)</span><br><span class="line">score = int(input(<span class="string">'請輸入您的分數'</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    print(name,<span class="string">'是學霸!好電Orz'</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;=<span class="number">60</span>:</span><br><span class="line">    print(<span class="string">'還可以接受啦'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(name,<span class="string">'!你給我去讀書!'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">name = input('請輸入您的名字')
+score = int(input('請輸入您的分數'))
+if score &gt;= 90:
+    print(name,'是學霸!好電Orz')
+elif score &gt;=60:
+    print('還可以接受啦')
+else:
+    print(name,'!你給我去讀書!')
+    
+</code></pre>
 <h3 id="邏輯運算子">邏輯運算子</h3>
 <table>
 <thead>
@@ -497,7 +561,12 @@ B 為條件B</p>
 </tr>
 </tbody>
 </table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">score = int(input(<span class="string">'請輸入您的分數'</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt;= <span class="number">90</span> :</span><br><span class="line">    print(<span class="string">'你只有'</span>,score,<span class="string">'是個普通人'</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> score &gt;= <span class="number">60</span> :</span><br><span class="line">    print(<span class="string">'一樣給我去念書!!'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">score = int(input('請輸入您的分數'))
+if score &gt;= 60 and score &lt;= 90 :
+    print('你只有',score,'是個普通人')
+if not score &gt;= 60 :
+    print('一樣給我去念書!!')
+</code></pre>
 <h1>陣列</h1>
 <ul>
 <li>Range,Tuple 不可修改</li>
@@ -523,8 +592,26 @@ Range(start, stop, step)</p>
 <li>陣列內的元素也可以是陣列(類似數學上的集合)</li>
 <li>使用 **[start:stop:step]**來取出資料，-1表示最後一個</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">number = range (<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>) <span class="comment">#range</span></span><br><span class="line">name = <span class="string">'John'</span>,<span class="string">'Chris'</span>,<span class="string">'Amber'</span>,<span class="string">'Bob'</span>,<span class="string">'Emma'</span> <span class="comment">#tuple</span></span><br><span class="line">score = [ <span class="number">50</span>,<span class="number">70</span>,<span class="number">98</span>,<span class="number">78</span>,<span class="number">4</span>] <span class="comment">#list</span></span><br><span class="line">score[<span class="number">0</span>] = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">print(<span class="string">'座號:'</span>,number[<span class="number">0</span>],number[<span class="number">1</span>],number[<span class="number">2</span>],number[<span class="number">3</span>])</span><br><span class="line">print(<span class="string">'姓名:'</span>,name[<span class="number">0</span>],name[<span class="number">1</span>],name[<span class="number">2</span>],name[<span class="number">3</span>])</span><br><span class="line">print(<span class="string">'分數:'</span>,score[<span class="number">0</span>],score[<span class="number">1</span>],score[<span class="number">2</span>],score[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'hello world'</span></span><br><span class="line">arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">arr2 = arr1[<span class="number">0</span>:<span class="number">5</span>]</span><br><span class="line">arr3 = arr1[<span class="number">0</span>:<span class="number">-1</span>:<span class="number">2</span>]</span><br><span class="line">arr4 = arr1[:]</span><br><span class="line">print(arr2)</span><br><span class="line">print(arr3)</span><br><span class="line">print(arr4)</span><br><span class="line">print(str1[<span class="number">5</span>:])</span><br><span class="line">print(arr1[:<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">number = range (1,5,1) #range
+name = 'John','Chris','Amber','Bob','Emma' #tuple
+score = [ 50,70,98,78,4] #list
+score[0] = [0,1,2]
+print('座號:',number[0],number[1],number[2],number[3])
+print('姓名:',name[0],name[1],name[2],name[3])
+print('分數:',score[0],score[1],score[2],score[3])
+
+</code></pre>
+<pre><code class="language-Python">str1 = 'hello world'
+arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr2 = arr1[0:5]
+arr3 = arr1[0:-1:2]
+arr4 = arr1[:]
+print(arr2)
+print(arr3)
+print(arr4)
+print(str1[5:])
+print(arr1[:-1])
+</code></pre>
 <h1>重複結構</h1>
 <h3 id="for">for</h3>
 <p>常跟range搭配使用<br>
@@ -535,15 +622,57 @@ Range(start, stop, step)</p>
 for i in str<br>
 for i in arr</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">score = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">program = [<span class="string">'國文'</span>,<span class="string">'英文'</span>,<span class="string">'數學'</span>,<span class="string">'自然'</span>,<span class="string">'社會'</span>]</span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    x = int(input(program[i]))</span><br><span class="line">    score[i] = x</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">'%s成績為%d分'</span>%(program[i],score[i]))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    sum += score[i]</span><br><span class="line">print(<span class="string">'總分'</span>,sum)</span><br><span class="line">avg = sum/<span class="number">5</span></span><br><span class="line">print(<span class="string">'平均'</span>,avg)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">score = [0,0,0,0,0]
+program = ['國文','英文','數學','自然','社會']
+sum = 0
+for i in range(5):
+    x = int(input(program[i]))
+    score[i] = x
+for i in range(5):
+    print('%s成績為%d分'%(program[i],score[i]))
+for i in range(5):
+    sum += score[i]
+print('總分',sum)
+avg = sum/5
+print('平均',avg)
+</code></pre>
 <p><em><strong>example</strong></em><br>
 <strong>印出10為底的三角形,如下</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">***********</span><br><span class="line"></span><br><span class="line"> *********</span><br><span class="line"></span><br><span class="line">  *******</span><br><span class="line"></span><br><span class="line">   *****</span><br><span class="line"></span><br><span class="line">    ***</span><br><span class="line"></span><br><span class="line">     *</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i):</span><br><span class="line">        print(<span class="string">' '</span>,end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">11</span>- <span class="number">2</span>*i):</span><br><span class="line">        print(<span class="string">'*'</span>,end=<span class="string">""</span>)</span><br><span class="line">    print(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>***********
+
+ *********
+
+  *******
+
+   *****
+
+    ***
+
+     *
+
+</code></pre>
+<pre><code class="language-Python">for i in range(10):
+    for j in range(i):
+        print(' ',end=&quot;&quot;)
+    for j in range(11- 2*i):
+        print('*',end=&quot;&quot;)
+    print('\n')
+        
+</code></pre>
 <h3 id="while">while</h3>
 <p><strong>有條件限定的</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 條件:</span><br><span class="line">    <span class="keyword">if</span> 條件:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">if</span> 條件:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num = int(input(<span class="string">'請輸入一個數'</span>))</span><br><span class="line"><span class="keyword">while</span> num != <span class="number">0</span>:</span><br><span class="line">    print(num % <span class="number">10</span>)</span><br><span class="line">    num //= <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">while 條件:
+    if 條件:
+        continue
+    if 條件:
+        break
+</code></pre>
+<pre><code class="language-Python">num = int(input('請輸入一個數'))
+while num != 0:
+    print(num % 10)
+    num //= 10
+
+</code></pre>
 <h1>字元、字串</h1>
 <p>字串其實也是序列的一種 也可以把它看成一種容器</p>
 <ul>
@@ -555,11 +684,20 @@ for i in arr</p>
 <p>split(‘分割符’,數量)<br>
 join可將一個陣列組合成一個字串</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">country = <span class="string">'Taiwan,USA,UK,Japan'</span></span><br><span class="line">list1 = country.split(<span class="string">','</span>,<span class="number">4</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(list1)):</span><br><span class="line">    print(list1[i])</span><br><span class="line">ans = <span class="string">'xx'</span>.join(list1)</span><br><span class="line"><span class="keyword">print</span> (ans)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">country = 'Taiwan,USA,UK,Japan'
+list1 = country.split(',',4)
+for i in range(len(list1)):
+    print(list1[i])
+ans = 'xx'.join(list1)
+print (ans)
+</code></pre>
 <h1>函式</h1>
 <p>在不同地方但需要使用同一段程式碼時<br>
 argument可以預設 若無輸入就會使用預設</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FunctionName</span><span class="params">(Argument)</span>:</span></span><br><span class="line">    程式碼</span><br><span class="line">    <span class="keyword">return</span> 回傳值</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">def FunctionName(Argument):
+    程式碼
+    return 回傳值
+</code></pre>
 <p><em><strong>最小公因數(GCD)</strong></em></p>
 <p><strong>輾轉相除法</strong><br>
 兩個整數的GCD是能夠同時整除它們的最大的正整數。</p>
@@ -567,11 +705,29 @@ argument可以預設 若無輸入就會使用預設</p>
 <p>原理：<br>
 兩個整數的GCD等於較小的數和,兩數的差的最大公因數</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> gcd(b,a%b)</span><br><span class="line">x = int(input(<span class="string">'請輸入x:'</span>))</span><br><span class="line">y = int(input(<span class="string">'請輸入y:'</span>))</span><br><span class="line">print(<span class="string">'x和y的GCD為'</span>,gcd(x,y))</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">def gcd(a,b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b,a%b)
+x = int(input('請輸入x:'))
+y = int(input('請輸入y:'))
+print('x和y的GCD為',gcd(x,y))
+        
+</code></pre>
 <h3 id="遞迴">遞迴</h3>
 <p>這只是基礎的遞迴<br>
 <em><strong>費氏數列</strong></em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> n &lt;=<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> f(n<span class="number">-1</span>)+f(n<span class="number">-2</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">11</span>):</span><br><span class="line">    print(f(i))</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">def f(n):
+    if n == 0:
+        return 0
+    if n &lt;=2:
+        return 1
+    return f(n-1)+f(n-2)
+for i in range(11):
+    print(f(i))
+
+</code></pre>
 <h1>其他常見操作</h1>
 <table>
 <thead>
@@ -608,7 +764,11 @@ argument可以預設 若無輸入就會使用預設</p>
 </tbody>
 </table>
 <h3 id="導入模組">導入模組</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"><span class="keyword">from</span> apthlib <span class="keyword">import</span> Path</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Python">import time
+import random as rd
+from apthlib import Path
+</code></pre>
+
             
         </article>
     </div>
@@ -675,7 +835,7 @@ if判斷式和for迴圈不需要以小括號包覆起來。<br>
 
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月05日</a>
-            <a><i class="nexmoefont icon-areachart"></i>510 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>485 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
         </div>
 
@@ -697,7 +857,64 @@ father是用來記錄父節點的;num是在記錄樹的大小以便合併<br>
 for跑 找根 如果根不同 就將權重加入 並合併<br>
 還要順便確認邊的數量是否相同</p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> father[<span class="number">100000</span>],num[<span class="number">100000</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line"><span class="keyword">int</span> start,<span class="built_in">stop</span>,length;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_father</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(father[s]!=s)&#123;</span><br><span class="line">        s=father[s];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">myCompare</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a.length&lt;b.length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;node&gt; <span class="title">v</span><span class="params">(m)</span></span>;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            father[i]=i;</span><br><span class="line">            num[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;v[i].start&gt;&gt;v[i].<span class="built_in">stop</span>&gt;&gt;v[i].length;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),myCompare);</span><br><span class="line">        <span class="keyword">int</span> edgesum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            a=find_father(v[i].start);</span><br><span class="line">            b=find_father(v[i].<span class="built_in">stop</span>);</span><br><span class="line">            <span class="keyword">if</span>(a!=b)&#123;</span><br><span class="line">                <span class="keyword">if</span>(num[a]&gt;num[b])&#123;</span><br><span class="line">                    father[b]=a;</span><br><span class="line">                    num[a]+=num[b];</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    father[a]=b;</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    num[b]+=num[a];</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(edgesum==n<span class="number">-1</span>)<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int father[100000],num[100000];
+struct node {
+int start,stop,length;
+};
+int find_father(int s){
+    while(father[s]!=s){
+        s=father[s];
+    }
+    return s;
+}
+bool myCompare(node a,node b){
+return a.length&lt;b.length;
+}
+int main()
+{
+    int n,m;
+    while(cin&gt;&gt;n&gt;&gt;m){
+        vector&lt;node&gt; v(m);
+        long long int ans=0;
+        for(int i=0;i&lt;n;i++){
+            father[i]=i;
+            num[i]=1;
+        }
+        for(int i=0;i&lt;m;i++){
+            cin&gt;&gt;v[i].start&gt;&gt;v[i].stop&gt;&gt;v[i].length;
+        }
+        sort(v.begin(),v.end(),myCompare);
+        int edgesum=0;
+        for(int i=0;i&lt;m;i++){
+            int a,b;
+            a=find_father(v[i].start);
+            b=find_father(v[i].stop);
+            if(a!=b){
+                if(num[a]&gt;num[b]){
+                    father[b]=a;
+                    num[a]+=num[b];
+                    ans+=v[i].length;
+                    edgesum++;
+                }
+                else{
+                    father[a]=b;
+                    ans+=v[i].length;
+                    num[b]+=num[a];
+                    edgesum++;
+                }
+            }
+        }
+        if(edgesum==n-1)cout&lt;&lt;ans&lt;&lt;endl;
+        else cout&lt;&lt;-1&lt;&lt;endl;
+
+    }
+    return 0;
+}
+
+</code></pre>
+
             
         </article>
     </div>
@@ -714,7 +931,7 @@ for跑 找根 如果根不同 就將權重加入 並合併<br>
 
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月25日</a>
-            <a><i class="nexmoefont icon-areachart"></i>240 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>234 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
 
@@ -729,7 +946,15 @@ for跑 找根 如果根不同 就將權重加入 並合併<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6wPIMMuPxUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 影片取自洪Âng春男Chhun-Lâm
 <h3 id="實現關鍵片段程式碼">實現關鍵片段程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(d[i][j] &gt; d[i][k]+d[k][j])</span><br><span class="line">                d[i][j] = d[i][k]+d[k][j];</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">for(int k=0;k&lt;n;k++){
+    for(int i=0;i&lt;n;i++){
+        for(int j=0;j&lt;n;j++){
+            if(d[i][j] &gt; d[i][k]+d[k][j])
+                d[i][j] = d[i][k]+d[k][j];
+        }        
+    }
+}
+</code></pre>
 <h3 id="注意">注意</h3>
 <p>並不是每個題目都是透過上述的判斷式決定<br>
 上面為求最短路徑</p>
@@ -820,7 +1045,7 @@ NVIDA、Intel、MSI，也呼籲玩家使用顯卡為這項企畫提供算力，�
 
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月18日</a>
-            <a><i class="nexmoefont icon-areachart"></i>819 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>804 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
         </div>
 
@@ -877,7 +1102,40 @@ NVIDA、Intel、MSI，也呼籲玩家使用顯卡為這項企畫提供算力，�
 再依序追蹤朋友的朋友直到某人的朋友已經被追蹤過<br>
 則記為一個群體</p>
 <h3 id="程式碼">程式碼</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">50000</span>],c[<span class="number">50000</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[a]==<span class="literal">false</span>)&#123;</span><br><span class="line">        c[a]=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">int</span> after=f[a];</span><br><span class="line">        <span class="keyword">if</span>(c[after]==<span class="literal">false</span>)</span><br><span class="line">            dfs(after);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;f[i];</span><br><span class="line">            c[i]=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c[i]==<span class="literal">false</span>)&#123;</span><br><span class="line">                  ans++;</span><br><span class="line">                  c[i]=<span class="literal">true</span>;</span><br><span class="line">                  dfs(f[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int f[50000],c[50000];
+void dfs(int a){
+    if(c[a]==false){
+        c[a]=true;
+        int after=f[a];
+        if(c[after]==false)
+            dfs(after);
+    }
+}
+int main()
+{
+    int n;
+    while(cin&gt;&gt;n){
+        int ans=0;
+        for(int i=0;i&lt;n;i++){
+            cin&gt;&gt;f[i];
+            c[i]=false;
+        }
+        for(int i=0;i&lt;n;i++){
+            if(c[i]==false){
+                  ans++;
+                  c[i]=true;
+                  dfs(f[i]);
+            }
+        }
+        cout&lt;&lt;ans&lt;&lt;endl;
+    }
+    return 0;
+}
+
+</code></pre>
+
             
         </article>
     </div>
@@ -897,7 +1155,7 @@ NVIDA、Intel、MSI，也呼籲玩家使用顯卡為這項企畫提供算力，�
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645597"></script>
+<script src="/js/app.js?v=1601513864291"></script>
   
     <!-- Google Analytics -->
 <script>

@@ -12,12 +12,12 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="拓樸排序 定義(待補) 用法 在操作有前後順序的圖 可以使用拓樸排序 作法 用deg存每個點的出度 每次都將出度為0的點輸出 再把他的子節點出度都-1 以下範例代碼為Zerojudge a552 1234567891011121314151617181920212223242526272829303132333435#include &lt;bits&#x2F;stdc++.h&gt;#define IOS">
+  <meta name="description" content="拓樸排序 定義(待補) 用法 在操作有前後順序的圖 可以使用拓樸排序 作法 用deg存每個點的出度 每次都將出度為0的點輸出 再把他的子節點出度都-1 以下範例代碼為Zerojudge a552 #include &lt;bits&#x2F;stdc++.h&gt; #define IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0); using n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TopologicalSort 拓樸排序">
 <meta property="og:url" content="https://chaonote.tk/2020/08/15/alogrithm/Graph/TopologicalSort/index.html">
 <meta property="og:site_name" content="Chao&#39;s Note">
-<meta property="og:description" content="拓樸排序 定義(待補) 用法 在操作有前後順序的圖 可以使用拓樸排序 作法 用deg存每個點的出度 每次都將出度為0的點輸出 再把他的子節點出度都-1 以下範例代碼為Zerojudge a552 1234567891011121314151617181920212223242526272829303132333435#include &lt;bits&#x2F;stdc++.h&gt;#define IOS">
+<meta property="og:description" content="拓樸排序 定義(待補) 用法 在操作有前後順序的圖 可以使用拓樸排序 作法 用deg存每個點的出度 每次都將出度為0的點輸出 再把他的子節點出度都-1 以下範例代碼為Zerojudge a552 #include &lt;bits&#x2F;stdc++.h&gt; #define IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0); using n">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-08-14T22:16:37.000Z">
 <meta property="article:modified_time" content="2020-08-14T22:18:16.066Z">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601513645525">
+  <link rel="stylesheet" href="/css/style.css?v=1601513864232">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -203,7 +203,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月15日</a>
-    <a><i class="nexmoefont icon-areachart"></i>232 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>221 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -230,7 +230,43 @@
 每次都將出度為0的點輸出<br>
 再把他的子節點出度都-1</p>
 <p><strong>以下範例代碼為Zerojudge a552</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v[<span class="number">101</span>];</span><br><span class="line">        <span class="keyword">int</span> deg[<span class="number">101</span>];</span><br><span class="line">        priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">        <span class="built_in">memset</span>(deg,<span class="number">0</span>,<span class="keyword">sizeof</span>(deg));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            deg[b]++;</span><br><span class="line">            v[a].push_back(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!deg[i])s.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">while</span>(s.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="keyword">int</span> now=s.top();</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;now&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">            s.pop();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;v[now].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">                deg[v[now][i]]--;</span><br><span class="line">                <span class="keyword">if</span>(!deg[v[now][i]])s.push(v[now][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-C++">#include &lt;bits/stdc++.h&gt;
+#define IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+using namespace std;
+int main()
+{
+    IOS
+    int n,m;
+    while(cin&gt;&gt;n&gt;&gt;m){
+        vector&lt;int&gt; v[101];
+        int deg[101];
+        priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt; s;
+        memset(deg,0,sizeof(deg));
+        for(int i=0;i&lt;m;i++){
+            int a,b;
+            cin&gt;&gt;a&gt;&gt;b;
+            deg[b]++;
+            v[a].push_back(b);
+        }
+        for(int i=0;i&lt;n;i++){
+            if(!deg[i])s.push(i);
+        }
+        cout&lt;&lt;endl;
+        while(s.size()){
+            int now=s.top();
+            cout&lt;&lt;now&lt;&lt;&quot; &quot;;
+            s.pop();
+            for(int i=0;i&lt;v[now].size();i++){
+                deg[v[now][i]]--;
+                if(!deg[v[now][i]])s.push(v[now][i]);
+            }
+        }  
+        cout&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+
   </article>
 
   
@@ -283,7 +319,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601513645526"></script>
+<script src="/js/app.js?v=1601513864233"></script>
   
     <!-- Google Analytics -->
 <script>
