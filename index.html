@@ -1,444 +1,262 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="zh-tw">
+
 <head>
-  <meta charset="utf-8" name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <title>Chao&#39;s Note</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   
-  <!-- JQuery -->
   
-<script src="/lib/jquery.min.js"></script>
 
-  <!-- Font Awesome -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Chao&#39;s Note">
+<meta property="og:url" content="https://chaonote.tk/index.html">
+<meta property="og:site_name" content="Chao&#39;s Note">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="ChaoYi Lin">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-<script src="/lib/fontawesome/all.min.js"></script>
-
-  <!-- Title & Icon -->
-  
-  <link rel="icon" href="/img/favicon.ico">
-  
-  
-  <!-- MyStyle -->
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  <!-- LayoutBehavior -->
-  
-<script src="/js/layoutBehavior.js"></script>
-
-  <!-- PostBehavior -->
-  
-<script src="/js/postBehavior.js"></script>
-
+  <link rel="stylesheet" href="/css/style.css?v=1601513645596">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body id="layout" style="background-image: url(/img/thumb-1920-819294.png);">
+<body class="mdui-drawer-body-left">
   
-  <nav id="navbar" class="banner-style">
-  <div class="navbar-list wrapper">
-    <div class="nav-item-avatar">
-      <img src="/img/gitcat.png" alt="avatar" onmousedown="return false;">
-    </div>
-    <div class="nav-item-links-left">
-      
-<ul class="links">
-  
-  <li class="item">
-    
-    <a class="item-link" href="/">
-      首頁
-    </a>
-    
-  </li>
-  
-  <li class="item">
-    
-    <a class="item-link" href="/archives">
-      歸檔
-    </a>
-    
-  </li>
-  
-</ul>
-    </div>
-    <div class="nav-item-links-right">
-      
-<ul class="links">
-  
-  <li class="item">
-    
-    <a href="https://zerojudge.tw/UserStatistic?id=47443" target="_blank" rel="noopener" title="ZeroJudge">
-      <i class="item-link fas fa-code"></i>
-    </a>
-    
-  </li>
-  
-  <li class="item">
-    
-    <a href="https://github.com/ucangodiedie0213" target="_blank" rel="noopener" title="Github">
-      <i class="item-link fab fa-github"></i>
-    </a>
-    
-  </li>
-  
-</ul>
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="ChaoYi Lin" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin"></a>
+       </div>
     </div>
   </div>
-</nav>
-  <div id="messageField">
-    <p>Test Message</p>
-  </div>
-  <header id="header">
-  <img class="banner-img" src="/img/banner.jpg" onmousedown="return false" alt="headerImage">
-  <div class="banner-inner">
-    <div class="banner-title">
-    Chao&#39;s Note
-    </div>
-  </div>
-</header>
-  <div class="wrapper main-body">
-    <main id="main">
-      
-<article id="學習Linux開啟CTF的第一章吧!-SCIST資安D1" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            學習Linux開啟CTF的第一章吧!-SCIST資安D1
-          </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ChaoYi Lin">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin" alt="ChaoYi Lin">
         </a>
-      </li>
-    </ul>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>14</div>
+        <div><span>Tags</span>22</div>
+        <div><span>Categories</span>7</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://www.google.com/search?q=site:chaonote.tk" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://github.com/ucangodiedie0213/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Golang/">Golang</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Python/">Python</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/zerojudge/">zerojudge</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/">語言學習</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/資訊新知/">資訊新知</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/">題解</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
   </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/09/19/scist01/">
-        <h1 class="title-text" title="學習Linux開啟CTF的第一章吧!-SCIST資安D1">學習Linux開啟CTF的第一章吧!-SCIST資安D1</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCIST/" rel="tag">SCIST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Share/" rel="tag">Share</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-09-19
-        </time>
-      </div>
-    </header>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/Disjoint-Set/" style="font-size: 10px;">Disjoint Set</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Kruskal/" style="font-size: 10px;">Kruskal</a> <a href="/tags/LCS/" style="font-size: 10px;">LCS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MST/" style="font-size: 10px;">MST</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/alogrithm/" style="font-size: 15px;">alogrithm</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/floyd-washall/" style="font-size: 10px;">floyd washall</a> <a href="/tags/graph/" style="font-size: 20px;">graph</a> <a href="/tags/topologicalsort/" style="font-size: 10px;">topologicalsort</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
+    </div>
     
-    <div class="content  toc-article">
-      <h2 id="Linux">Linux</h2>
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 ChaoYi Lin
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <section class="nexmoe-posts">
+    
+    <div class="nexmoe-post">
+        <a href="/2020/09/19/scist01/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="學習Linux開啟CTF的第一章吧!-SCIST資安D1" class="lazyload">
+                    <h1>學習Linux開啟CTF的第一章吧!-SCIST資安D1</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月19日</a>
+            <a><i class="nexmoefont icon-areachart"></i>655 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+        </div>
+
+        <article>
+            
+                <h2 id="Linux">Linux</h2>
 <p>Linux 是一個類unix 免費且開源的操作系統<br>
 在你CTF的路上他可是你不可或缺的好夥伴呦<br>
 趕快跟Linux交個朋友吧!</p>
-      <div class="hidden-content">
-        <h2 id="Commands">Commands</h2>
-<ul>
-<li>ls<br>
-執行ls指令會列出當下目錄的所有檔案<br>
-也可以ls指定目錄 只要在ls後加上路徑<br>
-ls [DIR]<br>
-可選參數若填入-al 可列出所有檔案的詳細資訊</li>
-</ul>
-<blockquote>
-<p>ls -al<br>
-星號為萬字元<br>
-使用者列表位於/etc/passwd<br>
-密碼存於/etc/shadow</p>
-</blockquote>
-<ul>
-<li>chmod<br>
-chmod 可以更改檔案權限<br>
-權限分為擁有者、群組、所有人<br>
-這三個都各有rwx三個參數<br>
-可用二進制表示<br>
-rwx為7(111) r-x為5(101) rw-為6(110)</li>
-</ul>
-<blockquote>
-<p>chmod 777 file</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>更改資料夾 -R</p>
-</blockquote>
-</blockquote>
-<ul>
-<li>sudo<br>
-以root權限執行<br>
-當你執行大部分的系統命令時出現沒有權限，可在指令前加入sudo解決</li>
-</ul>
-<blockquote>
-<blockquote>
-<p>sudo su 可直接將自己變成root</p>
-</blockquote>
-</blockquote>
-<ul>
-<li>wget</li>
-</ul>
-<blockquote>
-<p>wget [網址] [參數]<br>
-參數常用為-O [檔案名稱] 可將下載下來的檔案直接命名</p>
-</blockquote>
-<ul>
-<li>file</li>
-</ul>
-<blockquote>
-<p>file [FILE]<br>
-取的檔案型態<br>
-ELF為可執行檔<br>
-ASCII txt為文字檔可直接cat<br>
-gzip壓縮 可用tar解壓</p>
-</blockquote>
-<ul>
-<li>cat<br>
-將檔案內的內容吐出來</li>
-</ul>
-<blockquote>
-<p>cat [FILE]</p>
-</blockquote>
-<h2 id="輸出型態">輸出型態</h2>
-<p>輸出分為 STDIN(0) STDOUT (1) STDERR(2)<br>
-有時候會有用STDERR偽裝STDOUT<br>
-需要過濾</p>
-<ul>
-<li>
-<p>apt<br>
-安裝程式</p>
-</li>
-<li>
-<p>tree<br>
-美化版ls</p>
-<p>-L 可指定最深幾層</p>
-</li>
-</ul>
-<blockquote>
-<p>tree -L 2</p>
-</blockquote>
-<ul>
-<li>
-<p>cd<br>
-移動目錄</p>
-<p>/為根目錄<br>
-~預設為home<br>
-.為當前目錄<br>
-…為上一層</p>
-</li>
-<li>
-<p>tar<br>
-壓縮打包與解壓<br>
-參數<br>
-z為用gzip操作;x為解壓縮;c為壓縮;v詳細資料;f指定檔名<br>
-解壓範例</p>
-</li>
-</ul>
-<blockquote>
-<p>tar zxvf [FILE]</p>
-</blockquote>
-<ul>
-<li>grep</li>
-</ul>
-<blockquote>
-<p>grep KEYWORD [FILE]<br>
-搜尋關鍵字</p>
-</blockquote>
-<h2 id="管道符號與重導向符號">管道符號與重導向符號</h2>
-<blockquote>
-<p>command1 | command2<br>
-把command1的<strong>STDOUT</strong>當成command2的<strong>STDIN</strong>執行<br>
-command1 &gt; file<br>
-將command1的STDOUT<strong>寫入</strong>file<br>
-command1 &gt;&gt;file<br>
-將command1的STDOUT寫入到file的<strong>後方</strong></p>
-</blockquote>
-<ul>
-<li>touch</li>
-</ul>
-<blockquote>
-<p>touch [檔名]<br>
-建立新檔案</p>
-</blockquote>
-<ul>
-<li>mkdir</li>
-</ul>
-<blockquote>
-<p>mkdir [資料夾名稱]<br>
-建立新資料夾</p>
-</blockquote>
-<ul>
-<li>mv<br>
-移動檔案</li>
-</ul>
-<blockquote>
-<p>mv [FILE] [DIR]</p>
-</blockquote>
-<ul>
-<li>cp<br>
-複製檔案到路徑</li>
-</ul>
-<blockquote>
-<p>cp [FILE] [DIR]</p>
-</blockquote>
-<ul>
-<li>rm<br>
-刪除</li>
-</ul>
-<blockquote>
-<p>rm [FILE]</p>
-</blockquote>
-<ul>
-<li>strings<br>
-吐出檔案內所有可視字元</li>
-</ul>
-<blockquote>
-<p>strings [FILE]</p>
-</blockquote>
-<ul>
-<li>md5sum<br>
-計算md5值</li>
-</ul>
-<blockquote>
-<p>md5sum [FILE]</p>
-</blockquote>
-<ul>
-<li>base64<br>
-使用base64做編碼解碼<br>
-預設為編碼 解碼只要加上-d的參數</li>
-</ul>
-<blockquote>
-<p>base64 -d [FILE]</p>
-</blockquote>
-<ul>
-<li>ssh<br>
-遠端連線電腦</li>
-</ul>
-<blockquote>
-<p>ssh user@ip</p>
-</blockquote>
-<pre><code>若要指定port
-加上-p [PORT] 參數
-</code></pre>
-<ul>
-<li>find<br>
-在指定目錄尋找檔案名稱</li>
-</ul>
-<blockquote>
-<p>find [PATH] -name [FILENAME]</p>
-</blockquote>
-<ul>
-<li>service<br>
-對特定服務進行操作</li>
-</ul>
-<blockquote>
-<p>service [NAME] [start|stop|status|restart]</p>
-</blockquote>
-<ul>
-<li>ps -aux<br>
-查看所有服務</li>
-<li>curl<br>
-模擬人為操作瀏覽網站</li>
-</ul>
-<blockquote>
-<p>curl [host/ip]</p>
-</blockquote>
-<h1>Vim</h1>
-<p>分成normal insert模式</p>
-<h1>參考資料</h1>
-<p><a href="https://www.youtube.com/watch?v=Mq7eqAZreqY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Mq7eqAZreqY</a></p>
-      </div>
-    </div>
-    <div class="more">
-      <a class="more-button" onclick="readMore()">閱讀更多</a>
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
-
-<article id="PID-arduinoAuto" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            PID-arduinoAuto
-          </div>
+    <div class="nexmoe-post">
+        <a href="/2020/09/05/PID-arduinoAuto/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="PID-arduinoAuto" class="lazyload">
+                    <h1>PID-arduinoAuto</h1>
+                </div>
+            
         </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/09/05/PID-arduinoAuto/">
-        <h1 class="title-text" title="PID-arduinoAuto">PID-arduinoAuto</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-09-05
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <p><a href="https://www.facebook.com/notes/%E8%98%87%E5%A5%95%E6%98%95/%E6%BC%94%E7%AE%97%E6%B3%95-pid%E8%87%AA%E5%8B%95%E6%8E%A7%E5%88%B6-arduino%E5%AF%A6%E4%BD%9C/1157343571048056/" target="_blank" rel="noopener">https://www.facebook.com/notes/蘇奕昕/演算法-pid自動控制-arduino實作/1157343571048056/</a></p>
 
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月05日</a>
+            <a><i class="nexmoefont icon-areachart"></i>20 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <p><a href="https://www.facebook.com/notes/%E8%98%87%E5%A5%95%E6%98%95/%E6%BC%94%E7%AE%97%E6%B3%95-pid%E8%87%AA%E5%8B%95%E6%8E%A7%E5%88%B6-arduino%E5%AF%A6%E4%BD%9C/1157343571048056/" target="_blank" rel="noopener">https://www.facebook.com/notes/蘇奕昕/演算法-pid自動控制-arduino實作/1157343571048056/</a></p>
+
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
-
-<article id="最長共同子序列-LongestCommonSubsequence" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            最長共同子序列-LongestCommonSubsequence
-          </div>
+    <div class="nexmoe-post">
+        <a href="/2020/08/20/alogrithm/DP/LCS/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="最長共同子序列-LongestCommonSubsequence" class="lazyload">
+                    <h1>最長共同子序列-LongestCommonSubsequence</h1>
+                </div>
+            
         </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/08/20/alogrithm/DP/LCS/">
-        <h1 class="title-text" title="最長共同子序列-LongestCommonSubsequence">最長共同子序列-LongestCommonSubsequence</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/" rel="tag">DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCS/" rel="tag">LCS</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-08-20
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h1>LCS</h1>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月20日</a>
+            <a><i class="nexmoefont icon-areachart"></i>252 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1>LCS</h1>
 <blockquote>
 <p>s1 = 2 5 7 9 3 1 2<br>
 s2 = 3 5 3 2 8<br>
@@ -478,56 +296,29 @@ s2 = sub2+e2</p>
 { if(e1==e2) LCS(sub1,sub2)+e1}</p>
 </blockquote>
 
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/08/15/alogrithm/Graph/TopologicalSort/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="TopologicalSort 拓樸排序" class="lazyload">
+                    <h1>TopologicalSort 拓樸排序</h1>
+                </div>
+            
+        </a>
 
-<article id="TopologicalSort 拓樸排序" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/Alogrithm/" title="Alogrithm (2)">
-          <div class="meta-list-link-text">
-            Alogrithm
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            TopologicalSort 拓樸排序
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/08/15/alogrithm/Graph/TopologicalSort/">
-        <h1 class="title-text" title="TopologicalSort 拓樸排序">TopologicalSort 拓樸排序</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topologicalsort/" rel="tag">topologicalsort</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-08-15
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h3 id="拓樸排序">拓樸排序</h3>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月15日</a>
+            <a><i class="nexmoefont icon-areachart"></i>232 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <h3 id="拓樸排序">拓樸排序</h3>
 <h2 id="定義-待補">定義(待補)</h2>
 <h2 id="用法">用法</h2>
 <p>在操作有前後順序的圖<br>
@@ -538,64 +329,29 @@ s2 = sub2+e2</p>
 再把他的子節點出度都-1</p>
 <p><strong>以下範例代碼為Zerojudge a552</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v[<span class="number">101</span>];</span><br><span class="line">        <span class="keyword">int</span> deg[<span class="number">101</span>];</span><br><span class="line">        priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">        <span class="built_in">memset</span>(deg,<span class="number">0</span>,<span class="keyword">sizeof</span>(deg));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            deg[b]++;</span><br><span class="line">            v[a].push_back(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!deg[i])s.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">while</span>(s.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="keyword">int</span> now=s.top();</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;now&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">            s.pop();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;v[now].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">                deg[v[now][i]]--;</span><br><span class="line">                <span class="keyword">if</span>(!deg[v[now][i]])s.push(v[now][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/06/13/Python/python-1/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="Python教學-基礎語法" class="lazyload">
+                    <h1>Python教學-基礎語法</h1>
+                </div>
+            
+        </a>
 
-<article id="Python教學-基礎語法" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/" title="語言學習 (2)">
-          <div class="meta-list-link-text">
-            語言學習
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/" title="Python (1)">
-          <div class="meta-list-link-text">
-            Python
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            Python教學-基礎語法
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/06/13/Python/python-1/">
-        <h1 class="title-text" title="Python教學-基礎語法">Python教學-基礎語法</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-06-13
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h1>常見錯誤及需要注意的</h1>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月13日</a>
+            <a><i class="nexmoefont icon-areachart"></i>1.3k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1>常見錯誤及需要注意的</h1>
 <ul>
 <li>一定要給我排版!絕對</li>
 <li>如果可以盡量宣告時直接指定型態</li>
@@ -853,64 +609,29 @@ argument可以預設 若無輸入就會使用預設</p>
 </table>
 <h3 id="導入模組">導入模組</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"><span class="keyword">from</span> apthlib <span class="keyword">import</span> Path</span><br></pre></td></tr></table></figure>
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/05/21/Golang-0/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="C語言的後裔 -Go語言 Golang" class="lazyload">
+                    <h1>C語言的後裔 -Go語言 Golang</h1>
+                </div>
+            
+        </a>
 
-<article id="C語言的後裔 -Go語言 Golang" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/" title="語言學習 (2)">
-          <div class="meta-list-link-text">
-            語言學習
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/" title="Golang (1)">
-          <div class="meta-list-link-text">
-            Golang
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            C語言的後裔 -Go語言 Golang
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/05/21/Golang-0/">
-        <h1 class="title-text" title="C語言的後裔 -Go語言 Golang">C語言的後裔 -Go語言 Golang</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/" rel="tag">Golang</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-05-21
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h3 id="Introduction">Introduction</h3>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月21日</a>
+            <a><i class="nexmoefont icon-areachart"></i>259 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <h3 id="Introduction">Introduction</h3>
 <p>Go語言 稱為Go language，又稱Golang。<br>
 Golang 由 Google開發的一個靜態編譯程式語言，並且由Google負責維護。<br>
 <em><strong>編譯器</strong></em><br>
@@ -938,64 +659,29 @@ if判斷式和for迴圈不需要以小括號包覆起來。<br>
 <h3 id="List">List</h3>
 <p><strong>以下我會慢慢發布做Golang的教學</strong></p>
 
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/05/05/ZJ/a129zerojudge/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="a129.最小生成樹" class="lazyload">
+                    <h1>a129.最小生成樹</h1>
+                </div>
+            
+        </a>
 
-<article id="a129.最小生成樹" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
-          <div class="meta-list-link-text">
-            題解
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
-          <div class="meta-list-link-text">
-            zerojudge
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            a129.最小生成樹
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/05/05/ZJ/a129zerojudge/">
-        <h1 class="title-text" title="a129.最小生成樹">a129.最小生成樹</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disjoint-Set/" rel="tag">Disjoint Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/" rel="tag">Kruskal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MST/" rel="tag">MST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-05-05
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h3 id="內容">內容</h3>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月05日</a>
+            <a><i class="nexmoefont icon-areachart"></i>510 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+        </div>
+
+        <article>
+            
+                <h3 id="內容">內容</h3>
 <p>給你一個加權的無向圖(weighted undirected graph)，請問這個圖的最小生成樹(minimum spanning tree)的權重和為多少？</p>
 <h3 id="輸入說明">輸入說明</h3>
 <p>輸入可能包含多筆測試資料，以EOF作為結束。</p>
@@ -1012,56 +698,29 @@ for跑 找根 如果根不同 就將權重加入 並合併<br>
 還要順便確認邊的數量是否相同</p>
 <h3 id="程式碼">程式碼</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> father[<span class="number">100000</span>],num[<span class="number">100000</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line"><span class="keyword">int</span> start,<span class="built_in">stop</span>,length;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_father</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(father[s]!=s)&#123;</span><br><span class="line">        s=father[s];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">myCompare</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a.length&lt;b.length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;node&gt; <span class="title">v</span><span class="params">(m)</span></span>;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            father[i]=i;</span><br><span class="line">            num[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;v[i].start&gt;&gt;v[i].<span class="built_in">stop</span>&gt;&gt;v[i].length;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),myCompare);</span><br><span class="line">        <span class="keyword">int</span> edgesum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b;</span><br><span class="line">            a=find_father(v[i].start);</span><br><span class="line">            b=find_father(v[i].<span class="built_in">stop</span>);</span><br><span class="line">            <span class="keyword">if</span>(a!=b)&#123;</span><br><span class="line">                <span class="keyword">if</span>(num[a]&gt;num[b])&#123;</span><br><span class="line">                    father[b]=a;</span><br><span class="line">                    num[a]+=num[b];</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    father[a]=b;</span><br><span class="line">                    ans+=v[i].length;</span><br><span class="line">                    num[b]+=num[a];</span><br><span class="line">                    edgesum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(edgesum==n<span class="number">-1</span>)<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/04/25/alogrithm/Graph/floydwashll/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="Floyd-Washall 佛洛伊德演算法 最短路徑" class="lazyload">
+                    <h1>Floyd-Washall 佛洛伊德演算法 最短路徑</h1>
+                </div>
+            
+        </a>
 
-<article id="Floyd-Washall 佛洛伊德演算法 最短路徑" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/Alogrithm/" title="Alogrithm (2)">
-          <div class="meta-list-link-text">
-            Alogrithm
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            Floyd-Washall 佛洛伊德演算法 最短路徑
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/04/25/alogrithm/Graph/floydwashll/">
-        <h1 class="title-text" title="Floyd-Washall 佛洛伊德演算法 最短路徑">Floyd-Washall 佛洛伊德演算法 最短路徑</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/alogrithm/" rel="tag">alogrithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floyd-washall/" rel="tag">floyd washall</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-04-25
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <p><strong>Flody-Washall</strong>演算法 是一個求最短路徑的一種演算法<br>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月25日</a>
+            <a><i class="nexmoefont icon-areachart"></i>240 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <p><strong>Flody-Washall</strong>演算法 是一個求最短路徑的一種演算法<br>
 它能處理正權、負權的圖，但不能處理負權迴圈的圖。</p>
 <h4 id="作法">作法</h4>
 <p><strong>Flody-Washall</strong> 就是找到任意兩個點間的最短路徑，<br>
@@ -1085,56 +744,29 @@ for跑 找根 如果根不同 就將權重加入 並合併<br>
 ●<a href="https://cyshchaonote.tk/" target="_blank" rel="noopener">題解</a><br>
 題目擷取自<a href="https://hackmd.io/@cube/H1TjWAbOE" target="_blank" rel="noopener">APCS(大學程式設計先修檢測)程式實作</a></p>
 
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/04/19/foldingathome/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="參與Folding@Home為研究武漢肺炎貢獻算力吧!" class="lazyload">
+                    <h1>參與Folding@Home為研究武漢肺炎貢獻算力吧!</h1>
+                </div>
+            
+        </a>
 
-<article id="參與Folding@Home為研究武漢肺炎貢獻算力吧!" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/" title="資訊新知 (1)">
-          <div class="meta-list-link-text">
-            資訊新知
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            參與Folding@Home為研究武漢肺炎貢獻算力吧!
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/04/19/foldingathome/">
-        <h1 class="title-text" title="參與Folding@Home為研究武漢肺炎貢獻算力吧!">參與Folding@Home為研究武漢肺炎貢獻算力吧!</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Folding-home/" rel="tag">Folding@home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" rel="tag">分散式計算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" rel="tag">武漢肺炎</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-04-19
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h3 id="介紹">介紹</h3>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月19日</a>
+            <a><i class="nexmoefont icon-areachart"></i>831 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+        </div>
+
+        <article>
+            
+                <h3 id="介紹">介紹</h3>
 <p><strong>Folding@home</strong> (簡稱FAH or F@H) 是一個由史丹佛大學化學系的潘德實驗室主辦。<br>
 從2000年啟動，至此Folding@home已經成為世界上最大的分散式計算計畫，2007年被金氏世界紀錄承認。<br>
 Folding@home主要在做蛋白質分子動力模擬、蛋白質摺疊的過程，更多的是生物醫療的研究，這項計畫研究過腦退化症、亨丁頓舞蹈症、癌症、成骨不全症、病毒、甚至最新的COVID-19 這項計畫都有參與研究的，</p>
@@ -1172,64 +804,29 @@ NVIDA、Intel、MSI，也呼籲玩家使用顯卡為這項企畫提供算力，�
 <a href="https://www.eettaiwan.com/20200331nt61-use-your-pc-to-study-the-coronavirus/" target="_blank" rel="noopener">研究新冠病毒 你也可以貢獻力量!</a><br>
 <a href="https://blogs.nvidia.com.tw/2020/03/new-breakthrough-in-coronavirus-research-uses-gpu-accelerated-software-to-support-treatment-design/" target="_blank" rel="noopener">GPU 加速軟體助力治療發展，幫助新冠病毒研究取得新突破</a></p>
 
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+    <div class="nexmoe-post">
+        <a href="/2020/04/18/ZJ/c291-zerojudge/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="c291.APCS 2017-0304-2小群體" class="lazyload">
+                    <h1>c291.APCS 2017-0304-2小群體</h1>
+                </div>
+            
+        </a>
 
-<article id="c291.APCS 2017-0304-2小群體" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/" title="題解 (5)">
-          <div class="meta-list-link-text">
-            題解
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/" title="zerojudge (5)">
-          <div class="meta-list-link-text">
-            zerojudge
-          </div>
-        </a>
-      </li>
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            c291.APCS 2017-0304-2小群體
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <a class="title-link" href="/2020/04/18/ZJ/c291-zerojudge/">
-        <h1 class="title-text" title="c291.APCS 2017-0304-2小群體">c291.APCS 2017-0304-2小群體</h1>
-      </a>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graph/" rel="tag">graph</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-04-18
-        </time>
-      </div>
-    </header>
-    
-    <div class="content">
-      <h3 id="題目內容">題目內容</h3>
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月18日</a>
+            <a><i class="nexmoefont icon-areachart"></i>819 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+        </div>
+
+        <article>
+            
+                <h3 id="題目內容">題目內容</h3>
 <p>Q同學正在習程式， P老師出了以下的題目讓他練習。</p>
 <p>一群人在一起時經常會形成一個一個的小群體。假設有 N個人，編號由 0到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說0到 N-1每個數字 都恰好出現一次。</p>
 <p>這種好友的關係會形成一些小群體。例如 N=10，好友編號如下，</p>
@@ -1281,59 +878,40 @@ NVIDA、Intel、MSI，也呼籲玩家使用顯卡為這項企畫提供算力，�
 則記為一個群體</p>
 <h3 id="程式碼">程式碼</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">50000</span>],c[<span class="number">50000</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[a]==<span class="literal">false</span>)&#123;</span><br><span class="line">        c[a]=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">int</span> after=f[a];</span><br><span class="line">        <span class="keyword">if</span>(c[after]==<span class="literal">false</span>)</span><br><span class="line">            dfs(after);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;f[i];</span><br><span class="line">            c[i]=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c[i]==<span class="literal">false</span>)&#123;</span><br><span class="line">                  ans++;</span><br><span class="line">                  c[i]=<span class="literal">true</span>;</span><br><span class="line">                  dfs(f[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
+        </article>
     </div>
     
-  </div>
-</div>
-</article>
+</section>
 
-
-<div class="index-pagination">
-  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一頁</a>
-</div>
-
-    </main>
-    <aside id="sidebar" class="sidebar">
-      
-<div class="widget">
-  <div class="tag-cloud">
-    <a class="title">
-      標籤雲
-    </a>
-    
-    <div class="content">
-    
-      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/Disjoint-Set/" style="font-size: 10px;">Disjoint Set</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Kruskal/" style="font-size: 10px;">Kruskal</a> <a href="/tags/LCS/" style="font-size: 10px;">LCS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MST/" style="font-size: 10px;">MST</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/alogrithm/" style="font-size: 15px;">alogrithm</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/floyd-washall/" style="font-size: 10px;">floyd washall</a> <a href="/tags/graph/" style="font-size: 20px;">graph</a> <a href="/tags/topologicalsort/" style="font-size: 10px;">topologicalsort</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
-    </div>
-  </div>
-</div>
-
-
-<div class="widget">
-  <div class="categories">
-    <a class="title">
-      分類目錄
-    </a>
-    
-    <div class="content">
-    
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/">語言學習</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/">Golang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/">資訊新知</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/">題解</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/">zerojudge</a><span class="category-list-count">5</span></li></ul></li></ul>
-    </div>
-  </div>
-</div>
-
-
-    </aside>
-  </div>
-  <footer id="footer">
-  <div class="wrapper">
-    <div class="copyright">
-      &copy; 2020 Theme by <a href="https://github.com/naukri7707/hexo-theme-naukri" target="_blank" rel="noopener">Naukri</a> -
-      Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.
-    </div>
-  </div>
-</footer>
+    <nav class="nexmoe-page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="nexmoefont icon-right"></i></a>
+    </nav>
   
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+<script src="/js/app.js?v=1601513645597"></script>
+  
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'G-VHZ8T5D36G', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+
+
 </body>
 
 </html>

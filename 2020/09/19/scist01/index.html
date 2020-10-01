@@ -1,139 +1,227 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="zh-tw">
+
 <head>
-  <meta charset="utf-8" name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>學習Linux開啟CTF的第一章吧!-SCIST資安D1 | Chao&#39;s Note</title>
+  <title>學習Linux開啟CTF的第一章吧!-SCIST資安D1 - Chao&#39;s Note</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   
-  <!-- JQuery -->
   
-<script src="/lib/jquery.min.js"></script>
 
-  <!-- Font Awesome -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="Linux Linux 是一個類unix 免費且開源的操作系統 在你CTF的路上他可是你不可或缺的好夥伴呦 趕快跟Linux交個朋友吧!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="學習Linux開啟CTF的第一章吧!-SCIST資安D1">
+<meta property="og:url" content="https://chaonote.tk/2020/09/19/scist01/index.html">
+<meta property="og:site_name" content="Chao&#39;s Note">
+<meta property="og:description" content="Linux Linux 是一個類unix 免費且開源的操作系統 在你CTF的路上他可是你不可或缺的好夥伴呦 趕快跟Linux交個朋友吧!">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-09-19T11:58:26.000Z">
+<meta property="article:modified_time" content="2020-09-27T12:47:20.844Z">
+<meta property="article:author" content="ChaoYi Lin">
+<meta property="article:tag" content="SCIST">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Share">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-<script src="/lib/fontawesome/all.min.js"></script>
-
-  <!-- Title & Icon -->
-  
-  <link rel="icon" href="/img/favicon.ico">
-  
-  
-  <!-- MyStyle -->
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  <!-- LayoutBehavior -->
-  
-<script src="/js/layoutBehavior.js"></script>
-
-  <!-- PostBehavior -->
-  
-<script src="/js/postBehavior.js"></script>
-
+  <link rel="stylesheet" href="/css/style.css?v=1601513645519">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body id="layout" style="background-image: url(/img/thumb-1920-819294.png);">
+<body class="mdui-drawer-body-left">
   
-  <nav id="navbar" class="banner-style">
-  <div class="navbar-list wrapper">
-    <div class="nav-item-avatar">
-      <img src="/img/gitcat.png" alt="avatar" onmousedown="return false;">
-    </div>
-    <div class="nav-item-links-left">
-      
-<ul class="links">
-  
-  <li class="item">
-    
-    <a class="item-link" href="/">
-      首頁
-    </a>
-    
-  </li>
-  
-  <li class="item">
-    
-    <a class="item-link" href="/archives">
-      歸檔
-    </a>
-    
-  </li>
-  
-</ul>
-    </div>
-    <div class="nav-item-links-right">
-      
-<ul class="links">
-  
-  <li class="item">
-    
-    <a href="https://zerojudge.tw/UserStatistic?id=47443" target="_blank" rel="noopener" title="ZeroJudge">
-      <i class="item-link fas fa-code"></i>
-    </a>
-    
-  </li>
-  
-  <li class="item">
-    
-    <a href="https://github.com/ucangodiedie0213" target="_blank" rel="noopener" title="Github">
-      <i class="item-link fab fa-github"></i>
-    </a>
-    
-  </li>
-  
-</ul>
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="ChaoYi Lin" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin"></a>
+       </div>
     </div>
   </div>
-</nav>
-  <div id="messageField">
-    <p>Test Message</p>
-  </div>
-  <header id="header">
-  <img class="banner-img" src="/img/banner.jpg" onmousedown="return false" alt="headerImage">
-  <div class="banner-inner">
-    <div class="banner-title">
-    Chao&#39;s Note
-    </div>
-  </div>
-</header>
-  <div class="wrapper main-body">
-    <main id="main">
-      <article id="學習Linux開啟CTF的第一章吧!-SCIST資安D1" class="post">
-<div class="postinside">
-  <div class="post-meta">
-    <ul class="meta-list">
-      
-      <li class="meta-list-item">
-        <a class="meta-list-link current-link">
-          <div class="meta-list-link-text">
-            學習Linux開啟CTF的第一章吧!-SCIST資安D1
-          </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ChaoYi Lin">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin" alt="ChaoYi Lin">
         </a>
-      </li>
-    </ul>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>14</div>
+        <div><span>Tags</span>22</div>
+        <div><span>Categories</span>7</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://www.google.com/search?q=site:chaonote.tk" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://github.com/ucangodiedie0213/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Golang/">Golang</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Python/">Python</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/zerojudge/">zerojudge</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/">語言學習</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/資訊新知/">資訊新知</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/">題解</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
   </div>
-  <div class="post-inner">
-    <header class="title">
-      
-      <h1 class="title-text" title="學習Linux開啟CTF的第一章吧!-SCIST資安D1">學習Linux開啟CTF的第一章吧!-SCIST資安D1</h1>
-      
-      <div class="separator"></div>
-      <div class="info">
-        
-        <i class="fas fa-tags"></i>
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCIST/" rel="tag">SCIST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Share/" rel="tag">Share</a></li></ul>
-        
-        <time class="time">
-          <i class="far fa-calendar-alt"></i>
-          2020-09-19
-        </time>
-      </div>
-    </header>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/Disjoint-Set/" style="font-size: 10px;">Disjoint Set</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Kruskal/" style="font-size: 10px;">Kruskal</a> <a href="/tags/LCS/" style="font-size: 10px;">LCS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MST/" style="font-size: 10px;">MST</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/alogrithm/" style="font-size: 15px;">alogrithm</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/floyd-washall/" style="font-size: 10px;">floyd washall</a> <a href="/tags/graph/" style="font-size: 20px;">graph</a> <a href="/tags/topologicalsort/" style="font-size: 10px;">topologicalsort</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
+    </div>
     
-    <div class="content">
-      <h2 id="Linux">Linux</h2>
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 ChaoYi Lin
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="學習Linux開啟CTF的第一章吧!-SCIST資安D1" class="lazyload">
+          <h1>學習Linux開啟CTF的第一章吧!-SCIST資安D1</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月19日</a>
+    <a><i class="nexmoefont icon-areachart"></i>655 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-number">1.</span> <span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commands"><span class="toc-number">2.</span> <span class="toc-text">Commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#輸出型態"><span class="toc-number">3.</span> <span class="toc-text">輸出型態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管道符號與重導向符號"><span class="toc-number">4.</span> <span class="toc-text">管道符號與重導向符號</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number"></span> <span class="toc-text">Vim</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number"></span> <span class="toc-text">參考資料</span></a>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <article>
+    <h2 id="Linux">Linux</h2>
 <p>Linux 是一個類unix 免費且開源的操作系統<br>
 在你CTF的路上他可是你不可或缺的好夥伴呦<br>
 趕快跟Linux交個朋友吧!</p>
@@ -351,136 +439,71 @@ command1 &gt;&gt;file<br>
 <h1>參考資料</h1>
 <p><a href="https://www.youtube.com/watch?v=Mq7eqAZreqY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Mq7eqAZreqY</a></p>
 
-    </div>
-    
-  </div>
-</div>
-</article>
-    </main>
-    <aside id="sidebar" class="sidebar">
-      
-<div class="widget">
-  <div class="tag-cloud">
-    <a class="title">
-      標籤雲
-    </a>
-    
-    <div class="content" style="display:none">
-    
-      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/Disjoint-Set/" style="font-size: 10px;">Disjoint Set</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Kruskal/" style="font-size: 10px;">Kruskal</a> <a href="/tags/LCS/" style="font-size: 10px;">LCS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MST/" style="font-size: 10px;">MST</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/alogrithm/" style="font-size: 15px;">alogrithm</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/floyd-washall/" style="font-size: 10px;">floyd washall</a> <a href="/tags/graph/" style="font-size: 20px;">graph</a> <a href="/tags/topologicalsort/" style="font-size: 10px;">topologicalsort</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
-    </div>
-  </div>
-</div>
+  </article>
 
-
-<div class="widget">
-  <div class="categories">
-    <a class="title">
-      分類目錄
-    </a>
-    
-    <div class="content" style="display:none">
-    
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/">語言學習</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Golang/">Golang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B3%87%E8%A8%8A%E6%96%B0%E7%9F%A5/">資訊新知</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/">題解</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%8C%E8%A7%A3/zerojudge/">zerojudge</a><span class="category-list-count">5</span></li></ul></li></ul>
-    </div>
-  </div>
-</div>
-
-
-<div class="widget">
-  <div class="post-toc">
-    <a class="title">
-      索引
-    </a>
-    
-      <div class="content">
-        
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commands"><span class="toc-text">Commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#輸出型態"><span class="toc-text">輸出型態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管道符號與重導向符號"><span class="toc-text">管道符號與重導向符號</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">Vim</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">參考資料</span></a>
-      </div>
-    </div>
-    <div class="post-progress">
-      <span class="post-progress-gotop" onclick="goTop()">
-        <i class="fas fa-chevron-up"></i>
-      </span>
-      <span class="post-progress-rate">
-        0%
-      </span>
-      <span class="post-progress-gobot" onclick="goBot()">
-        <i class="fas fa-chevron-down"></i>
-      </span>
-    </div>
-  </div>
-  <script>
-    const $toc = $($(".post-toc").parent());
-    const $rate = $(".post-progress-rate");
-    const width = $toc.width();
-    var pos = $toc.offset();
-
-    setTOCPosition();
-
-    $(window).scroll(function () {
-      setTOCPosition();
-      var r = $(window).scrollTop() * 100 / ($('body').height() - $(window).height());
-      $rate.text((r > 99 ? 100 : r < 1 ? 0 : r.toFixed(1)) + '%');
-    });
-
-    $('.widget').each(function () {
-      $(this).find('.title').click(function () {
-        $content = $(this).siblings('.content');
-        if ($content.css('display') === 'none') {
-          $content.slideDown(400, function () {
-            pos = $toc.offset();
-            setTOCPosition();
-          });
-        }
-        else {
-          $content.slideUp(400, function () {
-            pos = $toc.offset();
-            setTOCPosition();
-          });
-        }
-      });
-    });
-
-    function setTOCPosition() {
-      if ($(window).scrollTop() + 55 > pos.top) {
-        $toc.css({ 'position': 'fixed', 'top': '3rem', 'width': width });
-      }
-      else {
-        $toc.css('top', 0).css('position', 'relative');
-      }
-    }
-
-    function goTop() {
-      $("html,body").animate(
-        {
-          scrollTop: 0
-        },
-        "fast", "swing"
-      );
-    }
-
-    function goBot() {
-      $("html,body").animate(
-        {
-          scrollTop: $('body').height() - $(window).height()
-        },
-        "fast", "swing"
-      );
-    }
-  </script>
-
-    </aside>
-  </div>
-  <footer id="footer">
-  <div class="wrapper">
-    <div class="copyright">
-      &copy; 2020 Theme by <a href="https://github.com/naukri7707/hexo-theme-naukri" target="_blank" rel="noopener">Naukri</a> -
-      Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.
-    </div>
-  </div>
-</footer>
   
+    
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>ChaoYi Lin<br>
+    <strong>Link：</strong><a href="https://chaonote.tk/2020/09/19/scist01/" title="https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;09&#x2F;19&#x2F;scist01&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;09&#x2F;19&#x2F;scist01&#x2F;</a><br>
+    
+      <strong>版權聲明：</strong>本文採用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 協議進行許可 轉載請附上連結
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/CTF/" rel="tag">CTF</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/Linux/" rel="tag">Linux</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/SCIST/" rel="tag">SCIST</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/Share/" rel="tag">Share</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '0e9a93f76e4182c1faa6',
+        clientSecret: '922c8667ebed53ae32cf66dac7457ddd81cec052',
+        id: window.location.pathname,
+        repo: 'ucangodiedie0213.github.io',
+        owner: 'ucangodiedie0213',
+        admin: 'ucangodiedie0213'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+<script src="/js/app.js?v=1601513645520"></script>
+  
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'G-VHZ8T5D36G', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+
+
 </body>
 
 </html>
