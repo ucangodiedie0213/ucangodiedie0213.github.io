@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+  
+  <title>基礎圖論 Basic Graph Theory - Chao&#39;s Note</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" type="image/png" />
+  <meta name="description" content="圖的種類 圖的種類不多 但最常用的就是前兩個  有向圖 : 圖的邊皆為有向邊(每條邊都有方向) 無向圖 : 圖的邊皆為無向邊(每條邊都沒有有方向性) 混合圖 : 同時存在有向邊跟無向邊 簡單圖 : 沒有重邊、沒有自環 完全圖 : 所有點戶相連接 二分圖 : 把一張圖分成兩半，彼此不相連  名詞與專業術語介紹  DAG : 有向無環圖  圖的表示法 相鄰矩陣 使用二維矩陣實現，請依照題目選取適合的矩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基礎圖論 Basic Graph Theory">
+<meta property="og:url" content="https://chaonote.tk/2020/10/01/BasicGraphTheory/index.html">
+<meta property="og:site_name" content="Chao&#39;s Note">
+<meta property="og:description" content="圖的種類 圖的種類不多 但最常用的就是前兩個  有向圖 : 圖的邊皆為有向邊(每條邊都有方向) 無向圖 : 圖的邊皆為無向邊(每條邊都沒有有方向性) 混合圖 : 同時存在有向邊跟無向邊 簡單圖 : 沒有重邊、沒有自環 完全圖 : 所有點戶相連接 二分圖 : 把一張圖分成兩半，彼此不相連  名詞與專業術語介紹  DAG : 有向無環圖  圖的表示法 相鄰矩陣 使用二維矩陣實現，請依照題目選取適合的矩">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://2.bp.blogspot.com/-EfxHG_RWEag/U5sboNcJFUI/AAAAAAAAB0A/Ph2b02acEkM/s1600/img_003.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-xpYYilrrB7g/U5sbojcBBhI/AAAAAAAAB0E/MhZqY5pnVlM/s1600/img_004.png">
+<meta property="og:image" content="http://3.bp.blogspot.com/-l4jN64p89bA/U5siWA0KMwI/AAAAAAAAB0g/zrXUkJmrOEk/s1600/img_006.png">
+<meta property="article:published_time" content="2020-10-01T01:51:23.000Z">
+<meta property="article:modified_time" content="2020-10-02T01:26:20.698Z">
+<meta property="article:author" content="ChaoYi Lin">
+<meta property="article:tag" content="GraphTheory">
+<meta property="article:tag" content="Basic">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://2.bp.blogspot.com/-EfxHG_RWEag/U5sboNcJFUI/AAAAAAAAB0A/Ph2b02acEkM/s1600/img_003.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
+  
+  <link rel="stylesheet" href="/css/style.css?v=1601601994174">
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="ChaoYi Lin" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ChaoYi Lin">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin" alt="ChaoYi Lin">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>10</div>
+        <div><span>標籤</span>16</div>
+        <div><span>分類</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首頁">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首頁
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章歸檔">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章歸檔
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="關於我">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                關於我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://www.google.com/search?q=site:chaonote.tk" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://github.com/ucangodiedie0213/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分類</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Golang/">Golang</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Python/">Python</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/zerojudge/">zerojudge</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/">語言學習</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/資訊新知/">資訊新知</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/">題解</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Basic/" style="font-size: 10px;">Basic</a> <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/GraphTheory/" style="font-size: 10px;">GraphTheory</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/graph/" style="font-size: 15px;">graph</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
+    </div>
+    
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 ChaoYi Lin
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 62.5%;"> 
+          <img data-src="https://iversity.org/blog/wp-content/uploads/2017/07/qqEFn72MhN8-1280x800.jpg" data-sizes="auto" alt="基礎圖論 Basic Graph Theory" class="lazyload">
+          <h1>基礎圖論 Basic Graph Theory</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年10月01日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 10 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">圖的種類</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">名詞與專業術語介紹</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">圖的表示法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#相鄰矩陣"><span class="toc-number">3.1.</span> <span class="toc-text">相鄰矩陣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相鄰串列"><span class="toc-number">3.2.</span> <span class="toc-text">相鄰串列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">圖的遍歷</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DFS-深度優先搜尋"><span class="toc-number">4.1.</span> <span class="toc-text">DFS 深度優先搜尋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFS-廣度優先搜尋"><span class="toc-number">4.2.</span> <span class="toc-text">BFS 廣度優先搜尋</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">最短路徑</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bellman-Ford"><span class="toc-number">5.1.</span> <span class="toc-text">Bellman-Ford</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SPFA"><span class="toc-number">5.2.</span> <span class="toc-text">SPFA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Floyd-Washall"><span class="toc-number">5.3.</span> <span class="toc-text">Floyd-Washall</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dijkstra"><span class="toc-number">5.4.</span> <span class="toc-text">Dijkstra</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">樹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#名詞介紹"><span class="toc-number">6.1.</span> <span class="toc-text">名詞介紹</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">7.</span> <span class="toc-text">二元樹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二元樹的遍歷"><span class="toc-number">7.1.</span> <span class="toc-text">二元樹的遍歷</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">8.</span> <span class="toc-text">最小生成樹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-number">8.1.</span> <span class="toc-text">Kruskal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-number">8.2.</span> <span class="toc-text">Prim</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">9.</span> <span class="toc-text">拓樸排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">10.</span> <span class="toc-text">資料來源</span></a></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <article>
+    <h1>圖的種類</h1>
+<p>圖的種類不多 但最常用的就是前兩個</p>
+<ul>
+<li>有向圖 : 圖的邊皆為有向邊(每條邊都有方向)</li>
+<li>無向圖 : 圖的邊皆為無向邊(每條邊都沒有有方向性)</li>
+<li>混合圖 : 同時存在有向邊跟無向邊</li>
+<li>簡單圖 : 沒有重邊、沒有自環</li>
+<li>完全圖 : 所有點戶相連接</li>
+<li>二分圖 : 把一張圖分成兩半，彼此不相連</li>
+</ul>
+<h1>名詞與專業術語介紹</h1>
+<ul>
+<li>DAG : 有向無環圖</li>
+</ul>
+<h1>圖的表示法</h1>
+<h2 id="相鄰矩陣">相鄰矩陣</h2>
+<p>使用<strong>二維矩陣</strong>實現，請依照題目選取適合的矩陣型態<br>
+如果不帶權重只需要紀錄是否連通，可以用<strong>bool</strong>，帶權重者可用<strong>int</strong>實現。<br>
+空間複雜度為<strong>O(N^2)</strong> 但可以做到**O(1)**查詢是否連通</p>
+<h2 id="相鄰串列">相鄰串列</h2>
+<p>使用<strong>一維vector</strong>實現</p>
+<ul>
+<li>補充 : 宣告vector時用<strong>v[i]<strong>是宣告</strong>i個</strong>vector，但，<strong>v(i)<strong>則是宣告一個</strong>大小為i</strong>的vector<br>
+第<strong>i</strong>個vector存與<strong>i點</strong>連通的點</li>
+</ul>
+<h1>圖的遍歷</h1>
+<h2 id="DFS-深度優先搜尋">DFS 深度優先搜尋</h2>
+<p>DFS根本概念就是有路就走到底，走到死路再回頭去，走另外一條路再走到底。<br>
+記得，每次走過點之後就要把它紀錄成有走過的點。<br>
+d626: 小畫家真好用<br>
+d165: 八、草场普查<br>
+DFS是一種遞迴，可以來解排列組合，包牌問題，有些題目會需要剪枝，將不必要的解剪掉。<br>
+也因為他是遞迴，寫DFS一定要注意幾個關鍵:邊界、遞迴式、跳出條件<br>
+d115: 數字包牌<br>
+f168: m4a2-分配寶物(Treasure)<br>
+練習題:<br>
+c463: apcs 樹狀圖分析 (Tree Analyses)</p>
+<h2 id="BFS-廣度優先搜尋">BFS 廣度優先搜尋</h2>
+<p>BFS根本概念是將目前能走的點抓進來佇列裡面，再pop掉，一樣要記錄走過的點喔。<br>
+配合著queue使用<br>
+少數的最短路問題也可以用BFS解決喔*<br>
+a982: 迷宮問題#1<br>
+c117: 00439 - Knight Moves<br>
+UVA571<br>
+TIOJ1013<br>
+最短路問題:<br>
+TIOJ 1085<br>
+TIOJ 1022</p>
+<h1>最短路徑</h1>
+<p>最短路有個很關鍵的概念就是<strong>鬆弛(Relax)</strong><br>
+a-&gt;b 的距離如果大於a-&gt;c-&gt;b的距離就把a-&gt;b的距離更新成a-&gt;c-&gt;b的距離</p>
+<h2 id="Bellman-Ford">Bellman-Ford</h2>
+<p>一種單源最短路徑演算法。<br>
+使用相鄰矩陣存圖，無法通過的設置成無現大<br>
+在開一個陣列存點對所有點的距離<br>
+檢查每條邊是否能鬆弛這個點可以就更新。<br>
+如果檢查V(點數)還能夠鬆弛代表有負環。<br>
+時間複雜度為<strong>O(VE)</strong><br>
+<strong><a href="https://www.youtube.com/watch?v=3jsQ02jvOEY" target="_blank" rel="noopener">洪春男老師講解</a></strong></p>
+<h2 id="SPFA">SPFA</h2>
+<p>SPFA(Shortest Path Faster Algorihm)是Bellman-Ford的優化<br>
+把更新過的點放入佇列裡只檢查佇列裡中結點上的邊<br>
+一樣可以檢查負環<br>
+期望複雜度為O(2E)但通常很容易到O(VE)</p>
+<pre><code class="language-c++">for(int i=1;i&lt;=n;i++)
+    dis[i]=inf;
+queue&lt;int&gt;q;
+q.push(1);vis[1]=1;dis[1]=0;
+while(q.size()){
+    x=q.front();q.pop();vis[x]=0;
+    for(int i=head[x];i;i=a[i].next){
+        int s=a[i].to;
+        if(dis[s]&gt;dis[x]+a[i].cost){
+            dis[s]=dis[x]+a[i].cost;
+            if(vis[s]==0){
+            vis[s]=1;
+            q.push(s);
+            }
+        }
+    }
+}
+</code></pre>
+<h2 id="Floyd-Washall">Floyd-Washall</h2>
+<p>Floyd-Washall是可以處理多源最短路的演算法<br>
+可用於正負權圖，不可有負環。<br>
+使用相鄰矩陣實現<br>
+影片取自洪Âng春男Chhun-Lâm<br>
+<strong><a href="https://www.youtube.com/embed/6wPIMMuPxUw" target="_blank" rel="noopener">洪春男老師講解</a></strong></p>
+<p><strong>關鍵程式碼</strong></p>
+<pre><code class="language-c++">for(int k=0;k&lt;n;k++){
+    for(int i=0;i&lt;n;i++){
+        for(int j=0;j&lt;n;j++){
+            if(d[i][j] &gt; d[i][k]+d[k][j])
+                d[i][j] = d[i][k]+d[k][j];
+        }        
+    }
+}
+</code></pre>
+<p>練習題:<br>
+<a href="https://zerojudge.tw/ShowProblem?problemid=d282" target="_blank" rel="noopener">d282: 11015 - 05-2 Rendezvous</a><br>
+<a href="https://zerojudge.tw/ShowProblem?problemid=c128" target="_blank" rel="noopener">c128: 00544 - Heavy Cargo</a><br>
+<a href="https://zerojudge.tw/ShowProblem?problemid=a874" target="_blank" rel="noopener">a874: 14. Trace Route</a><br>
+<a href="https://zerojudge.tw/ShowProblem?problemid=a674" target="_blank" rel="noopener">a674: 10048 - Audiophobia</a></p>
+<h2 id="Dijkstra">Dijkstra</h2>
+<p><strong><a href="https://www.youtube.com/embed/6wPIMMuPxUw" target="_blank" rel="noopener">洪春男老師講解</a></strong><br>
+用Greddy的方法解決最短路問題，但不能處理有負邊負環的圖。<br>
+每次挑選一個離起點最近的點，把它標記成<strong>確定最短路徑點</strong>後，在利用者個點去鬆弛其他<strong>還沒有確認</strong>的點。<br>
+這裡提供佇列優化版的程式碼，時間複雜度<strong>O(nlonn)</strong><br>
+<strong>程式碼轉自[Zrn-code](<a href="https://zrn-code.github.io/2020/09/29/dijkstrat" target="_blank" rel="noopener">https://zrn-code.github.io/2020/09/29/dijkstrat</a> mp/)</strong></p>
+<pre><code class="language-c++">typedef pair&lt;int,int&gt;PII;
+const int MAXN = 100010;
+vector&lt;PII&gt; G[MAXN];
+void add_edge(int u,int v,int d){
+    G[u].push_back(make_pair(v,d));
+}
+void init(int n){
+    for(int i=0;i&lt;n;i++)
+        G[i].clear();
+}
+int vis[MAXN];
+int dis[MAXN]; 
+void dijkstra(int s,int n){
+    for(int i=0;i&lt;n;i++)vis[i] = 0;
+    for(int i=0;i&lt;n;i++)dis[i] = (i == s ? 0 : INF);
+    priority_queue&lt;PII,vector&lt;PII&gt;,greater&lt;PII&gt; &gt;q;
+	q.push(make_pair(dis[s],s));
+    while(!q.empty()){
+        PII p = q.top();
+        int x = p.second;
+        q.pop();
+        if(vis[x])continue;
+        vis[x] = 1;
+        for(int i=0;i&lt;G[x].size();i++){
+            int y = G[x][i].first;
+            int d = G[x][i].second;
+            if(!vis[y]&amp;&amp;dis[x] + d &lt; dis[y]){
+                dis[y] = dis[x] + d;
+                q.push(make_pair(dis[y],y));
+            }
+        }
+    }
+}
+</code></pre>
+<h1>樹</h1>
+<p>可以把樹看成一張沒有環的連通圖</p>
+<h2 id="名詞介紹">名詞介紹</h2>
+<p>這裡會介紹一些常用的名詞，但不只這些。</p>
+<ul>
+<li>根 : 樹的起點，沒有父節點的點</li>
+<li>葉 : 樹的終點，沒有子節點的點</li>
+<li>祖先 : 父節點到根的路徑上所有的點</li>
+<li>子代 : 向下所有可到的節點</li>
+<li>層 : 一個節點與根的距離</li>
+<li>深度 : 整棵樹的層數</li>
+<li>n元樹 : 一個節點最多能擁有n個小孩</li>
+</ul>
+<h1>二元樹</h1>
+<p>顧名思義是一個節點最多只能擁有2個小孩的樹。<br>
+因為很多資結還有其他應用，所以這裡單獨拿出來討論。</p>
+<h2 id="二元樹的遍歷">二元樹的遍歷</h2>
+<ul>
+<li>前序 : 根-&gt;左子樹-&gt;右子樹</li>
+<li>中序 : 左子樹-&gt;根-&gt;右子樹</li>
+<li>後序 : 右子樹-&gt;左子樹-&gt;根</li>
+</ul>
+<h1>最小生成樹</h1>
+<p>生成樹是一顆包含圖上所有點的樹。<br>
+最小生成樹則是求圖上權重和最小的生成樹。<br>
+有兩種演算法，以邊出發用Kruskal，以點出發用Prim<br>
+<strong>以下兩個網址都講得不錯，而且兩種算法都有</strong><br>
+<a href="http://sunmoon-template.blogspot.com/2019/08/minimum-spanning-tree-kruskal-prim.html" target="_blank" rel="noopener">日月卦長</a><br>
+<a href="http://smilecatx3.blogspot.com/2014/06/minimum-spanning-tree-kruskal-prim.html" target="_blank" rel="noopener">自由気ままな猫</a></p>
+<ul>
+<li>圖片轉自<strong>自由気ままな猫</strong>，程式碼轉自<strong>日月卦長</strong></li>
+</ul>
+<h2 id="Kruskal">Kruskal</h2>
+<p>將邊排序後，由權重最小的邊開始加入生成樹。<br>
+使用<strong>disjoin set</strong>維護是否已經加入樹了(不會用的可以去看基礎資結)<br>
+時間複雜度<strong>O(ElogE)</strong><br>
+<img data-sizes="auto" data-src="http://2.bp.blogspot.com/-EfxHG_RWEag/U5sboNcJFUI/AAAAAAAAB0A/Ph2b02acEkM/s1600/img_003.png" alt="avatar" class="lazyload"><br>
+<img data-sizes="auto" data-src="http://4.bp.blogspot.com/-xpYYilrrB7g/U5sbojcBBhI/AAAAAAAAB0E/MhZqY5pnVlM/s1600/img_004.png" alt="avatar" class="lazyload"><br>
+<strong>模板轉自日月卦長的模板庫</strong></p>
+<pre><code class="language-c++">template&lt;typename T&gt;
+class kruskal{
+	static const int MAXN=100005;
+	int n; // 1-base
+	tuple&lt;T,int,int&gt; edge;
+	int pa[MAXN];
+	int find(int x){
+		if(x==pa[x]) return x;
+		return pa[x] = find(pa[x]);
+	}
+public:
+	void init(int _n){
+		n = _n;
+	}
+	void addEdge(int u,int v,const T &amp;cost){
+		edge.emplace_back(cost, u, v);
+	}
+	pair&lt;T,int&gt; solve(){
+		T ans = 0;
+		int component = n;
+		for(int i=1; i&lt;=n; ++i) pa[i] = i;
+		sort(edge.begin(), edge.end());
+		for(const auto &amp;e: edge){
+			int u = find(get&lt;1&gt;(e)), v = find(get&lt;2&gt;(e));
+			if(u==v) continue;
+			pa[u] = v;
+			ans += get&lt;0&gt;(e);
+		}
+		return {ans, component};
+	}
+};
+</code></pre>
+<h2 id="Prim">Prim</h2>
+<p>每次尋找離目前生成樹最近的點加入<br>
+<img data-sizes="auto" data-src="http://3.bp.blogspot.com/-l4jN64p89bA/U5siWA0KMwI/AAAAAAAAB0g/zrXUkJmrOEk/s1600/img_006.png" alt="avatar" class="lazyload"><br>
+<strong>模板轉自日月卦長的模板庫</strong></p>
+<pre><code class="language-c++">template&lt;typename T&gt;
+class prim{
+	static const int MAXN=100005;
+	struct edge{
+		int u, v;
+		T cost;
+		edge(){}
+		edge(int u,int v,const T &amp;cost):u(u),v(v),cost(cost){}
+		bool operator&lt; (const edge&amp;b)const{
+			return cost &gt; b.cost;
+		}
+	};
+	int n;// 1-base
+	vector&lt;edge&gt; E;
+	vector&lt;int&gt; G[MAXN];
+	bool vis[MAXN];
+	T build(int x){
+		T ans = 0;
+		priority_queue&lt;edge&gt; q;
+		for(auto i: G[x]) q.push(E[i]);
+		vis[x] = true;
+		while(q.size()){
+			edge e = q.top(); q.pop();
+			if(vis[e.v]) continue;
+			ans += e.cost;
+			vis[e.v] = true;
+			for(auto i:G[e.v]) if(!vis[E[i].v]){
+				q.push(E[i]);
+			}
+		}
+		return ans;
+	}
+public:
+	void init(int _n){
+		n = _n;
+		for(int i=1; i&lt;=n; ++i) G[i].clear();
+	}
+	void addEdge(int u, int v, const T &amp;cost){
+		G[u].emplace_back(E.size());
+		E.emplace_back(u, v, cost);
+		G[v].emplace_back(E.size());
+		E.emplace_back(v, u, cost);
+	}
+	pair&lt;T,int&gt; solve(){
+		T ans = 0;
+		int component = 0;
+		for(int i=1; i&lt;=n; ++i) vis[i] = false;
+		for(int i=1; i&lt;=n; ++i) if(!vis[i]){
+			ans += build(i);
+			++component;
+		}
+		return {ans, component};
+	}
+};
+</code></pre>
+<h1>拓樸排序</h1>
+<p>給一DAG，使所有序號大的點不可到序號小的點;所有序號小的點不可到序號大的點。<br>
+通常搭配stack存取，這並不一定。<br>
+每次將出度為0的點push進stack裡即可<br>
+再將這個點的所有小孩出度-1<br>
+<strong>範例題a255片段碼</strong></p>
+<pre><code class="language-c++">        vector&lt;int&gt; v[101];//圖
+        int deg[101];//出度
+        priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt; s;
+        memset(deg,0,sizeof(deg));
+        for(int i=0;i&lt;m;i++){
+            int a,b;
+            cin&gt;&gt;a&gt;&gt;b;
+            deg[b]++;
+            v[a].push_back(b);
+        }
+        for(int i=0;i&lt;n;i++){
+            if(!deg[i])s.push(i);
+        }
+        cout&lt;&lt;endl;
+        while(s.size()){
+            int now=s.top();
+            cout&lt;&lt;now&lt;&lt;&quot; &quot;;
+            s.pop();
+            for(int i=0;i&lt;v[now].size();i++){
+                deg[v[now][i]]--;
+                if(!deg[v[now][i]])s.push(v[now][i]);
+            }
+        }  
+        cout&lt;&lt;endl;
+</code></pre>
+<h1>資料來源</h1>
+<p><strong>本篇主要整理自IONC的講義</strong></p>
+<ul>
+<li>IONCamp講義</li>
+</ul>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>ChaoYi Lin<br>
+    <strong>本文鏈接：</strong><a href="https://chaonote.tk/2020/10/01/BasicGraphTheory/" title="https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;10&#x2F;01&#x2F;BasicGraphTheory&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;10&#x2F;01&#x2F;BasicGraphTheory&#x2F;</a><br>
+    
+      <strong>版權聲明：</strong>本文採用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 協議進行許可 轉載請附上連結
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/Basic/" rel="tag">Basic</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/GraphTheory/" rel="tag">GraphTheory</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '0e9a93f76e4182c1faa6',
+        clientSecret: '922c8667ebed53ae32cf66dac7457ddd81cec052',
+        id: window.location.pathname,
+        repo: 'ucangodiedie0213.github.io',
+        owner: 'ucangodiedie0213',
+        admin: 'ucangodiedie0213'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+<script src="/js/app.js?v=1601601994175"></script>
+  
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '2076481477', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

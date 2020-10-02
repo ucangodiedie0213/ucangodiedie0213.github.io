@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chaonote.tk/2020/10/01/BasicGraphTheory/</loc>
+    
+    <lastmod>2020-10-02T01:26:20.698Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chaonote.tk/PY.html</loc>
     
     <lastmod>2020-10-01T11:53:14.270Z</lastmod>
@@ -30,13 +37,6 @@
   </url>
   
   <url>
-    <loc>https://chaonote.tk/2020/09/05/PID-arduinoAuto/</loc>
-    
-    <lastmod>2020-09-12T08:30:39.262Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chaonote.tk/2020/04/12/ZJ/a111zerojudge/</loc>
     
     <lastmod>2020-09-12T03:40:42.593Z</lastmod>
@@ -51,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://chaonote.tk/2020/05/05/ZJ/a129zerojudge/</loc>
-    
-    <lastmod>2020-09-12T03:40:33.452Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chaonote.tk/2020/04/12/ZJ/d038zerojudge/</loc>
     
     <lastmod>2020-09-12T03:40:26.786Z</lastmod>
@@ -68,20 +61,6 @@
     <loc>https://chaonote.tk/2020/04/18/ZJ/c291-zerojudge/</loc>
     
     <lastmod>2020-09-12T03:40:25.041Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chaonote.tk/2020/04/25/alogrithm/Graph/floydwashll/</loc>
-    
-    <lastmod>2020-09-12T03:40:03.035Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chaonote.tk/2020/08/15/alogrithm/Graph/TopologicalSort/</loc>
-    
-    <lastmod>2020-08-14T22:18:16.066Z</lastmod>
     
   </url>
   
