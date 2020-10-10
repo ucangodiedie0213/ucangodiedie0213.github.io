@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>文章歸檔 - Chao&#39;s Note</title>
+  <title>Qiskit套件安裝 - Chao&#39;s Note</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,16 +12,20 @@
   
 
   <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Chao&#39;s Note">
-<meta property="og:url" content="https://chaonote.tk/archives/index.html">
+  <meta name="description" content="先備知識 安裝軟體 anaconda 下載並安裝，如果他沒有裝python需要自己裝 Anaconda官網 qiskit 開啟anaconda prompt 輸入以下指令 pip install qiskit  安裝完後輸入以下指令開啟jupyter jupyter notebook  它會在瀏覽器打開jupyter 點選new然後選python3 量子初體驗 首先我們可以先查看Qiskit版本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qiskit套件安裝">
+<meta property="og:url" content="https://chaonote.tk/2020/10/03/QuantumComputing/qiskit-01/index.html">
 <meta property="og:site_name" content="Chao&#39;s Note">
+<meta property="og:description" content="先備知識 安裝軟體 anaconda 下載並安裝，如果他沒有裝python需要自己裝 Anaconda官網 qiskit 開啟anaconda prompt 輸入以下指令 pip install qiskit  安裝完後輸入以下指令開啟jupyter jupyter notebook  它會在瀏覽器打開jupyter 點選new然後選python3 量子初體驗 首先我們可以先查看Qiskit版本">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-10-03T13:00:39.000Z">
+<meta property="article:modified_time" content="2020-10-05T11:16:44.656Z">
 <meta property="article:author" content="ChaoYi Lin">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1602337708818">
+  <link rel="stylesheet" href="/css/style.css?v=1602337708903">
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -179,46 +183,114 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        
-<section class="nexmoe-archives">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 33.33333333333333%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="Qiskit套件安裝" class="lazyload">
+          <h1>Qiskit套件安裝</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年10月03日</a>
+    <a><i class="nexmoefont icon-areachart"></i>401 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
 
-    <article>
-        
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">先備知識</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">安裝軟體</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda"><span class="toc-number">2.1.</span> <span class="toc-text">anaconda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#qiskit"><span class="toc-number">2.2.</span> <span class="toc-text">qiskit</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">量子初體驗</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">取得IBMQ的API Token</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">量子界的Hello World!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">資料來源</span></a></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
 
-        
-            <h2>2020</h2>
-            <ul>
-            
-                <li><span>10-03</span><a href="/2020/10/03/QuantumComputing/qiskit-01/" >Qiskit套件安裝</a></li>
-            
-                <li><span>10-03</span><a href="/2020/10/03/QuantumComputing/introduce-quantum/" >introduce_quantum</a></li>
-            
-                <li><span>10-01</span><a href="/2020/10/01/BasicGraphTheory/" >基礎圖論 Basic Graph Theory</a></li>
-            
-                <li><span>10-01</span><a href="/2020/10/01/SegmentTree/" >我會線段樹，帶我逃離新手村！</a></li>
-            
-                <li><span>09-19</span><a href="/2020/09/19/scist01/" >學習Linux開啟CTF的第一章吧!-SCIST資安D1</a></li>
-            
-                <li><span>06-13</span><a href="/2020/06/13/Python/python-1/" >Python教學-基礎語法</a></li>
-            
-                <li><span>05-21</span><a href="/2020/05/21/Golang-0/" >C語言的後裔 -Go語言 Golang</a></li>
-            
-                <li><span>04-19</span><a href="/2020/04/19/foldingathome/" >參與Folding@Home為研究武漢肺炎貢獻算力吧!</a></li>
-            
-                <li><span>04-18</span><a href="/2020/04/18/ZJ/c291-zerojudge/" >c291.APCS 2017-0304-2小群體</a></li>
-            
-                <li><span>04-12</span><a href="/2020/04/12/ZJ/d038zerojudge/" >d038. 00900 - Brick Wall Patterns</a></li>
-            
-                <li><span>04-12</span><a href="/2020/04/12/ZJ/a111zerojudge/" >a111. 12149 - Feynman</a></li>
-            
-                <li><span>04-01</span><a href="/2020/04/01/ZJ/c129zerojudge/" >c129. 00572 - Oil Deposits --Uva 572</a></li>
-            
-                <li><span>04-01</span><a href="/2020/04/01/HelloWorld/" >HelloWorld</a></li>
-            
-            </ul>
-        
-    </article>
+  <article>
+    <h1>先備知識</h1>
+<h1>安裝軟體</h1>
+<h2 id="anaconda">anaconda</h2>
+<p>下載並安裝，如果他沒有裝python需要自己裝<br>
+<a href="https://www.anaconda.com/products/individual" target="_blank" rel="noopener">Anaconda官網</a></p>
+<h2 id="qiskit">qiskit</h2>
+<p>開啟anaconda prompt<br>
+輸入以下指令</p>
+<pre><code>pip install qiskit
+</code></pre>
+<p>安裝完後輸入以下指令開啟jupyter</p>
+<pre><code>jupyter notebook
+</code></pre>
+<p>它會在瀏覽器打開jupyter<br>
+點選<strong>new</strong>然後選<strong>python3</strong></p>
+<h1>量子初體驗</h1>
+<p>首先我們可以先查看Qiskit版本</p>
+<pre><code>import qiskit
+qiskit.__qiskit_version__
+</code></pre>
+<p>就可以查看所有目前安裝的qiskit版本<br>
+可以和<a href="https://github.com/Qiskit/qiskit" target="_blank" rel="noopener">Github</a>上的版本對照</p>
+<h1>取得IBMQ的API Token</h1>
+<p>因為我們現在是用經典電腦模擬量子電腦，速度和機率、情況等等都跟真實的電腦不同<br>
+等等會示範一個範例，來看經典與量子的差別。<br>
+但是我們沒有真正的量子電腦，所以我們必須仰賴IBM的機器，將我們的工作加入隊列，在回傳答案給我們。<br>
+我們需要有IBM的Token我們才有辦法把我們的工作丟給IBM。<br>
+我們需要先在<strong>IBM Quantum Experience</strong>註冊一個帳號，取得<strong>API Token</strong><br>
+<a href="https://quantum-computing.ibm.com" target="_blank" rel="noopener">IBM Quantum Experience</a><br>
+登入後，你可以在<strong>backend</strong>看到目前可以使用的量子電腦的狀況。<br>
+然後在右上角<strong>My account</strong>中可以看到自己的Token，把它<strong>複製下來</strong><br>
+在jupyter上輸入以下指令。引入IBMQ，儲存token，讀取帳號。</p>
+<pre><code>from qiskit import IBMQ
+IBMQ.save_account('[token]')
+IBMQ.load_account()
+</code></pre>
+<p>此時他會顯示你帳號信息，有可能會報錯因為時區不同<br>
+這樣你就可以開始玩量子了~</p>
+<h1>量子界的Hello World!</h1>
+<h1>資料來源</h1>
+<p><a href="https://www.youtube.com/watch?v=M4EkW4VwhcI" target="_blank" rel="noopener">Qiskit官方影片-如何安裝Qiskit-在Quantum Computers 2上編程</a></p>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>ChaoYi Lin<br>
+    <strong>本文鏈接：</strong><a href="https://chaonote.tk/2020/10/03/QuantumComputing/qiskit-01/" title="https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;10&#x2F;03&#x2F;QuantumComputing&#x2F;qiskit-01&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;10&#x2F;03&#x2F;QuantumComputing&#x2F;qiskit-01&#x2F;</a><br>
+    
+      <strong>版權聲明：</strong>本文採用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 協議進行許可 轉載請附上連結
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '0e9a93f76e4182c1faa6',
+        clientSecret: '922c8667ebed53ae32cf66dac7457ddd81cec052',
+        id: window.location.pathname,
+        repo: 'ucangodiedie0213.github.io',
+        owner: 'ucangodiedie0213',
+        admin: 'ucangodiedie0213'
+    })
+    gitalk.render('gitalk')
+</script>
 </section>
+  </div>
+</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
@@ -228,7 +300,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1602337708820"></script>
+<script src="/js/app.js?v=1602337708904"></script>
   
     <!-- Google Analytics -->
 <script>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+  
+  <title>我會線段樹，帶我逃離新手村！ - Chao&#39;s Note</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" type="image/png" />
+  <meta name="description" content="前言 逃離新手村後第一個資結就是線段樹了 他是一種二元樹狀資料結構。 線段樹生來就是解決區間問題的 線段樹可以做到以下:  點修改 區間查詢 區間修改 n個區間的線段樹，k符合條件的區間數量，空間複雜度為O(n)，query的時間複雜度為O(logn+k) 本文會整理出帶有lazytag的線段樹模板與教學 他非常好用，但請不要毒瘤，連靜態區間和都砸線段樹(除非你想入教)  初探線段樹 線段樹的概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我會線段樹，帶我逃離新手村！">
+<meta property="og:url" content="https://chaonote.tk/2020/10/01/SegmentTree/index.html">
+<meta property="og:site_name" content="Chao&#39;s Note">
+<meta property="og:description" content="前言 逃離新手村後第一個資結就是線段樹了 他是一種二元樹狀資料結構。 線段樹生來就是解決區間問題的 線段樹可以做到以下:  點修改 區間查詢 區間修改 n個區間的線段樹，k符合條件的區間數量，空間複雜度為O(n)，query的時間複雜度為O(logn+k) 本文會整理出帶有lazytag的線段樹模板與教學 他非常好用，但請不要毒瘤，連靜態區間和都砸線段樹(除非你想入教)  初探線段樹 線段樹的概念">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Segment_tree.svg/420px-Segment_tree.svg.png">
+<meta property="og:image" content="https://timbian.files.wordpress.com/2015/01/segmenttree.png?w=768&amp;h=426">
+<meta property="article:published_time" content="2020-10-01T01:51:06.000Z">
+<meta property="article:modified_time" content="2020-10-04T03:34:21.019Z">
+<meta property="article:author" content="ChaoYi Lin">
+<meta property="article:tag" content="SegmentTree">
+<meta property="article:tag" content="DataStructure">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Segment_tree.svg/420px-Segment_tree.svg.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
+  
+  <link rel="stylesheet" href="/css/style.css?v=1602337708908">
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="ChaoYi Lin" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ChaoYi Lin">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="ChaoYi Lin" alt="ChaoYi Lin">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>13</div>
+        <div><span>標籤</span>18</div>
+        <div><span>分類</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首頁">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首頁
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章歸檔">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章歸檔
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="關於我">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                關於我
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://www.google.com/search?q=site:chaonote.tk" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://github.com/ucangodiedie0213/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分類</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Golang/">Golang</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/Python/">Python</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/zerojudge/">zerojudge</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/語言學習/">語言學習</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/資訊新知/">資訊新知</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/題解/">題解</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Basic/" style="font-size: 10px;">Basic</a> <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/DataStructure/" style="font-size: 10px;">DataStructure</a> <a href="/tags/Folding-home/" style="font-size: 10px;">Folding@home</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/GraphTheory/" style="font-size: 10px;">GraphTheory</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SCIST/" style="font-size: 10px;">SCIST</a> <a href="/tags/SegmentTree/" style="font-size: 10px;">SegmentTree</a> <a href="/tags/Share/" style="font-size: 10px;">Share</a> <a href="/tags/apcs/" style="font-size: 10px;">apcs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/dfs/" style="font-size: 15px;">dfs</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/graph/" style="font-size: 15px;">graph</a> <a href="/tags/%E5%88%86%E6%95%A3%E5%BC%8F%E8%A8%88%E7%AE%97/" style="font-size: 10px;">分散式計算</a> <a href="/tags/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E/" style="font-size: 10px;">武漢肺炎</a>
+    </div>
+    
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 ChaoYi Lin
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 33.33333333333333%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="我會線段樹，帶我逃離新手村！" class="lazyload">
+          <h1>我會線段樹，帶我逃離新手村！</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年10月01日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.4k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">初探線段樹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-base-or-1-base"><span class="toc-number">2.1.</span> <span class="toc-text">0-base or 1-base?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#區間要怎麼表示"><span class="toc-number">2.2.</span> <span class="toc-text">區間要怎麼表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#怎麼存圖"><span class="toc-number">2.3.</span> <span class="toc-text">怎麼存圖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">建樹</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">查詢</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">單點修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">區間加值&#x2F;修改(懶標)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">7.</span> <span class="toc-text">RMQ問題</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">8.</span> <span class="toc-text">高維線段樹</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">9.</span> <span class="toc-text">差分</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">10.</span> <span class="toc-text">參考資料</span></a></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <article>
+    <h1>前言</h1>
+<p>逃離新手村後第一個資結就是線段樹了<br>
+他是一種二元樹狀資料結構。<br>
+線段樹生來就是解決<strong>區間問題</strong>的<br>
+線段樹可以做到以下:</p>
+<ul>
+<li>點修改</li>
+<li>區間查詢</li>
+<li>區間修改<br>
+n個區間的線段樹，k符合條件的區間數量，空間複雜度為<strong>O(n)</strong>，query的時間複雜度為<strong>O(logn+k)</strong><br>
+本文會整理出帶有lazytag的線段樹模板與教學<br>
+他非常好用，但請不要毒瘤，連靜態區間和都砸線段樹(除非你想入教)</li>
+</ul>
+<h1>初探線段樹</h1>
+<p>線段樹的概念就是把序列一直切半，切到最後剩一塊。<br>
+可以畫成一顆二元樹<br>
+葉結點都是一個元素<br>
+而每個結點都是一個區間。<br>
+<img data-sizes="auto" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Segment_tree.svg/420px-Segment_tree.svg.png" alt="avatar" class="lazyload"></p>
+<h2 id="0-base-or-1-base">0-base or 1-base?</h2>
+<p>其實沒差習慣就好了。<br>
+這裡seg 從1開始<br>
+區間從0開始</p>
+<h2 id="區間要怎麼表示">區間要怎麼表示</h2>
+<p>通常有兩種表示法<br>
+這裡示範左閉右閉</p>
+<ul>
+<li>左閉右閉</li>
+<li>左閉右開(一閉一開)<br>
+但通常沒差別，習慣就好。</li>
+</ul>
+<h2 id="怎麼存圖">怎麼存圖</h2>
+<p>通常會用<strong>陣列</strong>存<br>
+如果有n個點，某一個點的編號為<strong>id</strong><br>
+令根結點為編號1<br>
+他的左兒子編號就是<strong>2*id</strong> ，右兒子編號是<strong>2*id+1</strong><br>
+所以結點樹不會超過<strong>4*n</strong><br>
+所以陣列大小只要開到<strong>4*n</strong>就好<br>
+記得也幫lazytag開</p>
+<pre><code class="language-c++">int seg[4*n];
+int tag[4*n];
+</code></pre>
+<h1>建樹</h1>
+<p>用build函數做建樹，記得將陣列初始化喔<br>
+pull函數合併結點</p>
+<ul>
+<li>id : 編號，根結點編號為1</li>
+<li>l、r : 代表編號id的區間</li>
+</ul>
+<pre><code class="language-c++">void pull(int x, int y){//因為這個函式很簡單通常不會寫
+    return seg[x]+seg[y];
+}
+void build(int id, int l, int r){
+    if(l==r){//已經到葉結點
+        seg[id]=a[l];
+        return;
+    }
+    int m = (l+r)/2;
+    build(2*id,l,m);//向左子樹推
+    build(2*id+1,m+1,r);//向右子樹推
+    seg[id] = pull(2*id,2*id+1);//走到葉子後回來把左右兩個兒子的值加上來
+}
+</code></pre>
+<h1>查詢</h1>
+<p>query可以查詢範圍[ql,qr]的資料是甚麼。<br>
+ql,qr是要查詢的範圍，l,r是編號的範圍<br>
+在查詢的時候會出現以下情況:</p>
+<ul>
+<li>r &lt; ql or l &gt; qr : 此種情況表示查詢區間與範圍完全沒交集，可依照題序直接return</li>
+<li>ql &lt;= l and qr &gt;= r : 此種情況表示目前這個結點的區間被要查詢的區間完全覆蓋，這就是我要的答案，直接return此點的值</li>
+<li>剩下就是有交集沒有完全包含的情況，一直往下遞迴，到變成以上兩種結果，就可以把答案拉上來</li>
+</ul>
+<pre><code class="language-c++">int query(int id, int l, int r, int ql, int qr){
+    if(r&lt;ql || l&gt;qr) return 0;//第一種
+    if(ql&lt;=l &amp;&amp; r&lt;=qr)return seg[id];//第二種
+    int m = (l+r)/2;//第三種
+    return query(id*2),l,m,ql,qr)+query(id*2+1,m+1,r,ql,qr);
+}
+</code></pre>
+<h1>單點修改</h1>
+<p>update可以將第i個位置改成v</p>
+<pre><code class="language-c++">void update(int id, int l, int r, int i, int v){
+    if(l==r){//找到結點了
+        seg[id]=v;
+        return;
+    }
+    int m = (l+r)/2;
+    if(i&lt;=m)update(id*2,l,m,i,v);//點在左子樹
+    else update(id*2+1,m+1,r,i,v);//點在右子樹
+    seg[id] = pull(id*2,id*2+1);//更新完了把答案拉回來
+}
+</code></pre>
+<h1>區間加值/修改(懶標)</h1>
+<p>懶標是區間修改的關鍵手段，先在區間設立懶標，代表這個區間的每個數字都要做一樣的事情，<strong>但是還沒做</strong>。<br>
+設立懶標後利用push函式將tag往下推送到每個點，推完在把點算回來<br>
+所以我們可以寫出區間加值/修改的函式<br>
+[l,r]為要修改的區間,[L,R]為結點id的區間</p>
+<h1>RMQ問題</h1>
+<p>RMQ問題，是求區間最大值或區間最小值的題目。<br>
+可以用線段樹解決，原理就是把點改成存區間最小值或大值，這樣就可以用線段樹維護了。<br>
+也可以在存Node的結構裡面加上區間極值來維護。<br>
+圖片與資料參考自<a href="https://timbian.wordpress.com/2015/01/30/%E7%B7%9A%E6%AE%B5%E6%A8%B9%E8%99%95%E7%90%86rmq%E5%95%8F%E9%A1%8C/" target="_blank" rel="noopener">天邊。世界</a><br>
+<img data-sizes="auto" data-src="https://timbian.files.wordpress.com/2015/01/segmenttree.png?w=768&amp;h=426" alt="avatar" class="lazyload"><br>
+雖然可以用線段樹解決，但是通常單純的RMQ問題很少有人用線段樹(除非你是毒瘤)<br>
+大部分的RMQ用稀疏表維護，會好寫很多。<a href="https://chaonote.tk/_posts/SparseTable">稀疏表教學點我</a></p>
+<h1>高維線段樹</h1>
+<p>線段樹可以推廣到很多維度，做法是你在<strong>N</strong>維線段樹的結點上放一顆<strong>N-1</strong>維的線段樹</p>
+<p>拿二維現段數舉例，二維線段樹中代表[2,4]的節點有一顆一維線段樹，這顆線段樹上代表[0,2]節點上的答案，<br>
+可以看成在二維矩陣上左上角(2,0)到右下角(4,2)這個子範圍的答案。</p>
+<h1>差分</h1>
+<p>給定陣列A，兩種操作<br>
+1.要在區間l,r加上一個等差數列。<br>
+2.詢問索引值</p>
+<p>假定等差數列首項k,公差d。<br>
+做法就是，把原序列的差分存在陣列<strong>b</strong>內，就變成普通的區間加值了。<br>
+令<strong>b[i]=a[i]-a[i-1]</strong><br>
+這個序列有幾個特性</p>
+<ul>
+<li>前綴和<strong>Si=ai</strong></li>
+<li>區間l,r加值等於<strong>b[l]+v,b[r+1]-v</strong><br>
+有上述可知，要加上等差數列，只要做以下兩件事</li>
+<li><strong>b[l]+k</strong>和*<em>b[r+1]-(k+(r-1)<em>d)</em></em></li>
+<li>然後把整個序列區間<strong>l+1,r加上d</strong><br>
+這樣就可以用線段數維護序列，查詢前綴和就可以了</li>
+</ul>
+<h1>參考資料</h1>
+<p><a href="https://zh.wikipedia.org/wiki/%E7%B7%9A%E6%AE%B5%E6%A8%B9" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/線段樹</a><br>
+<a href="https://hackmd.io/@wiwiho/CPN-segment-tree" target="_blank" rel="noopener">https://hackmd.io/@wiwiho/CPN-segment-tree</a><br>
+IONC講義</p>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>ChaoYi Lin<br>
+    <strong>本文鏈接：</strong><a href="https://chaonote.tk/2020/10/01/SegmentTree/" title="https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;10&#x2F;01&#x2F;SegmentTree&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;chaonote.tk&#x2F;2020&#x2F;10&#x2F;01&#x2F;SegmentTree&#x2F;</a><br>
+    
+      <strong>版權聲明：</strong>本文採用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 協議進行許可 轉載請附上連結
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/DataStructure/" rel="tag">DataStructure</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/SegmentTree/" rel="tag">SegmentTree</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '0e9a93f76e4182c1faa6',
+        clientSecret: '922c8667ebed53ae32cf66dac7457ddd81cec052',
+        id: window.location.pathname,
+        repo: 'ucangodiedie0213.github.io',
+        owner: 'ucangodiedie0213',
+        admin: 'ucangodiedie0213'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+<script src="/js/app.js?v=1602337708909"></script>
+  
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '2076481477', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
